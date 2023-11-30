@@ -1,27 +1,40 @@
-import React, { useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import UseAxiosSecure from "../../Hooks/UseAxiosSecure";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
+import { AuthContext } from "../../Provider/AuthProvider";
 import { Helmet } from "react-helmet";
 import { Button } from "flowbite-react";
 import Email from "./Email";
 
 const ManageSlot = () => {
   const [trainers, setTrainers] = useState([]);
-  const [showEmailForm, setShowEmailForm] = useState(false);
-
+  const [showEmail, setShowEmail] = useState(false); // State to control email visibility
+  const axiosSecure = UseAxiosSecure();
   const { user } = useContext(AuthContext);
 
   const { refetch, data = [] } = useQuery({
-    queryKey: ['users'],
+    queryKey: ["users"],
     queryFn: async () => {
-      const res = await axios.get(`/trainerBooked/${user.displayName}`);
+      const res = await axiosSecure.get(`/trainerBooked/${user.displayName}`);
       return res.data;
     },
   });
 
   const handleRejectClick = () => {
-    setShowEmailForm(true);
+    setShowEmail(true); // Show the email field when the reject button is clicked
   };
+
+  useEffect(() => {
+    axios
+      .get(`https://fitness-server-iota.vercel.app/trainerBooked/${user.displayName}`)
+      .then((res) => res.data)
+      .then((data) => {
+        setTrainers(data);
+        refetch();
+      })
+      .catch((error) => console.error("Error fetching data:", error));
+  }, [user.displayName, refetch]);
 
   return (
     <div>
@@ -50,7 +63,7 @@ const ManageSlot = () => {
                 <td className="py-2 px-4 text-center">${item.price}</td>
                 <td className="py-2 px-4 text-center justify-center">
                   <Button onClick={handleRejectClick}>Reject</Button>
-                  {showEmailForm && <Email />}
+                  {showEmail && <Email />}
                 </td>
               </tr>
             ))}
