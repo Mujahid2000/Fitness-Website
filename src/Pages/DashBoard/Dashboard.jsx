@@ -67,6 +67,11 @@ const Dashboard = () => {
                   <FaBalanceScale /> Balance
                 </NavLink>
               </li>
+              <li>
+                <NavLink to='/dashboard/profile' className='flex text-white leading-normal shadow-md transition duration-150 ease-in-out hover:bg-[#c0392b] hover:shadow-lg focus:bg-[#c0392b] focus:shadow-lg focus:outline-none focus:ring-0 active:bg-[#e74c3c] active:shadow-lg rounded-lg p-3 bg-[#d35400] items-center gap-5'>
+                  <FaCog /> Profile Settings
+                </NavLink>
+              </li>
             </>
           ) : isTrainer ? (
             // Trainer Dashboard
@@ -89,6 +94,11 @@ const Dashboard = () => {
               <li>
                 <NavLink to='/dashboard/addClass' className='flex text-white leading-normal shadow-md transition duration-150 ease-in-out hover:bg-[#f39c12] hover:shadow-lg focus:bg-[#f39c12] focus:shadow-lg focus:outline-none focus:ring-0 active:bg-[#d35400] active:shadow-lg rounded-lg p-3 bg-[#f1c40f] items-center gap-5'>
                   <FaPlusSquare /> Add New Class
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to='/dashboard/profile' className='flex text-white leading-normal shadow-md transition duration-150 ease-in-out hover:bg-[#c0392b] hover:shadow-lg focus:bg-[#c0392b] focus:shadow-lg focus:outline-none focus:ring-0 active:bg-[#e74c3c] active:shadow-lg rounded-lg p-3 bg-[#d35400] items-center gap-5'>
+                  <FaCog /> Profile Settings
                 </NavLink>
               </li>
             </>

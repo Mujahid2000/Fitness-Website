@@ -17,10 +17,10 @@ const MyFooter = () => {
             <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Contact Us</h2>
             <ul className="text-gray-500 dark:text-gray-400 font-medium">
                 <li className="mb-4">
-                    <a href="https://flowbite.com/" className="hover:underline">Address: Dhanmondi, Dhaka</a>
+                    <a href="/" className="hover:underline">Address: Dhanmondi, Dhaka</a>
                 </li>
                 <li>
-                    <a href="https://tailwindcss.com/" className="hover:underline">Tel: +82547169</a>
+                    <a href="/" className="hover:underline">Tel: +82547169</a>
                 </li>
             </ul>
         </div>
@@ -28,10 +28,10 @@ const MyFooter = () => {
             <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow us</h2>
             <ul className="text-gray-500 dark:text-gray-400 font-medium">
                 <li className="mb-4">
-                    <a href="https://github.com/themesberg/flowbite" className="hover:underline ">Facebook</a>
+                    <a href="" className="hover:underline ">Facebook</a>
                 </li>
                 <li>
-                    <a href="https://discord.gg/4eeurUVvTy" className="hover:underline">Youtube</a>
+                    <a href="" className="hover:underline">Youtube</a>
                 </li>
             </ul>
         </div>

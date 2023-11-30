@@ -1,11 +1,28 @@
+import { useContext, useEffect, useState } from "react";
+import { AuthContext } from "../../Provider/AuthProvider";
+import UseAxiosSecure from "../../Hooks/UseAxiosSecure";
+
+
 
 
 const ManageMember = () => {
-  const members = [
-    { id: 1, name: 'John Doe', image: 'image1.jpg', package: 'Admin' },
-    { id: 2, name: 'Jane Smith', image: 'image2.jpg', package: 'Member' },
-    { id: 3, name: 'Bob Johnson', image: 'image3.jpg', package: 'Member' },
-  ];
+
+  const {user} = useContext(AuthContext);
+  const [dataList, setDataList] = useState([])
+  const axiosSecure = UseAxiosSecure();
+  
+  useEffect(() => {
+    if(user.displayName){
+      axiosSecure.get(`/trainerBooked/${user.displayName}`)
+      .then(res => {
+        console.log(res)
+        setDataList(res.data)
+      }).catch(err => {
+        console.log(err)
+      })
+    }
+    
+  }, [user])
 
   return (
     <div className="container mx-auto my-8">
@@ -20,17 +37,17 @@ const ManageMember = () => {
               <th className="p-4 text-left">Package</th>
             </tr>
           </thead>
-          <tbody>
-            {members.map((member) => (
+           <tbody>
+            {dataList.map((member) => (
               <tr key={member.id} className="hover:bg-blue-100">
-                <td className="p-4">{member.name}</td>
+                <td className="p-4">{member.user.displayName}</td>
                 <td className="p-4">
-                  <img src={member.image} alt={`Image for ${member.name}`} className="w-16 h-16 object-cover" />
+                  <img src={member.user.photoURL} alt={`Image for ${member.name}`} className="w-16 h-16 object-cover" />
                 </td>
-                <td className="p-4">{member.package}</td>
+                <td className="p-4">{member.packageName}</td>
               </tr>
             ))}
-          </tbody>
+          </tbody> 
         </table>
       </div>
     </div>

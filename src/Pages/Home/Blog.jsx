@@ -23,7 +23,7 @@ const Blog = () => {
         <div>
             <h3 className="text-4xl font-medium text-center mb-6 mt-4 uppercase">Blog Post</h3>
             <hr />
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 sm:w-80 max-w-7xl gap-6 mx-auto mt-5">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  max-w-7xl gap-6 mx-auto mt-5">
             {
                 blog.map((blogs, index) =>
                     <Card key={blogs.id} className="md:p-6 p-5 max-w-lg">

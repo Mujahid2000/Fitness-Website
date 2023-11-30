@@ -1,29 +1,52 @@
-// src/components/ProfileCard.js
-import React, { useState } from 'react';
+import axios from 'axios';
+import  { useContext, useState } from 'react';
+
+import { AuthContext } from '../../Provider/AuthProvider';
+import UseAxiosSecure from '../../Hooks/UseAxiosSecure';
 
 const Profile = () => {
-  // Sample user data
-  const initialUser = {
-    name: 'John Doe',
-    email: 'john.doe@example.com',
-    role: 'Web Developer',
-    about: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id gravida orci.',
-  };
+  const {setLoading, user, handleUpdateProfile } = useContext(AuthContext);
+  const axiosPublic = UseAxiosSecure();
+  const [formData, setFormData] = useState({
+    name: user.displayName,
+    email: user.email,
+  });
 
-  const [user, setUser] = useState(initialUser);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    handleUpdateProfile(formData.name, user.photoURL)
+      .then(async () => {
+        try {
+          axiosPublic.patch(`/users/update/${user.email}`, {
+            name: formData.name,
+
+          })
+            .then(res => {
+              setLoading(false)
+              console.log(res)
+            }).catch(err => {
+              setLoading(false)
+              console.log(err)
+            })
+
+        } catch (error) {
+          setLoading(false)
+          console.error('Error updating user data:', error);
+        }
+      }).catch((error) => {
+        setLoading(false)
+        console.error('Error updating user profile:', error);
+      })
+
+  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setUser((prevUser) => ({
-      ...prevUser,
+    setFormData((prevData) => ({
+      ...prevData,
       [name]: value,
     }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle form submission (e.g., update user data)
-    console.log('Updated user data:', user);
   };
 
   return (
@@ -39,7 +62,7 @@ const Profile = () => {
               type="text"
               id="name"
               name="name"
-              value={user.name}
+              value={formData.name}
               onChange={handleChange}
               className="w-full p-2 border border-gray-300 rounded-md"
             />
@@ -50,14 +73,15 @@ const Profile = () => {
             </label>
             <input
               type="email"
+              disabled
+              readOnly={true}
               id="email"
               name="email"
-              value={user.email}
-              
+              value={formData.email}
+              onChange={handleChange}
               className="w-full p-2 border border-gray-300 rounded-md bg-gray-100"
             />
           </div>
-        
         </div>
 
         {/* Submit Button */}
