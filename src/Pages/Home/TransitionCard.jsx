@@ -16,7 +16,7 @@
 
 
     useEffect(() =>{
-    fetch('/public/Team.json')
+    fetch('/Team.json')
     .then((res) => res.json())
     .then((data) => setTeam(data))
     }, [])

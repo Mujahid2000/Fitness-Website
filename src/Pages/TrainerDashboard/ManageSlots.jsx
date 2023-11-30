@@ -9,7 +9,8 @@ import Email from "./Email";
 
 const ManageSlot = () => {
   const [trainers, setTrainers] = useState([]);
-  const [showEmail, setShowEmail] = useState(false); // State to control email visibility
+  const [showEmail, setShowEmail] = useState(false);
+  const [rejectionSubmitted, setRejectionSubmitted] = useState(false);
   const axiosSecure = UseAxiosSecure();
   const { user } = useContext(AuthContext);
 
@@ -22,7 +23,17 @@ const ManageSlot = () => {
   });
 
   const handleRejectClick = () => {
-    setShowEmail(true); // Show the email field when the reject button is clicked
+    setShowEmail(true);
+    setRejectionSubmitted(false); // Reset the submission status
+  };
+
+  const handleSubmitEmail = () => {
+    // Add your logic for submitting the email
+    // ...
+
+    // After successfully submitting the email, hide the email field
+    setShowEmail(false);
+    setRejectionSubmitted(true); // Set the submission status to true
   };
 
   useEffect(() => {
@@ -63,7 +74,12 @@ const ManageSlot = () => {
                 <td className="py-2 px-4 text-center">${item.price}</td>
                 <td className="py-2 px-4 text-center justify-center">
                   <Button onClick={handleRejectClick}>Reject</Button>
-                  {showEmail && <Email />}
+                  {showEmail && !rejectionSubmitted && (
+                    <div>
+                      <Email />
+                      <Button onClick={handleSubmitEmail}>Submit</Button>
+                    </div>
+                  )}
                 </td>
               </tr>
             ))}

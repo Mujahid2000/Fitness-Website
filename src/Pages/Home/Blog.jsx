@@ -12,7 +12,7 @@ const Blog = () => {
   };
 
   useEffect(() => {
-    fetch('/public/Blog.json')
+    fetch('/Blog.json')
       .then((res) => res.json())
       .then((data) => {
         setBlog(data);

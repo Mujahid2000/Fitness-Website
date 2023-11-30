@@ -9,7 +9,7 @@ const Success = () => {
   };
 
   useEffect(() => {
-    fetch('/public/Success.json')
+    fetch('/Success.json')
       .then((res) => res.json())
       .then((data) => {
         setSuccess(data);

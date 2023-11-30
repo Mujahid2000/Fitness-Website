@@ -5,7 +5,7 @@ const Featured = () => {
     const [feature, setFeature] = useState([]);
 
     useEffect(() => {
-        fetch(`/public/Feature.json`)
+        fetch(`/Feature.json`)
         .then((res) => res.json())
         .then((data) => setFeature(data));
     }, []);
