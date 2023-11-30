@@ -24,16 +24,13 @@ const ManageSlot = () => {
 
   const handleRejectClick = () => {
     setShowEmail(true);
-    setRejectionSubmitted(false); // Reset the submission status
+    setRejectionSubmitted(false); 
   };
 
   const handleSubmitEmail = () => {
-    // Add your logic for submitting the email
-    // ...
-
-    // After successfully submitting the email, hide the email field
+    
     setShowEmail(false);
-    setRejectionSubmitted(true); // Set the submission status to true
+    setRejectionSubmitted(true); 
   };
 
   useEffect(() => {
