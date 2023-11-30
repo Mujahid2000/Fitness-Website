@@ -30,7 +30,7 @@ const PostList = ({ posts, reFetch, setRefetch }) => {
           status: action === "up" ? "upVote" : "downVote"
         };
         axios
-          .post("http://localhost:5050/updateVotes", data)
+          .post("https://fitness-server-iota.vercel.app/updateVotes", data)
           .then((response) => {
             setRefetch(!reFetch)
             console.log("Votes updated successfully:", response.data);

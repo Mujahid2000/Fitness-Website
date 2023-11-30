@@ -15,7 +15,7 @@ const Subscription = () => {
       email: formData.get('email')
     });
     
-    axios.post('http://localhost:5050/subscribe', {
+    axios.post('https://fitness-server-iota.vercel.app/subscribe', {
       name: formData.get('name'),
       email: formData.get('email')
     })

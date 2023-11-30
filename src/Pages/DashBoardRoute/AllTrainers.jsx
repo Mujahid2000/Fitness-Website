@@ -18,7 +18,7 @@ const AllTrainers = () => {
     })
   
     axios
-      .get("http://localhost:5050/trainer")
+      .get("https://fitness-server-iota.vercel.app/trainer")
       .then((res) => res.data)
       .then((data) => {
         setTrainers(data)

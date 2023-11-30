@@ -37,11 +37,12 @@ const TrainerApply = () => {
         // availableTimeDay: formData.get('availableTimeDay'),
         schedule,
         salary: formData.get('salary'),
+        experience: formData.get('experience'),
         otherInfo: formData.get('otherInfo'),
         role : 'member'
     });
 
-    axios.post('http://localhost:5050/trainerApply', {
+    axios.post('https://fitness-server-iota.vercel.app/trainerApply', {
         name: formData.get('name'),
         age: formData.get('age'),
         image: formData.get('image'),
@@ -52,7 +53,8 @@ const TrainerApply = () => {
         role : 'member',
         email: user.email,
         title: 'FITNESS INSTRUCTOR',
-        salary: formData.get('salary')
+        salary: formData.get('salary'),
+        experience: formData.get('experience')
     })
     .then(res => {
         console.log(res.data);
@@ -156,7 +158,7 @@ return (
                 required
             />
             </div>
-            <div className="mb-4 flex">
+            <div className="mb-4 flex gap-5">
 
             <div>
             <label htmlFor="salary" className="block text-sm font-medium text-gray-600">
@@ -171,13 +173,13 @@ return (
             />
             </div>
             <div>
-            <label htmlFor="salary" className="block text-sm font-medium text-gray-600">
-                Salary
+            <label htmlFor="experience" className="block text-sm font-medium text-gray-600">
+                Experience
             </label>
             <input
                 type="number"
-                id="salary"
-                name="salary"
+                id="experience"
+                name="experience"
                 className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring focus:border-blue-300"
                 required
             />

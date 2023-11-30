@@ -10,7 +10,7 @@ const Community = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5050/forum")
+      .get("https://fitness-server-iota.vercel.app/forum")
       .then((res) => {
         const { forum: result, voteList: countVote } = res.data;
         let newData = [];

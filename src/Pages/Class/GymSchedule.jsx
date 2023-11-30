@@ -6,7 +6,7 @@ const GymSchedule = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    Axios.get('http://localhost:5050/weeklySchedule')
+    Axios.get('https://fitness-server-iota.vercel.app/weeklySchedule')
       .then(res => setData(res.data))
       .catch(error => console.error('Error fetching weekly schedule', error));
   }, []);

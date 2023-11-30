@@ -2,10 +2,10 @@ import { Tabs } from 'keep-react';
 
 const About = () => {
     return (
-        <div className='max-w-7xl mx-auto mt-5'>
+        <div className=' lg:max-w-7xl mx-auto mt-5'>
           <h2 className='text-5xl text-center mt-5 mb-4 font-mono font-bold'>About Us</h2>
-            <Tabs aria-label="tabs" style="underline" borderPosition="bottom" className='max-w-7xl mx-auto'>
-      <Tabs.Item title="Our Commitment">
+            <Tabs aria-label="tabs" style="underline" borderPosition="bottom" className='w-96 md:max-w-5xl lg:max-w-7xl mx-auto'>
+      <Tabs.Item title="Our Commitment" >
         <p className='text-center text-xl'>We understand the challenges that the middle class often faces when it comes to investing in fitness and wellness. That's why we've made it our mission to provide top-notch fitness tracking technology at affordable prices. At Fitness Tracker, we're breaking down barriers, ensuring that cutting-edge health monitoring is within reach for every budget.</p>
       </Tabs.Item>
       <Tabs.Item title="Quality for Every Body">

@@ -29,10 +29,6 @@ const Profile = () => {
   return (
     <div className="bg-white p-6 rounded-md shadow-md">
       <form onSubmit={handleSubmit}>
-        {/* User Avatar */}
-        {/* ... (same as before) */}
-
-        {/* User Details Form */}
         <div>
           <h3 className="text-lg font-semibold mb-2">Account Details</h3>
           <div className="mb-4">
@@ -57,36 +53,11 @@ const Profile = () => {
               id="email"
               name="email"
               value={user.email}
-              disabled
+              
               className="w-full p-2 border border-gray-300 rounded-md bg-gray-100"
             />
-            <p className="text-gray-500 text-sm mt-1">Email cannot be modified</p>
           </div>
-          <div className="mb-4">
-            <label htmlFor="role" className="block text-gray-700 font-semibold mb-2">
-              Role
-            </label>
-            <input
-              type="text"
-              id="role"
-              name="role"
-              value={user.role}
-              onChange={handleChange}
-              className="w-full p-2 border border-gray-300 rounded-md"
-            />
-          </div>
-          <div>
-            <label htmlFor="about" className="block text-gray-700 font-semibold mb-2">
-              About Me
-            </label>
-            <textarea
-              id="about"
-              name="about"
-              value={user.about}
-              onChange={handleChange}
-              className="w-full p-2 border border-gray-300 rounded-md resize-none"
-            />
-          </div>
+        
         </div>
 
         {/* Submit Button */}

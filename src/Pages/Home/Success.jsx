@@ -20,13 +20,13 @@ const Success = () => {
     <div className="mt-5">
       <h2 className="text-4xl font-semibold text-center mb-5">Our Success Story</h2>
       <hr />
-      <div className="grid grid-cols-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
         {success.map((successStory, index) => (
           <div
             key={successStory.id}
             className="max-w-md mx-auto bg-white rounded-md overflow-hidden shadow-md m-4"
           >
-            <img className="w-full h-72 object-cover" src={successStory.image} alt="" />
+            <img className="w-96 h-72 object-cover" src={successStory.image} alt="" />
             <div className="p-6">
               <h2 className="text-xl font-semibold mb-2">{successStory.name} </h2>
               <h4 className="text-xl font-semibold mb-2">{successStory.occupation} </h4>

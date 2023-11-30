@@ -67,7 +67,7 @@ const router = createBrowserRouter([
       {
         path: '/trainerDetail/:id',
         element: <PrivateRoute><TrainerDetails></TrainerDetails> </PrivateRoute> ,
-        loader: ({ params }) => fetch(`http://localhost:5050/trainer/${params.id}`),
+        loader: ({ params }) => fetch(`https://fitness-server-iota.vercel.app/trainer/${params.id}`),
       },
       {
         path: '/trainerApply',

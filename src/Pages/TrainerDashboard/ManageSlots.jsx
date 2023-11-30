@@ -23,7 +23,7 @@ const ManageSlot = () => {
     })
   
     axios
-      .get(`http://localhost:5050/trainerBooked/${user.displayName}`)
+      .get(`https://fitness-server-iota.vercel.app/trainerBooked/${user.displayName}`)
       .then((res) => res.data)
       .then((data) => {
         setTrainers(data)

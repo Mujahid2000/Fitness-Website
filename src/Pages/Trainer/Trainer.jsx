@@ -11,7 +11,7 @@ const Trainer = () => {
 
 
     useEffect(() => {
-      axios.get('http://localhost:5050/trainer')
+      axios.get('https://fitness-server-iota.vercel.app/trainer')
         .then(res => res.data)
         .then(data => setTrainer(data))
         .catch(error => console.error('Error fetching data:', error));

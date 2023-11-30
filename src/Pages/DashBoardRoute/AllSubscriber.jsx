@@ -6,7 +6,7 @@ const AllSubscriber = () => {
     const [subscribers, setSubscribers] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:5050/subscribe')
+        axios.get('https://fitness-server-iota.vercel.app/subscribe')
             .then(res => res.data)
             .then(data => setSubscribers(data))
             .catch(error => console.error('Error fetching data:', error));

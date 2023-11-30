@@ -2,7 +2,7 @@ import axios from "axios";
 
 
 const axiosPublic = axios.create({
-    baseURL: 'http://localhost:5050'
+    baseURL: 'https://fitness-server-iota.vercel.app'
 })
 const UseAxiosPublic = () => {
     return  axiosPublic;

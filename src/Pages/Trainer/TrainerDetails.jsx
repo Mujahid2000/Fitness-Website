@@ -13,7 +13,7 @@ const TrainerDetails = (book) => {
   
 
   useEffect(() => {
-    axios.get('http://localhost:5050/trainerBooked')
+    axios.get('https://fitness-server-iota.vercel.app/trainerBooked')
       .then(res => res.data)
       .then(data => setBooking(data)) 
       .catch(error => console.error('Error fetching booked slots:', error));
@@ -23,7 +23,7 @@ const TrainerDetails = (book) => {
 
   useEffect(() => {
     if (_id) {
-      axios.get(`http://localhost:5050/trainer/${_id}`)
+      axios.get(`https://fitness-server-iota.vercel.app/trainer/${_id}`)
         .then(res => res.data)
         .then(data => setData(data))
         .catch(error => console.error('Error fetching trainer data:', error));

@@ -22,7 +22,7 @@ const TrainerBooked = () => {
       return;
     }
 
-    axios.post("http://localhost:5050/trainerBooked", {
+    axios.post("https://fitness-server-iota.vercel.app/trainerBooked", {
       user,
       packageName: packageName,
       selectedSlot: finalSelectedSlot,

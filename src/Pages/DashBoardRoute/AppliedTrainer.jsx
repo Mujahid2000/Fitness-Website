@@ -22,7 +22,7 @@ const AppliedTrainer = () => {
     })
   
     
-      axios.get("http://localhost:5050/trainerApply")
+      axios.get("https://fitness-server-iota.vercel.app/trainerApply")
         .then((res) => res.data)
         .then((data) => {
             setApply(data)
@@ -31,7 +31,7 @@ const AppliedTrainer = () => {
         .catch((error) => console.error("Error fetching data:", error));
 
     const handleAccept = async (_id) => {
-      const res = await axios.patch(`http://localhost:5050/trainerApply/${_id}`);
+      const res = await axios.patch(`https://fitness-server-iota.vercel.app/trainerApply/${_id}`);
       console.log(res.data);
       Swal.fire({
         title: 'Success!',

@@ -26,7 +26,7 @@ const Gallery = () => {
         setLoading(true);
 
         axios
-            .get('http://localhost:5050/gallery', {
+            .get('https://fitness-server-iota.vercel.app/gallery', {
                 params: {
                     page: activePage,
                     size: LIMIT,

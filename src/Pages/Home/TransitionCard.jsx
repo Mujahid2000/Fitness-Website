@@ -25,7 +25,7 @@ return (
     <div>
         <h2 className='text-5xl mt-9 mb-9 text-center font-sans font-bold'>Our <span className='text-sky-500'>Team </span> </h2>
         <hr />
-        <div className='grid grid-cols-4 mt-5'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mt-5'>
     {
         team.map(teams => 
             <div key={teams.id}

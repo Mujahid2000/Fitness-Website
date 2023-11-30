@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 
 const axiosSecure = axios.create({
-    baseURL: 'http://localhost:5050'
+    baseURL: 'https://fitness-server-iota.vercel.app'
 })
 
 const UseAxiosSecure = () => {
