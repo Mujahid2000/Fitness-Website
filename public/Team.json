@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "name": "SELENA KYLE",
+        "title": "FITNESS INSTRUCTOR",
+        "experience": "3+ years",
+        "image": "https://i.ibb.co/t3YLDHM/team11.jpg"
+    },
+    {
+        "id": 2,
+        "name": "JAMES DUNHALL",
+        "title": "FITNESS INSTRUCTOR",
+        "experience": "3+ years",
+        "image": "https://i.ibb.co/7J9VPV9/team12.jpg"
+    },
+    {
+        "id": 3,
+        "name": "ALICA MEADOW",
+        "title": "FITNESS INSTRUCTOR",
+        "experience": "3+ years",
+        "image": "https://i.ibb.co/ss7Dqwn/team13.jpg"
+    },
+    {
+        "id": 4,
+        "name": "THOMAS PARK",
+        "title": "FITNESS INSTRUCTOR",
+        "experience": "3+ years",
+        "image": "https://i.ibb.co/Q90PYr1/team14.jpg"
+    }
+]

@@ -1,0 +1,38 @@
+[
+    {
+      "id": 1,
+      "title": "Dynamic Pulse Tracking",
+      "description": "Experience real-time updates on your pulse, steps, and calories burned for an active lifestyle.",
+      "image": "https://i.ibb.co/Kmw4pS8/smartwatch-screen.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Continuous Wellness Insights",
+      "description": "Optimize your workouts with 24/7 heart rate monitoring, ensuring a comprehensive approach to your fitness journey.",
+      "image": "https://i.ibb.co/kQgSzVG/wellness-lifestyle-refresh-flower.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Smart Sleep Analytics",
+      "description": "Unlock advanced sleep insights to enhance your overall well-being, tailored to your unique sleep patterns.",
+      "image": "https://i.ibb.co/wK2rWzb/6169707-23930.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Adventure-Ready GPS Navigation",
+      "description": "Explore the outdoors confidently with GPS integration, precisely mapping your routes and tracking your adventures.",
+      "image": "https://i.ibb.co/C20t95F/top-view-hands-holding-compass-smartphone.jpg"
+    },
+    {
+      "id": 5,
+      "title": "AquaFit Endurance",
+      "description": "Dive into fitness with our water-resistant trackers, designed for durability during swimming and high-intensity workouts.",
+      "image": "https://i.ibb.co/41THPyX/mid-shot-athlete-strecthing-arms.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Your Fitness, Your Way",
+      "description": "Craft a personalized fitness experience with custom workouts, calorie tracking, and multi-sport modes for individualized health goals.",
+      "image": "https://i.ibb.co/bXwcnTH/images.jpg"
+    }
+  ]

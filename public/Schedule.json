@@ -1,0 +1,101 @@
+[
+    {
+      
+      "time": "8:00 AM",
+      "exercise": "Morning Stretch",
+      "instructor": "John Doe",
+      "exercise2": "Cardio Warm-up",
+      "instructor2": "Jane Smith",
+      "exercise3": "Bodyweight Exercises",
+      "instructor3": "Chris Johnson",
+      "exercise4": "Functional Training",
+      "instructor4": "Emily Davis",
+      "exercise5": "Cool Down",
+      "instructor5": "Michael White"
+    },
+    {
+      
+      "time": "9:00 AM",
+      "exercise": "Pilates",
+      "instructor": "Alex Turner",
+      "exercise2": "HIIT",
+      "instructor2": "Sarah Thompson",
+      "exercise3": "Yoga",
+      "instructor3": "William Brown",
+      "exercise4": "Strength Training",
+      "instructor4": "Olivia Adams",
+      "exercise5": "Flexibility Exercises",
+      "instructor5": "David Rodriguez"
+    },
+    {
+      
+      "time": "10:00 AM",
+      "exercise": "Zumba",
+      "instructor": "Sophia Lee",
+      "exercise2": "Kickboxing",
+      "instructor2": "Daniel Garcia",
+      "exercise3": "CrossFit",
+      "instructor3": "Megan Turner",
+      "exercise4": "Balance Training",
+      "instructor4": "Nathan Brown",
+      "exercise5": "Meditation",
+      "instructor5": "Ava White"
+    },
+    {
+      
+      "time": "11:00 AM",
+      "exercise": "Swimming",
+      "instructor": "Elijah Miller",
+      "exercise2": "Cycling",
+      "instructor2": "Emma Davis",
+      "exercise3": "Plyometrics",
+      "instructor3": "Liam Johnson",
+      "exercise4": "Piloxing",
+      "instructor4": "Avery Smith",
+      "exercise5": "Stability Ball Exercises",
+      "instructor5": "Grace Turner"
+    },
+    {
+      
+      "time": "12:00 PM",
+      "exercise": "TRX Suspension Training",
+      "instructor": "Logan Adams",
+      "exercise2": "Powerlifting",
+      "instructor2": "Mia Brown",
+      "exercise3": "Barre",
+      "instructor3": "Noah White",
+      "exercise4": "Rowing",
+      "instructor4": "Aria Johnson",
+      "exercise5": "Stretch and Relax",
+      "instructor5": "Eva Davis"
+    },
+    {
+      
+      "time": "1:00 PM",
+      "exercise": "Boxing",
+      "instructor": "Sophie Turner",
+      "exercise2": "Aerobics",
+      "instructor2": "James White",
+      "exercise3": "Kettlebell Training",
+      "instructor3": "Charlie Smith",
+      "exercise4": "Circuit Training",
+      "instructor4": "Zoe Davis",
+      "exercise5": "Tai Chi",
+      "instructor5": "Isaac Johnson"
+    },
+    {
+      
+      "time": "2:00 PM",
+      "exercise": "Salsa Dancing",
+      "instructor": "Maria Garcia",
+      "exercise2": "Body Combat",
+      "instructor2": "Lucas Brown",
+      "exercise3": "Paddleboarding",
+      "instructor3": "Elena Adams",
+      "exercise4": "Crosstraining",
+      "instructor4": "Victor White",
+      "exercise5": "Mindfulness Meditation",
+      "instructor5": "Luna Johnson"
+    }
+  ]
+  

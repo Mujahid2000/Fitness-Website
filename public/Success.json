@@ -1,0 +1,31 @@
+[
+    {
+      "id": 1,
+      "name": "Sarah",
+      "occupation": "Professional and Mother",
+      "journey": "Determined to prioritize her health, Sarah started using Fitness Tracker to monitor her daily activity. Through consistent tracking, goal setting, and personalized workout plans, Sarah not only shed those extra pounds but also discovered a newfound energy and confidence. Her success story is a testament to the transformative power of dedication and the support offered by Fitness Tracker.",
+      "image": "https://i.ibb.co/sFmcxP9/award1.jpg"
+    },
+    
+    {
+      "id": 3,
+      "name": "Lisa",
+      "occupation": "Retiree",
+      "journey": "Lisa, a retiree, embraced a more active lifestyle with Fitness Tracker. By monitoring her daily steps and engaging in tailored workout plans, Lisa not only improved her physical health but also discovered a vibrant social community through the tracker's connected features. Lisa's story demonstrates that age is no barrier to leading an active and fulfilling life, and Fitness Tracker is there to support every step of the way.",
+      "image": "https://i.ibb.co/ss0WKcK/aw.jpg"
+    },
+    {
+      "id": 4,
+      "name": "The Johnsons",
+      "occupation": "Family",
+      "journey": "The Johnson family turned fitness into a shared adventure with Fitness Tracker. From friendly step challenges to weekend hikes, the Johnsons made health a family affair. With the tracker's family-friendly features, they celebrated each other's milestones, fostering a culture of wellness within their home. The Johnsons prove that fitness is more enjoyable and achievable when done together.",
+      "image": "https://i.ibb.co/DK16c2w/award3.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Maria",
+      "occupation": "Middle-Class Professional",
+      "journey": "Maria, a middle-class professional, found balance with Fitness Tracker. By monitoring her sleep, stress levels, and workouts, Maria achieved a holistic approach to wellness. The tracker's personalized insights helped her manage stress, improve sleep quality, and maintain a healthy weight. Maria's story exemplifies the importance of a well-rounded approach to health, and how Fitness Tracker can be the key to finding that balance.",
+      "image": "https://i.ibb.co/L0JHpdq/award2.jpg"
+    }
+  ]

@@ -1,0 +1,162 @@
+[
+    {
+        "name": "SELENA KYLE",
+        "title": "FITNESS INSTRUCTOR",
+        "experience": "3+ years",
+        "schedule": {
+            "0": "08:00 AM - 09:00 AM",
+            "1": "06:00 PM - 07:00 PM",
+            "3": "02:00 PM - 03:00 PM",
+            "4": "08:00 AM - 09:00 AM",
+            "5": "06:00 PM - 07:00 PM",
+            "7": "02:00 PM - 03:00 PM"
+        },
+        "image": "https://i.ibb.co/t3YLDHM/team11.jpg",
+        "about": "Selena is passionate about promoting a healthy lifestyle. She specializes in High-intensity Interval Training (HIIT) and enjoys working with clients to achieve their fitness goals. Selena believes that a positive mindset is key to a successful fitness journey.",
+        "salary": 60000
+    },
+    {
+        "name": "JAMES DUNHALL",
+        "title": "FITNESS INSTRUCTOR",
+        "experience": "3+ years",
+        "schedule": {
+            "0": "09:00 AM - 10:00 AM",
+            "1": "07:00 PM - 08:00 PM",
+            "3": "03:00 PM - 04:00 PM",
+            "4": "08:00 AM - 09:00 AM",
+            "5": "06:00 PM - 07:00 PM",
+            "7": "02:00 PM - 03:00 PM"
+        },
+        "image": "https://i.ibb.co/7J9VPV9/team12.jpg",
+        "about": "James is a certified personal trainer who believes in making fitness fun and accessible to every0. He enjoys creating diverse and engaging workouts that cater to individual needs and goals. James is also a nutrition enthusiast, providing dietary guidance for a holistic approach to health.",
+        "salary": 70000
+    },
+    {
+        "name": "ALICA MEADOW",
+        "title": "FITNESS INSTRUCTOR",
+        "experience": "3+ years",
+        "schedule": {
+            "0": "10:00 AM - 11:00 AM",
+            "1": "08:00 PM - 09:00 PM",
+            "3": "04:00 PM - 05:00 PM",
+            "4": "09:00 AM - 10:00 AM",
+            "5": "07:00 PM - 08:00 PM",
+            "7": "01:00 PM - 02:00 PM"
+        },
+        "image": "https://i.ibb.co/ss7Dqwn/team13.jpg",
+        "about": "Alica is not only a fitness instructor but also a certified nutritionist. She is dedicated to helping clients build strength and endurance while providing personalized dietary advice to complement their fitness routines. Alica believes in the power of nourishing the body and mind for overall well-being.",
+        "salary": 75000
+    },
+    {
+        "name": "THOMAS PARK",
+        "title": "FITNESS INSTRUCTOR",
+        "experience": "3+ years",
+        "schedule": {
+            "0": "11:00 AM - 12:00 PM",
+            "1": "09:00 PM - 10:00 PM",
+            "3": "05:00 PM - 06:00 PM",
+            "4": "10:00 AM - 11:00 AM",
+            "5": "08:00 PM - 09:00 PM",
+            "7": "02:00 PM - 03:00 PM"
+        },
+        "image": "https://i.ibb.co/Q90PYr1/team14.jpg",
+        "about": "Thomas is an advocate for functional fitness, emphasizing movements that support daily activities. With a background in sports science, he tailors his sessions to improve both strength and flexibility. Thomas enjoys creating challenging yet enjoyable workouts for his clients.",
+        "salary": 65000
+    },
+    {
+        "name": "EMMA WILSON",
+        "title": "FITNESS INSTRUCTOR",
+        "experience": "4+ years",
+        "schedule": {
+            "0": "12:00 PM - 01:00 PM",
+            "1": "10:00 PM - 11:00 PM",
+            "3": "06:00 PM - 07:00 PM",
+            "4": "11:00 AM - 12:00 PM",
+            "5": "09:00 PM - 10:00 PM",
+            "7": "03:00 PM - 04:00 PM"
+        },
+        "image": "https://i.ibb.co/rM25Jsx/cheerful-young-sports-woman-with-arms-crossed.jpg",
+        "about": "Emma is a cheerful and energetic fitness instructor with a passion for improving overall well-being. She specializes in a variety of workout styles, including cardio and strength training. Emma's goal is to make fitness enjoyable and empowering for all her clients.",
+        "salary": 80000
+    },
+    {
+        "name": "NATHANIEL REYES",
+        "title": "FITNESS INSTRUCTOR",
+        "experience": "5+ years",
+        "schedule": {
+            "0": "01:00 PM - 02:00 PM",
+            "1": "11:00 PM - 12:00 AM",
+            "3": "07:00 PM - 08:00 PM",
+            "4": "12:00 PM - 01:00 PM",
+            "5": "10:00 PM - 11:00 PM",
+            "7": "04:00 PM - 05:00 PM"
+        },
+        "image": "https://i.ibb.co/HFNv80d/portrait-young-handsome-sportsman-holds-hand-chin-dark-background.jpg",
+        "about": "Nathaniel is a sports enthusiast and a fitness expert with a focus on functional strength training. He tailors his sessions to individual needs and enjoys helping clients achieve their fitness goals through enjoyable and effective workouts. Nathaniel is also an advocate for a balanced and healthy lifestyle.",
+        "salary": 90000
+    },
+    {
+        "name": "OLIVIA GREENE",
+        "title": "FITNESS INSTRUCTOR",
+        "experience": "4+ years",
+        "schedule": {
+            "0": "02:00 PM - 03:00 PM",
+            "1": "12:00 AM - 01:00 AM",
+            "3": "08:00 PM - 09:00 PM",
+            "4": "01:00 PM - 02:00 PM",
+            "5": "11:00 PM - 12:00 AM",
+            "7": "05:00 PM - 06:00 PM"
+        },
+        "image": "https://i.ibb.co/94Bjbc8/beautiful-sportive-girl-posing-with-crossed-arms-dark-wall.jpg",
+        "about": "Olivia is a graceful fitness instructor with a background in dance. She incorporates her love for movement into energetic and fun workouts. Olivia believes in the transformative power of exercise to improve both physical and mental well-being. Her goal is to inspire clients to enjoy fitness as a lifelong journey.",
+        "salary": 75000
+    },
+    {
+        "name": "MARCUS RIVERA",
+        "title": "FITNESS INSTRUCTOR",
+        "experience": "6+ years",
+        "schedule": {
+            "0": "03:00 PM - 04:00 PM",
+            "1": "01:00 AM - 02:00 AM",
+            "3": "09:00 PM - 10:00 PM",
+            "4": "02:00 PM - 03:00 PM",
+            "5": "12:00 AM - 01:00 AM",
+            "7": "06:00 PM - 07:00 PM"
+        },
+        "image": "https://i.ibb.co/3vH0P7b/beautiful-sports-couple-is-engaged-gym.jpg",
+        "about": "Marcus is a certified strength and conditioning specialist with over 7 years of experience. He is dedicated to helping clients build lean muscle mass and improve their overall athletic performance. Marcus believes in the importance of a personalized approach to fitness to achieve long-term success.",
+        "salary": 10000
+    },
+    {
+        "name": "LILY CARTER",
+        "title": "FITNESS INSTRUCTOR",
+        "experience": "4+ years",
+        "schedule": {
+            "0": "04:00 PM - 05:00 PM",
+            "1": "02:00 AM - 03:00 AM",
+            "3": "10:00 PM - 11:00 PM",
+            "4": "03:00 PM - 04:00 PM",
+            "5": "01:00 AM - 02:00 AM",
+            "7": "07:00 PM - 08:00 PM"
+        },
+        "image": "https://i.ibb.co/X3fnmGd/gym-instructor-guiding-woman-while-exercising-with-dumbbell.jpg",
+        "about": "Lily is a yoga enthusiast and fitness instructor who integrates mindfulness into her sessions. She believes in the importance of balance and flexibility for a well-rounded approach to health. Lily's calming and positive presence creates a supportive environment for her clients to achieve their fitness goals.",
+        "salary": 85000
+    },
+    {
+        "name": "DANIEL MARTINEZ",
+        "title": "FITNESS INSTRUCTOR",
+        "experience": "5+ years",
+        "schedule": {
+            "0": "05:00 PM - 06:00 PM",
+            "1": "03:00 AM - 04:00 AM",
+            "3": "11:00 PM - 12:00 AM",
+            "4": "04:00 PM - 05:00 PM",
+            "5": "02:00 AM - 03:00 AM",
+            "7": "08:00 PM - 09:00 PM"
+        },
+        "image": "https://i.ibb.co/kBHcTqN/handsome-man-is-engaged-gym.jpg",
+        "about": "Daniel is a high-energy fitness instructor with over 5 years of experience. He specializes in dynamic workouts and is dedicated to helping clients achieve their fitness goals through challenging and enjoyable training sessions. Daniel believes in the power of consistency and motivation for a successful fitness journey.",
+        "salary": 80000
+    }
+]
