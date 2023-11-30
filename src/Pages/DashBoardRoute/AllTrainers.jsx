@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import UseAxiosSecure from "../../Hooks/UseAxiosSecure";
 import { useQuery } from "@tanstack/react-query";
+import { Helmet } from "react-helmet";
 
 const AllTrainers = () => {
   const [trainers, setTrainers] = useState([]);
@@ -26,7 +27,11 @@ const AllTrainers = () => {
       .catch((error) => console.error("Error fetching data:", error));
 
   return (
-    <div className="bg-[#9b59b6] h-screen p-6">
+      <div>
+        <Helmet>
+          <title>Dashboard || All Trainers</title>
+        </Helmet>
+<div className="bg-[#9b59b6] h-screen p-6">
       <h2 className="text-5xl text-center mb-6 mt-6 text-white font-serif font-semibold">
         All Trainers
       </h2>
@@ -60,6 +65,7 @@ const AllTrainers = () => {
         </table>
       </div>
     </div>
+      </div>
   );
 };
 

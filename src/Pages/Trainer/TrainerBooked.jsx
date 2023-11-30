@@ -5,6 +5,7 @@ import axios from "axios";
 import { FaRegCircleDot } from "react-icons/fa6";
 import {  useNavigate, useParams } from 'react-router-dom';
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet";
 
 const TrainerBooked = () => {
   const { user } = useContext(AuthContext);
@@ -50,7 +51,11 @@ const TrainerBooked = () => {
 
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-9 mt-7 max-w-6xl mx-auto">
+    <div>
+      <Helmet>
+                <title>Trainer || Booked</title>
+      </Helmet>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-9 mt-7 max-w-6xl mx-auto">
       <div>
         <Card className="max-w-sm">
           <h5
@@ -187,6 +192,8 @@ const TrainerBooked = () => {
         </Card>
       </div>
     </div>
+    </div>
+    
   );
 };
 

@@ -6,6 +6,7 @@ import { useState } from 'react';
 import Swal from 'sweetalert2';
 import UseAxiosSecure from '../../Hooks/UseAxiosSecure';
 import { useQuery } from '@tanstack/react-query';
+import { Helmet } from 'react-helmet';
 
 const AppliedTrainer = () => {
     const [openModal, setOpenModal] = useState(false);
@@ -42,7 +43,12 @@ const AppliedTrainer = () => {
 
   
     return (
-      <div className='bg-[#FFA500] h-full'>
+        <div>
+            <Helmet>
+                <title>Dashboard || Applied Trainers</title>
+            </Helmet>
+
+            <div className='bg-[#FFA500] h-full'>
         <div className="flex flex-col px-4">
                 <div className="-my-2 mt-6 overflow-x-auto sm:-mx-6 lg:-mx-8">
                 <div className="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
@@ -108,6 +114,8 @@ const AppliedTrainer = () => {
         </div>
     </div>
     </div>
+        </div>
+      
     );
 };
 

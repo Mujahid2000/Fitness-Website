@@ -1,6 +1,7 @@
 import axios from "axios";
 import { Spinner } from "keep-react";
 import { useState, useEffect } from "react";
+import { Helmet } from "react-helmet";
 import InfiniteScroll from "react-infinite-scroll-component";
 
 const LIMIT = 5;
@@ -51,6 +52,11 @@ const Gallery = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Fitness || Gallery</title>
+            </Helmet>
+
+            <div>
             <div className="relative h-screen flex items-center justify-center" style={containerStyle}>
                 <div className="absolute inset-0 bg-black opacity-25 rounded-xl"></div>
                 <div className="relative z-10 text-white text-center">
@@ -76,6 +82,8 @@ const Gallery = () => {
                 </div>
             </InfiniteScroll>
         </div>
+        </div>
+        
     );
 };
 

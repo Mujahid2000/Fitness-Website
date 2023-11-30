@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 
 const AllSubscriber = () => {
     const [subscribers, setSubscribers] = useState([]);
@@ -12,7 +13,11 @@ const AllSubscriber = () => {
     }, []);
 
     return (
-        <div className='bg-purple-700 h-screen p-6'>
+        <div>
+            <Helmet>
+                <title>Dashboard || ALL Subscriber</title>
+            </Helmet>
+<div className='bg-purple-700 h-screen p-6'>
             <h2 className='text-5xl text-center mb-6 mt-6 text-white font-serif font-semibold'>All Subscribers</h2>
             <div className="overflow-x-auto">
                 <table className="min-w-full bg-white border border-gray-300">
@@ -32,6 +37,7 @@ const AllSubscriber = () => {
                     </tbody>
                 </table>
             </div>
+        </div>
         </div>
     );
 };

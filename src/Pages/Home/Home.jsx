@@ -1,3 +1,5 @@
+
+import { Helmet } from "react-helmet";
 import About from "./About";
 import HomeBanner from "./Banner";
 import Blog from "./Blog";
@@ -10,7 +12,9 @@ import TransitionCard from "./TransitionCard";
 const Home = () => {
     return (
         <div>
-            
+            <Helmet>
+                <title>Home</title>
+            </Helmet>
             <HomeBanner></HomeBanner>
             <Featured></Featured>
             <About></About>

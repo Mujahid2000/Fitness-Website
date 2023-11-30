@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import PostList from "./PostList";
 import axios from "axios";
+import { Helmet } from "react-helmet";
 
 const Community = () => {
   const [posts, setPosts] = useState([]);
@@ -32,6 +33,9 @@ const Community = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Fitness Website || Community</title>
+      </Helmet>
       <div className="container mx-auto my-8">
         <h1 className="text-3xl font-bold mb-4">Post List</h1>
         <PostList posts={posts} reFetch={reFetch} setRefetch={setRefetch} />

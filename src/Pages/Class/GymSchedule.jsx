@@ -1,5 +1,6 @@
 import Axios from "axios";
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 
 const GymSchedule = () => {
   const [data, setData] = useState([]);
@@ -11,7 +12,11 @@ const GymSchedule = () => {
   }, []);
 
   return (
-    <div className="overflow-x-auto bg-slate-400 p-4 mt-5">
+    <div>
+      <Helmet>
+        <title>Fitness || Class</title>
+      </Helmet>
+<div className="overflow-x-auto bg-slate-400 p-4 mt-5">
       <table className="table-auto w-full border-collapse border border-gray-800 mt-6">
         <thead className="bg-slate-50 text-lg">
           <tr>
@@ -50,6 +55,7 @@ const GymSchedule = () => {
           ))}
         </tbody>
       </table>
+    </div>
     </div>
   );
 };

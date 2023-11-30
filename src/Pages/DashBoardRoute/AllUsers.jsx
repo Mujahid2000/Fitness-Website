@@ -2,6 +2,7 @@ import { useQuery } from '@tanstack/react-query';
 import { FaUserCheck } from 'react-icons/fa';
 import Swal from 'sweetalert2';
 import UseAxiosSecure from '../../Hooks/UseAxiosSecure';
+import { Helmet } from 'react-helmet';
 
 const AllUsers = () => {
 
@@ -35,6 +36,9 @@ const AllUsers = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Dashboard || ALL Users</title>
+            </Helmet>
             <div >
         <div className="flex justify-evenly my-4 ">
         <h2 className="text-3xl">All Users</h2>

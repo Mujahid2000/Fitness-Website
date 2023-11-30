@@ -1,8 +1,9 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import UseAxiosSecure from "../../Hooks/UseAxiosSecure";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import { AuthContext } from "../../Provider/AuthProvider";
+import { Helmet } from "react-helmet";
 
 
 
@@ -12,7 +13,7 @@ const ManageSlot = () => {
   const [trainers, setTrainers] = useState([]);
   const axiosSecure = UseAxiosSecure();
   const {user} = useContext(AuthContext);
-   
+  
     const {refetch, data: data =[] } = useQuery({
         queryKey: ['users'],
         queryFn: async () =>{
@@ -30,8 +31,14 @@ const ManageSlot = () => {
       })
       .catch((error) => console.error("Error fetching data:", error));
 
+
+  
   return (
-    <div className="overflow-x-auto max-w-full mx-auto">
+    <div>
+      <Helmet>
+        <title>Dashboard || Manage Slots</title>
+      </Helmet>
+<div className="overflow-x-auto max-w-full mx-auto">
       <table className="table-auto w-full mx-auto border-collapse">
         <thead>
           <tr className="bg-gray-800 text-white">
@@ -49,11 +56,12 @@ const ManageSlot = () => {
               <td className="py-2 px-4 text-center">{item.user.email}</td>
               <td className="py-2 px-4 text-center">{item.packageName}</td>
               <td className="py-2 px-4 text-center">{item.selectedSlot}</td>
-              <td className="py-2 px-4 text-center">{item.price}</td>
+              <td className="py-2 px-4 text-center">${item.price}</td>
             </tr>
           ))}
         </tbody>
       </table>
+    </div>
     </div>
   );
 };

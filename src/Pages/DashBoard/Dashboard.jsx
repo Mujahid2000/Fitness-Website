@@ -14,6 +14,7 @@ import {
 } from 'react-icons/fa';
 import UseAdmin from '../../Hooks/UseAdmin';
 import UseTrainer from '../../Hooks/UseTrainer';
+import { Helmet } from 'react-helmet';
 
 const Dashboard = () => {
   // todo: get isAdmin and isTrainer values from the database (replace true with your logic)
@@ -22,7 +23,11 @@ const Dashboard = () => {
   
 
   return (
-    <div className='flex'>
+    <div>
+      <Helmet>
+        <title>Dashboard</title>
+      </Helmet>
+<div className='flex'>
       <div className='w-64 min-h-screen bg-indigo-500 text-center'>
         <div className='flex justify-center items-center gap-2 mt-2'>
           <img className='w-10 h-10 rounded-lg' src='https://i.ibb.co/cYYK2CY/Screenshot-2023-11-24-003245.png' alt='' />
@@ -112,6 +117,7 @@ const Dashboard = () => {
       <div className='flex-1'>
         <Outlet />
       </div>
+    </div>
     </div>
   );
 };

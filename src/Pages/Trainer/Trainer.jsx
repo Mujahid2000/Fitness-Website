@@ -5,6 +5,7 @@ import { BsWhatsapp } from "react-icons/bs";
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 const Trainer = () => {
     const [trainer, setTrainer] = useState([]);
 
@@ -20,7 +21,11 @@ const Trainer = () => {
 
 
     return (
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-6'>
+      <div>
+        <Helmet>
+                <title>Fitness || Trainer</title>
+            </Helmet>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-6'>
       {
         trainer.map(trainers => 
           <div key={trainers._id} className="bg-white p-6 rounded-lg shadow-md">
@@ -47,6 +52,8 @@ const Trainer = () => {
         )
       }
         </div>
+      </div>
+       
     );
 };
 

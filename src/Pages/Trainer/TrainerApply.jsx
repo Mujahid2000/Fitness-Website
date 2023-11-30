@@ -4,6 +4,7 @@ import {  useContext, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const skillsOptions = ['Self-Development', 'Positivity', 'Extensive Knowledge of Fitness', 'Skills in Communication', 'Inspiring Others', 'Being Approachable and Friendly'];
 
@@ -72,7 +73,11 @@ const TrainerApply = () => {
 
 
 return (
-    <div className="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 min-h-screen flex items-center justify-center">
+    <div>
+        <Helmet>
+            <title>Fitness || Apply</title>
+        </Helmet>
+<div className="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 min-h-screen flex items-center justify-center">
         <div className="max-w-md mx-auto p-6 bg-[#9cf] rounded-md shadow-md mt-4 mb-4">
         <h2 className="text-3xl font-semibold text-center text-gray-800 mb-6">Application Form</h2>
         <form onSubmit={handleSubscribe} className="bg-[#9cf]">
@@ -151,17 +156,33 @@ return (
                 required
             />
             </div>
-            <div className="mb-4">
+            <div className="mb-4 flex">
+
+            <div>
             <label htmlFor="salary" className="block text-sm font-medium text-gray-600">
                 Salary
             </label>
             <input
-                type="text"
+                type="number"
                 id="salary"
                 name="salary"
                 className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring focus:border-blue-300"
                 required
             />
+            </div>
+            <div>
+            <label htmlFor="salary" className="block text-sm font-medium text-gray-600">
+                Salary
+            </label>
+            <input
+                type="number"
+                id="salary"
+                name="salary"
+                className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring focus:border-blue-300"
+                required
+            />
+            </div>
+            
             </div>
             <div className="mb-4">
             <label htmlFor="about" className="block text-sm font-medium text-gray-600">
@@ -181,6 +202,7 @@ return (
             </button>
         </form>
         </div>
+    </div>
     </div>
     );
 };
