@@ -71,7 +71,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/trainerApply',
-        element: <TrainerApply></TrainerApply>
+        element: <PrivateRoute> <TrainerApply></TrainerApply> </PrivateRoute>
       },
       {
         path: '/login',
@@ -102,45 +102,45 @@ const router = createBrowserRouter([
       },
       {
         path: 'allSubscriber',
-        element: <AllSubscriber></AllSubscriber>
+        element: <AdminRoute> <AllSubscriber></AllSubscriber> </AdminRoute>
       },
       {
         path: 'allTrainers',
-        element: <AllTrainers></AllTrainers>
+        element: <AdminRoute><AllTrainers></AllTrainers> </AdminRoute>
       },
       {
         path: '/dashboard/payment/:_id/:salary',
-        element: <PaymentForm></PaymentForm>
+        element: <AdminRoute><PaymentForm></PaymentForm> </AdminRoute>
       },
       {
         path: 'appliedTrainers',
-        element: <AppliedTrainer></AppliedTrainer>
+        element: <AdminRoute><AppliedTrainer></AppliedTrainer> </AdminRoute>
       },
       {
         path: 'balance',
-        element: <Balance></Balance>
+        element: <AdminRoute><Balance></Balance> </AdminRoute>
       },
       // Trainer path
       {
         path: 'manageSlots',
-        element: <ManageSlots></ManageSlots>
+        element: <PrivateRoute><ManageSlots></ManageSlots> </PrivateRoute>
       },
       {
         path: 'manageMember',
-        element: <ManageMember></ManageMember>
+        element: <PrivateRoute> <ManageMember></ManageMember> </PrivateRoute>
       },
       // user path
       {
         path: 'activityLog',
-        element: <ActivityLog></ActivityLog>
+        element: <PrivateRoute><ActivityLog></ActivityLog> </PrivateRoute>
       },
       {
         path: 'recommendedClass',
-        element: <Recomended></Recomended>
+        element: <PrivateRoute> <Recomended></Recomended></PrivateRoute>
       },
       {
         path: 'profile',
-        element: <Profile></Profile>
+        element: <PrivateRoute><Profile></Profile> </PrivateRoute>
       }
     ]
   } 
