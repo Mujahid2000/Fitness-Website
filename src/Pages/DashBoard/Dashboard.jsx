@@ -19,6 +19,7 @@ const Dashboard = () => {
   // todo: get isAdmin and isTrainer values from the database (replace true with your logic)
   const [isAdmin] = UseAdmin();
   const [isTrainer] = UseTrainer();
+  
 
   return (
     <div className='flex'>

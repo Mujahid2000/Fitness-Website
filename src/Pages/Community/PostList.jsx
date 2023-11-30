@@ -46,7 +46,8 @@ const PostList = ({ posts, reFetch, setRefetch }) => {
     const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
     return (
-    <div>
+      <div>
+        <div>
         {currentPosts.map((post) => (
         <div
             key={post.title}
@@ -90,6 +91,8 @@ const PostList = ({ posts, reFetch, setRefetch }) => {
         )}
       </div>
     </div>
+      </div>
+    
   );
 };
 

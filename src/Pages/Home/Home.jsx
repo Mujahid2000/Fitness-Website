@@ -10,6 +10,7 @@ import TransitionCard from "./TransitionCard";
 const Home = () => {
     return (
         <div>
+            
             <HomeBanner></HomeBanner>
             <Featured></Featured>
             <About></About>

@@ -4,7 +4,7 @@ import axios from "axios";
 
 const Community = () => {
   const [posts, setPosts] = useState([]);
-  const [reFetch,setRefetch] = useState(false);
+  const [reFetch, setRefetch] = useState(false);
   console.log(posts);
 
   useEffect(() => {
@@ -30,11 +30,12 @@ const Community = () => {
       .catch((error) => console.error("Error fetching data:", error));
   }, [reFetch]);
 
-
   return (
-    <div className="container mx-auto my-8">
-      <h1 className="text-3xl font-bold mb-4">Post List</h1>
-      <PostList posts={posts} reFetch={reFetch} setRefetch={setRefetch} />
+    <div>
+      <div className="container mx-auto my-8">
+        <h1 className="text-3xl font-bold mb-4">Post List</h1>
+        <PostList posts={posts} reFetch={reFetch} setRefetch={setRefetch} />
+      </div>
     </div>
   );
 };

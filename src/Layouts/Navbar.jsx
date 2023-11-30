@@ -4,9 +4,13 @@ import { Avatar, Dropdown, Navbar } from 'flowbite-react';
 import { useContext } from 'react';
 import { AuthContext } from '../Provider/AuthProvider';
 import { Link } from 'react-router-dom';
+import UseTrainer from '../Hooks/UseTrainer';
+import UseAdmin from '../Hooks/UseAdmin';
 
 const NavBar = () => {
   const { user, logOut } = useContext(AuthContext);
+  const [isTrainer] = UseTrainer();
+  const [isAdmin] = UseAdmin();
   const handleLogOut = () => {
     logOut()
     .then(() => {})
@@ -75,7 +79,19 @@ const NavBar = () => {
         <Navbar.Link href="/trainer" className='uppercase'>Trainer</Navbar.Link>
         <Navbar.Link href="/class" className='uppercase'>Classes</Navbar.Link>
         <Navbar.Link href="/community" className='uppercase'>Community</Navbar.Link>
-        <Navbar.Link href="/dashboard" className='uppercase'>DashBoard</Navbar.Link>
+        {
+          user && isAdmin && !isTrainer && <Navbar.Link href="/dashboard" className='uppercase'>DashBoard</Navbar.Link>
+        }
+        {
+          user && isTrainer && !isAdmin && <Navbar.Link href="/dashboard" className='uppercase'>DashBoard</Navbar.Link>
+        }
+        {
+          user && isAdmin && isTrainer && <Navbar.Link href="/dashboard" className='uppercase'>DashBoard</Navbar.Link>
+        }
+        {
+          user && !isAdmin && !isTrainer && <Navbar.Link href="/dashboard" className='uppercase'>DashBoard</Navbar.Link>
+        }
+        
         
       </Navbar.Collapse>
     </Navbar>

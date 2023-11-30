@@ -1,40 +1,61 @@
-import React from 'react';
+import { useContext, useState } from "react";
+import UseAxiosSecure from "../../Hooks/UseAxiosSecure";
+import { useQuery } from "@tanstack/react-query";
+import axios from "axios";
+import { AuthContext } from "../../Provider/AuthProvider";
 
-const ManageSlots = () => {
-    
 
-    return (
-        <div>
-            <h2>This is manageSlots </h2>
-            <table className="min-w-full bg-white border border-gray-300">
-      <thead>
-        <tr>
-          <th className="py-2 px-4 border-b">User Name</th>
-          <th className="py-2 px-4 border-b">Email</th>
-          <th className="py-2 px-4 border-b">Package Name</th>
-          <th className="py-2 px-4 border-b">Selected Slot</th>
-          <th className="py-2 px-4 border-b">Price</th>
-          <th className="py-2 px-4 border-b">Actions</th>
-        </tr>
-      </thead>
-      <tbody>
-        {data.map((user) => (
-          <tr key={user.id}>
-            <td className="py-2 px-4 border-b">{user.userName}</td>
-            <td className="py-2 px-4 border-b">{user.email}</td>
-            <td className="py-2 px-4 border-b">{user.packageName}</td>
-            <td className="py-2 px-4 border-b">{user.selectedSlot}</td>
-            <td className="py-2 px-4 border-b">{user.price}</td>
-            <td className="py-2 px-4 border-b">
-              <button className="bg-blue-500 text-white py-1 px-2 mr-2">Edit</button>
-              <button className="bg-red-500 text-white py-1 px-2">Delete</button>
-            </td>
+
+
+const ManageSlot = () => {
+
+  const [trainers, setTrainers] = useState([]);
+  const axiosSecure = UseAxiosSecure();
+  const {user} = useContext(AuthContext);
+   
+    const {refetch, data: data =[] } = useQuery({
+        queryKey: ['users'],
+        queryFn: async () =>{
+            const res = await axiosSecure.get(`/trainerBooked/${user.displayName}`);
+            return res.data
+        }
+    })
+  
+    axios
+      .get(`http://localhost:5050/trainerBooked/${user.displayName}`)
+      .then((res) => res.data)
+      .then((data) => {
+        setTrainers(data)
+        refetch()
+      })
+      .catch((error) => console.error("Error fetching data:", error));
+
+  return (
+    <div className="overflow-x-auto max-w-full mx-auto">
+      <table className="table-auto w-full mx-auto border-collapse">
+        <thead>
+          <tr className="bg-gray-800 text-white">
+            <th className="py-2 px-4">Name</th>
+            <th className="py-2 px-4">Email</th>
+            <th className="py-2 px-4">Package</th>
+            <th className="py-2 px-4">Time Slots</th>
+            <th className="py-2 px-4">Price</th>
           </tr>
-        ))}
-      </tbody>
-    </table>
-        </div>
-    );
+        </thead>
+        <tbody>
+          {data.map((item) => (
+            <tr key={item._id} className="hover:bg-gray-100">
+              <td className="py-2 px-4 text-center">{item.user.displayName}</td>
+              <td className="py-2 px-4 text-center">{item.user.email}</td>
+              <td className="py-2 px-4 text-center">{item.packageName}</td>
+              <td className="py-2 px-4 text-center">{item.selectedSlot}</td>
+              <td className="py-2 px-4 text-center">{item.price}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
 };
 
-export default ManageSlots;
+export default ManageSlot;
