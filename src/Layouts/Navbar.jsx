@@ -79,6 +79,7 @@ const NavBar = () => {
         <Navbar.Link href="/trainer" className='uppercase'>Trainer</Navbar.Link>
         <Navbar.Link href="/class" className='uppercase'>Classes</Navbar.Link>
         <Navbar.Link href="/community" className='uppercase'>Community</Navbar.Link>
+        <Navbar.Link href="/contact" className='uppercase'>Contact Us</Navbar.Link>
         {
           user && isAdmin && !isTrainer && <Navbar.Link href="/dashboard" className='uppercase'>DashBoard</Navbar.Link>
         }

@@ -41,6 +41,7 @@ import PrivateRoute from './Provider/PrivateRoute';
 import ActivityLog from './Pages/UserDashBoard/ActivityLog';
 import Recomended from './Pages/UserDashBoard/Recomended';
 import AllUsers from './Pages/DashBoardRoute/AllUsers';
+import SimpleMap from './Pages/Contact/Contact';
 const queryClient = new QueryClient()
 const router = createBrowserRouter([
   {
@@ -88,6 +89,10 @@ const router = createBrowserRouter([
       {
         path: '/community',
         element: <PrivateRoute><Community></Community></PrivateRoute>
+      },
+      {
+        path: '/contact',
+        element: <SimpleMap></SimpleMap>
       }     
     ]
   },
