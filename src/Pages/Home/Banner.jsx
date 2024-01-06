@@ -1,17 +1,15 @@
-import { Link } from "react-router-dom";
+
 
 
 const Banner = () => {
     return (
-        <div className="relative">
-            <img src="https://i.ibb.co/MNck8nV/Untitled-1.jpg" alt="" className="w-full"/>
-            <h2  className="text-white text-[80px] font-bold absolute  ml-32 italic text-xl md:text-2xl lg:text-4xl">NEVER <br /> <span className="text-purple-600">GIVE UP!</span></h2>
-            <p className="text-white text-xl font-normal absolute  ml-32">Elevate your fitness with sleek trackers—precision, style, and <br /> real-time progress for a healthier you!</p>
-            <Link to={'/class'}>
-            <button  className="bg-violet-500 absolute  ml-32 py-3 px-4 rounded-lg font-semibold text-white hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 ...">
-            See Our Class
-            </button>
-            </Link>
+        <div className="px-5">
+            <img src="https://i.ibb.co/MNck8nV/Untitled-1.jpg" alt="" />
+            <h2  className="text-white lg:text-[80px] font-bold absolute mt-[-90px] lg:mt-[-490px] ml-6 lg:ml-32 italic">NEVER <br /> <span className="text-purple-600">GIVE UP!</span></h2>
+             {/* <p className="text-white max-w-xl hidden text-sm lg:text-xl font-normal absolute mt-[-100px] lg:mt-[-310px]  lg:ml-32">Elevate your fitness with sleek trackers—precision, style, and <br /> real-time progress for a healthier you!</p> */}
+            {/* <Link to={'/class'}>
+            <Button className="lg:absolute lg:mt-[-240px] text-3xl mt-[-80px] lg:ml-32  lg:px-4" color="purple">See Our Class</Button>
+            </Link>  */}
             
         </div>
     );

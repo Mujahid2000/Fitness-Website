@@ -35,11 +35,11 @@ const AllUsers = () => {
     }
 
     return (
-        <div>
+        <div >
             <Helmet>
                 <title>Dashboard || ALL Users</title>
             </Helmet>
-            <div >
+            <div className='bg-lime-600 h-screen p-6'>
         <div className="flex justify-evenly my-4 ">
         <h2 className="text-3xl">All Users</h2>
         <h2 className="text-3xl">Total Users: {users.length}</h2>

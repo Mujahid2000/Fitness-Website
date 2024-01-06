@@ -30,7 +30,7 @@ const GymSchedule = () => {
       </Helmet>
       <div>
         <div>
-          <h2 className="text-center text-2xl mb-4 mt-4">Class Page</h2>
+          <h2 className="text-center text-5xl font-mono mb-4 mt-4">Class Page</h2>
         </div>
         <div>
           <form className="relative">

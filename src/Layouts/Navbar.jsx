@@ -18,13 +18,13 @@ const NavBar = () => {
   };
 
     return (
-        <div className='p-2 bg-metal-300'>
-            <Navbar fluid rounded className=' bg-metal-300'>
+        <div className='p-2 bg-indigo-500 rounded-md'>
+            <Navbar fluid rounded className=' bg-indigo-500'>
       <Navbar.Brand href="https://i.ibb.co/cYYK2CY/Screenshot-2023-11-24-003245.png">
-        <img src="https://i.ibb.co/cYYK2CY/Screenshot-2023-11-24-003245.png" className="mr-3 h-6 sm:h-9" alt="Flowbite React Logo" />
-        <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">Fitness Center</span>
+        <img src="https://i.ibb.co/2Z06Phn/1048219-OL3-O6-X0-removebg-preview.png" className="mr-3 h-8 sm:h-9" alt="Logo" />
+        <span className="self-center whitespace-nowrap text-xl font-semibold text-white">Fitness Center</span>
       </Navbar.Brand>
-      <div className="flex md:order-2">
+      <div className="flex  md:order-2">
       {
                 user?(
                     <div className="flex md:order-2">
@@ -63,7 +63,7 @@ const NavBar = () => {
                         : ""
                     }
                 >
-                    <button className="btn  btn-info bg-purple-600 text-white px-3 py-2 rounded-lg">Login</button>
+                    <button className="btn  btn-info bg-white text-black hover:bg-emerald-500 hover:text-white px-3 py-2 rounded-lg">Login</button>
                 </Link>
                 </div>
                 )
@@ -71,30 +71,50 @@ const NavBar = () => {
 
         <Navbar.Toggle />
       </div>
-      <Navbar.Collapse>
-        <Navbar.Link href="/"  className='uppercase'>
-          Home
-        </Navbar.Link>
-        <Navbar.Link href="/gallery" className='uppercase'>Gallery</Navbar.Link>
-        <Navbar.Link href="/trainer" className='uppercase'>Trainer</Navbar.Link>
-        <Navbar.Link href="/class" className='uppercase'>Classes</Navbar.Link>
-        <Navbar.Link href="/community" className='uppercase'>Community</Navbar.Link>
-        <Navbar.Link href="/contact" className='uppercase'>Contact Us</Navbar.Link>
-        {
-          user && isAdmin && !isTrainer && <Navbar.Link href="/dashboard" className='uppercase'>DashBoard</Navbar.Link>
-        }
-        {
-          user && isTrainer && !isAdmin && <Navbar.Link href="/dashboard" className='uppercase'>DashBoard</Navbar.Link>
-        }
-        {
-          user && isAdmin && isTrainer && <Navbar.Link href="/dashboard" className='uppercase'>DashBoard</Navbar.Link>
-        }
-        {
-          user && !isAdmin && !isTrainer && <Navbar.Link href="/dashboard" className='uppercase'>DashBoard</Navbar.Link>
-        }
-        
-        
-      </Navbar.Collapse>
+              <Navbar.Collapse >
+          <Link to="/" className='uppercase text-white'>
+            Home
+          </Link>
+          <Link to="/gallery" className='uppercase text-white'>
+            Gallery
+          </Link>
+          <Link to="/trainer" className='uppercase text-white'>
+            Trainer
+          </Link>
+          <Link to="/class" className='uppercase text-white'>
+            Classes
+          </Link>
+          <Link to="/community" className='uppercase text-white'>
+            Community
+          </Link>
+          <Link to="/contact" className='uppercase text-white'>
+            Contact Us
+          </Link>
+          {
+            user && isAdmin && !isTrainer &&
+            <Link to="/dashboard" className='uppercase text-white'>
+              DashBoard
+            </Link>
+          }
+          {
+            user && isTrainer && !isAdmin &&
+            <Link to="/dashboard" className='uppercase text-white'>
+              DashBoard
+            </Link>
+          }
+          {
+            user && isAdmin && isTrainer &&
+            <Link to="/dashboard" className='uppercase text-white'>
+              DashBoard
+            </Link>
+          }
+          {
+            user && !isAdmin && !isTrainer &&
+            <Link to="/dashboard" className='uppercase text-white'>
+              DashBoard
+            </Link>
+          }
+        </Navbar.Collapse>
     </Navbar>
         </div>
     );

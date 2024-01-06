@@ -51,13 +51,13 @@ const Gallery = () => {
     }, []);
 
     return (
-        <div>
+        <div >
             <Helmet>
                 <title>Fitness || Gallery</title>
             </Helmet>
 
             <div>
-            <div className="relative h-screen flex items-center justify-center" style={containerStyle}>
+            <div className="relative h-screen mt-3 flex items-center justify-center" style={containerStyle}>
                 <div className="absolute inset-0 bg-black opacity-25 rounded-xl"></div>
                 <div className="relative z-10 text-white text-center">
                     <h1 className="text-4xl font-bold uppercase text-center">Fitness Center || Gallery</h1>
@@ -72,7 +72,7 @@ const Gallery = () => {
             >
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-5 mt-8">
                     {gallery.map((galleries, index) => (
-                        <div key={galleries._id || index} className="max-w-md mx-auto bg-white rounded-xl overflow-hidden shadow-md">
+                        <div  key={galleries._id || index} className="max-w-md hover:scale-105 transition-transform duration-300 mx-auto bg-[#93c5fd] rounded-xl overflow-hidden shadow-md">
                             <img className="h-64 w-96 object-cover" src={galleries.image} alt="Card" />
                             <div className="px-6 py-4">
                                 <div className="font-bold text-xl mb-2 text-center">{galleries.title}</div>

@@ -7,6 +7,13 @@ import Featured from "./Featured";
 import Subscription from "./Subscription";
 import Success from "./Success";
 import TransitionCard from "./TransitionCard";
+import Health from "./Health";
+import ContactUS from "./Contact";
+
+
+
+
+
 
 
 const Home = () => {
@@ -17,11 +24,13 @@ const Home = () => {
             </Helmet>
             <HomeBanner></HomeBanner>
             <Featured></Featured>
-            <About></About>
             <Success></Success>
             <Blog></Blog>
             <Subscription></Subscription>
             <TransitionCard></TransitionCard>
+            <About></About>
+            <Health></Health>
+            <ContactUS></ContactUS>
         </div>
     );
 };

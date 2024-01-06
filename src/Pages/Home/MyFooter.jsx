@@ -3,12 +3,12 @@
 const MyFooter = () => {
     return (
         <div>
-        <footer className="bg-white dark:bg-gray-900">
+        <footer className="bg-indigo-200 border rounded-t-sm rounded-b-xl mt-5">
         <div className="mx-auto w-full p-4 py-6 lg:py-8">
         <div className="md:flex md:justify-between">
         <div className="mb-6 md:mb-0">
         <a href="" className="flex items-center">
-            <img src="https://i.ibb.co/cYYK2CY/Screenshot-2023-11-24-003245.png" className="h-8 me-3" alt="FlowBite Logo" />
+            <img src="https://i.ibb.co/2Z06Phn/1048219-OL3-O6-X0-removebg-preview.png" className="h-8 me-3" alt="FlowBite Logo" />
             <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Fitness Center</span>
         </a>
         </div>

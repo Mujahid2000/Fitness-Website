@@ -48,7 +48,7 @@ const AppliedTrainer = () => {
                 <title>Dashboard || Applied Trainers</title>
             </Helmet>
 
-            <div className='bg-[#FFA500] h-full'>
+            <div className='bg-[#FFA500] h-screen p-6'>
         <div className="flex flex-col px-4">
                 <div className="-my-2 mt-6 overflow-x-auto sm:-mx-6 lg:-mx-8">
                 <div className="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">

@@ -32,22 +32,14 @@ const Login = () => {
         })
     }
 
-    // const handleGoogleSignIn = () => {
-    //     googleLogin().then((result) => {
-    //     console.log(result.user);
-    //     navigate(from , {replace: true});
-    //     const userInfo = {
-    //         email: result.user?.email,
-    //         name: result.user?.displayName,
-    //     }})
-    // };
+    
 
 
     return (
-        <div className="max-w-6xl mx-auto mt-6">
+        <div className="max-w-6xl mx-auto mt-6 flex justify-center items-center">
 <div className="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
-    <form onSubmit={handleLogin} className="space-y-6" action="#">
-        <h5 className="text-xl font-medium text-gray-900 dark:text-white">Sign in to our platform</h5>
+    <form onSubmit={handleLogin} className="space-y-6" >
+        <h5 className="text-xl text-center uppercase font-medium text-gray-900 dark:text-white">Sign in to our platform</h5>
         <div>
             <label  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
             <input type="email" name="email" id="email" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="name@company.com" />
@@ -73,8 +65,7 @@ const Login = () => {
     <div className="flex gap-4 justify-center mt-4">
     <SocialLogin></SocialLogin>
     </div>
-</div>
-
+    </div>
         </div>
     );
 };

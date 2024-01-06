@@ -9,7 +9,7 @@ const CheckOutForm = ({ salary, trainerId, name }) => {
     const stripe = useStripe();
     const [transactionId, setTransactionId] = useState('');
     const {user} = useContext(AuthContext);
-    // console.log(user.displayName);
+    // console.log(salary);
     const [clientSecret, setClientSecret] = useState();
     const elements = useElements();
 

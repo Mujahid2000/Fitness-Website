@@ -2,11 +2,10 @@ import { useContext, useEffect, useState } from "react";
 import { FaCamera } from "react-icons/fa";
 import {  useLocation, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
-import { AuthContext } from "../../Provider/AuthProvider";
 import UseAxiosPublic from "../../Hooks/UseAxiosPublic";
-
-
 import SocialLogin from "../../Provider/SocialLogin";
+import { Button } from "keep-react";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 
 const SignUp = () => {
@@ -86,14 +85,12 @@ const SignUp = () => {
             });
     };
 
-    
 
-        return (
+    return (
         <div>
-            
-        <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-indigo-600 to-indigo-900">
-            <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
-            <h2 className="text-3xl font-bold text-indigo-600 mb-4">Sign Up</h2>
+        <div className="min-h-screen flex items-center justify-center">
+            <div className="bg-gray-100 p-8 rounded-lg shadow-lg w-full max-w-md">
+            <h2 className="text-3xl uppercase text-center font-bold text-indigo-600 mb-4">Sign Up</h2>
             <form onSubmit={handleRegister}>
                 <div className="mb-4">
                 <label
@@ -106,7 +103,7 @@ const SignUp = () => {
                     type="text"
                     id="name"
                     name="name"
-                    className="w-full py-2 px-3 border rounded-md focus:outline-none focus:border-indigo-600"
+                    className="w-full py-2 px-3 border bg-gray-100 rounded-md focus:outline-none focus:border-indigo-600"
                     placeholder="Enter your name"
                 />
                 </div>
@@ -121,7 +118,7 @@ const SignUp = () => {
                     type="email"
                     id="email"
                     name="email"
-                    className="w-full py-2 px-3 border rounded-md focus:outline-none focus:border-indigo-600"
+                    className="w-full py-2 px-3 border rounded-md bg-gray-100 focus:outline-none focus:border-indigo-600"
                     placeholder="Enter your email"
                 />
                 </div>
@@ -136,7 +133,7 @@ const SignUp = () => {
                     type="password"
                     id="password"
                     name="password"
-                    className="w-full py-2 px-3 border rounded-md focus:outline-none focus:border-indigo-600"
+                    className="w-full py-2 px-3 border rounded-md bg-gray-100 focus:outline-none focus:border-indigo-600"
                     placeholder="Enter your password"
                 />
                 </div>
@@ -152,7 +149,7 @@ const SignUp = () => {
                     type="text"
                     id="photoURL"
                     name="photoURL"
-                    className="w-full py-2 px-3 border rounded-md focus:outline-none focus:border-indigo-600"
+                    className="w-full py-2 px-3 border rounded-md bg-gray-100 focus:outline-none focus:border-indigo-600"
                     placeholder="Enter your photo URL"
                     />
                     <div className="absolute top-2 right-2 text-indigo-600">
@@ -162,7 +159,7 @@ const SignUp = () => {
                 </div>
                 <button
                 type="submit"
-                className="w-full bg-indigo-600 text-white py-2 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-600"
+                className="w-full bg-indigo-600 text-white py-2 rounded-md hover:bg-indigo-200 focus:outline-none "
                 >
                 Sign Up
                 </button>
@@ -172,7 +169,7 @@ const SignUp = () => {
             </div>
             <p className="mt-4 text-sm text-gray-600 text-center">
                 Already have an account?{" "}
-                <a href="/login" className="text-indigo-600">
+                <a href="/login" className="text-indigo-600 underline">
                 Log in
                 </a>
             </p>
