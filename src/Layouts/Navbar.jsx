@@ -20,7 +20,7 @@ const NavBar = () => {
     return (
         <div className='p-2 bg-indigo-500 rounded-md'>
             <Navbar fluid rounded className=' bg-indigo-500'>
-      <Navbar.Brand href="https://i.ibb.co/cYYK2CY/Screenshot-2023-11-24-003245.png">
+      <Navbar.Brand href="/">
         <img src="https://i.ibb.co/2Z06Phn/1048219-OL3-O6-X0-removebg-preview.png" className="mr-3 h-8 sm:h-9" alt="Logo" />
         <span className="self-center whitespace-nowrap text-xl font-semibold text-white">Fitness Center</span>
       </Navbar.Brand>
