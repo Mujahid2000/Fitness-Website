@@ -78,7 +78,7 @@ const Subscription = () => {
         </div>
         <button
           type="submit"
-          className="bg-red-600 hover:bg-blue-800 text-white font-medium rounded-md py-3 w-full transition duration-300"
+          className="bg-blue-600 hover:bg-blue-800 text-white font-medium rounded-md py-3 w-full transition duration-300"
         >
           Subscribe Now
         </button>
