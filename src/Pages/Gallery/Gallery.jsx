@@ -80,7 +80,7 @@ const Gallery = () => {
           loader={<Spinner className="justify-center items-center" color="info" aria-label="Info spinner example" />}
           endMessage={<p className="text-center text-2xl text-pink-500 font-bold mt-5"><b>You have loaded all data</b></p>}
         >
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mt-8 max-w-[1700px] ml-3 lg:ml-20 mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mt-8 max-w-[100rem] mx-auto ml-3 lg:ml-24  ">
             {gallery.map((galleries, index) => (
               <Card
                 key={galleries._id || index}

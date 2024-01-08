@@ -24,11 +24,11 @@ const Trainer = () => {
       <Helmet>
         <title>Fitness || Trainer</title>
       </Helmet>
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-6 mt-6 max-w-[1800px] mx-auto ml-7 lg:ml-28 hover:scale-105 transition-transform duration-300'>
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  gap-5 mt-6 max-w-[100rem] mx-auto '>
         {trainer.map(trainers => (
           <Card
             key={trainers._id}
-            className="max-w-xs overflow-hidden rounded-md"
+            className="max-w-xs overflow-hidden rounded-md hover:scale-105 transition-transform duration-300"
             imgSrc={trainers.image}
             imgSize="md"
           >
