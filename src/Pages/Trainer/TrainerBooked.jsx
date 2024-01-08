@@ -9,6 +9,8 @@ import { Helmet } from "react-helmet";
 
 const TrainerBooked = () => {
   const { user } = useContext(AuthContext);
+  const userEmail = (user.email)
+  // console.log(userEmail);
   const navigate = useNavigate();
   const [selectedSlot, setSelectedSlot] = useState(null);
   const { slot, name } = useParams();

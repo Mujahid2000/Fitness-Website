@@ -111,7 +111,7 @@ const Dashboard = () => {
                 </NavLink>
               </li>
               <li>
-                <NavLink to='/dashboard/recommendedClasses' className='flex text-white leading-normal shadow-md transition duration-150 ease-in-out hover:bg-[#e74c3c] hover:shadow-lg focus:bg-[#e74c3c] focus:shadow-lg focus:outline-none focus:ring-0 active:bg-[#c0392b] active:shadow-lg rounded-lg p-3 bg-[#d35400] items-center gap-5'>
+                <NavLink to='/dashboard/recommendedClass' className='flex text-white leading-normal shadow-md transition duration-150 ease-in-out hover:bg-[#e74c3c] hover:shadow-lg focus:bg-[#e74c3c] focus:shadow-lg focus:outline-none focus:ring-0 active:bg-[#c0392b] active:shadow-lg rounded-lg p-3 bg-[#d35400] items-center gap-5'>
                   <FaHeart /> Recommended Classes
                 </NavLink>
               </li>

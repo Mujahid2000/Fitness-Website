@@ -3,7 +3,7 @@ import { Button, Label, TextInput, Textarea } from "flowbite-react";
 const ContactUS = () => {
   return (
     <div className="mb-6 px-5">
-        <h2 className="text-5xl text-center font-mono font-bold mt-9 mb-4">Contact Us</h2>
+        <h2 className="text-2xl lg:text-5xl text-center font-mono font-bold mt-9 mb-4">Contact Us</h2>
         <hr />
       <div className="flex flex-col lg:flex-row justify-evenly items-center mt-6">
         <div>

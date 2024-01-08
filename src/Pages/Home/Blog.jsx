@@ -21,7 +21,7 @@ const Blog = () => {
 
     return (
         <div className="px-5">
-            <h3 className="text-5xl font-bold text-center mb-6 mt-4 font-mono uppercase">Blog Post</h3>
+            <h3 className="text-2xl lg:text-5xl font-bold text-center mb-6 mt-4 font-mono uppercase">Blog Post</h3>
             <hr />
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  max-w-7xl gap-6 mx-auto mt-5">
             {

@@ -4,10 +4,10 @@ const Health = () => {
     return (
         <div className='mt-7 px-10'>
             <div className='mb-9'>
-                <h2 className='text-center text-5xl   font-mono font-bold'>Our Services</h2>
+                <h2 className='text-center text-2xl lg:text-5xl   font-mono font-bold'>Our Services</h2>
             </div>
             <hr />
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  gap-8 max-w-[110rem] mx-auto mt-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  gap-8 max-w-[104rem] mx-auto mt-10">
   <div className="relative rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300 bg-gradient-to-t from-gray-800 via-black to-transparent">
     <img
       src="https://i.ibb.co/mGfHLjC/i-Stock-1258586742.jpg"

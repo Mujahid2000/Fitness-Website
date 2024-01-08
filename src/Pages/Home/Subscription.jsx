@@ -37,7 +37,7 @@ const Subscription = () => {
 
     return (
       <div className="mt-10 px-5">
-  <h2 className="text-5xl uppercase font-mono font-semibold text-center mb-8">
+  <h2 className="text-2xl lg:text-5xl uppercase font-mono font-semibold text-center mb-8">
     Subscribe Now <span className="text-5xl font-bold text-blue-500">&</span> Join with Us
   </h2>
   <div className="flex flex-col md:flex-row max-w-7xl mx-auto justify-center items-center">
