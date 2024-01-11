@@ -24,15 +24,13 @@ const Trainer = () => {
       <Helmet>
         <title>Fitness || Trainer</title>
       </Helmet>
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  gap-5 mt-6 max-w-[100rem] mx-auto '>
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mt-6 max-w-[1600px] ml-7 md:ml-9 lg:ml-40'>
         {trainer.map(trainers => (
           <Card
             key={trainers._id}
-            className="max-w-xs overflow-hidden rounded-md hover:scale-105 transition-transform duration-300"
+            className="max-w-xs overflow-hidden rounded-md hover:scale-105 transition-transform duration-300 mb-4 md:mb-0 lg:mb-0"
             imgSrc={trainers.image}
-            imgSize="md"
-          >
-            
+            imgSize="md">
             <Card.Container className="space-y-4 p-6">
               <Card.Title className="flex items-center gap-2 text-body-5 font-medium text-metal-500 md:!text-body-4">
                
