@@ -24,9 +24,9 @@ const Success = () => {
         {success.map((successStory, index) => (
           <div
             key={successStory.id}
-            className="max-w-md mx-auto bg-blue-100 rounded-md overflow-hidden hover:scale-105 transition-transform duration-300 shadow-md mt-5"
+            className=" bg-blue-100 rounded-md overflow-hidden hover:scale-105 transition-transform duration-300 shadow-md mt-5"
           >
-            <img className="w-96 h-72 object-cover" src={successStory.image} alt="" />
+            <img className="h-40 md:h-56 lg:h-56 xl:h-56 w-full object-cover" src={successStory.image} alt="" />
             <div className="p-6">
               <h2 className="text-base lg:text-xl font-semibold mb-2">{successStory.name}</h2>
               <h4 className="text-base lg:text-xl font-semibold mb-2">{successStory.occupation}</h4>

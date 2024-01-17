@@ -9,7 +9,7 @@ const About = () => {
           <p className='text-base  text-center '>when picking a gym, consider its amenities like guest access, hours location, and extra benefits to enhance your experience</p>
           </div>
          <hr className='mt-8 bg-amber-700' />
-          <div className='grid grid-cols-1 lg:grid-cols-4 max-w-7xl mx-auto gap-5 mt-6 px-5'>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 max-w-7xl mx-auto gap-5 mt-6 px-5'>
   <Card className="max-w-sm bg-blue-100 border border-gray-200 rounded-lg shadow-md hover:shadow-lg">
     <h5 className="text-2xl font-bold text-center tracking-tight text-gray-900 dark:text-white">
       Best Training
