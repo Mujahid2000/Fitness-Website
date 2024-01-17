@@ -27,5 +27,13 @@
       "occupation": "Middle-Class Professional",
       "journey": "Maria, a middle-class professional, found balance with Fitness Tracker. By monitoring her sleep, stress levels, and workouts, Maria achieved a holistic approach to wellness. The tracker's personalized insights helped her manage stress, improve sleep quality, and maintain a healthy weight. Maria's story exemplifies the importance of a well-rounded approach to health, and how Fitness Tracker can be the key to finding that balance.",
       "image": "https://i.ibb.co/L0JHpdq/award2.jpg"
+    },
+    {
+      "id": 6,
+      "name": "John",
+      "occupation": "Tech Enthusiast",
+      "journey": "John, a tech enthusiast, incorporated Fitness Tracker into his daily routine to optimize his physical activity. Through real-time monitoring of his heart rate, sleep patterns, and custom workout plans, John achieved a healthier lifestyle while staying connected to his digital world. His story highlights the synergy between technology and well-being, making fitness a seamless part of modern life.",
+      "image": "https://i.ibb.co/rM25Jsx/cheerful-young-sports-woman-with-arms-crossed.jpg"
     }
+    
   ]
