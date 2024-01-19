@@ -80,11 +80,11 @@ const Gallery = () => {
           loader={<Spinner className="justify-center items-center" color="info" aria-label="Info spinner example" />}
           endMessage={<p className="text-center text-2xl text-pink-500 font-bold mt-5"><b>You have loaded all data</b></p>}
         >
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-5 mt-8 ml-4 sm:ml-5 md:ml-6 lg:ml-0 xl:ml-4 2xl:ml-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-5 mt-8 max-w-full mx-auto justify-self-center place-items-center">
             {gallery.map((galleries, index) => (
               <Card
                 key={galleries._id || index}
-                className="max-w-xs overflow-hidden rounded-md hover:scale-105 transition-transform duration-300"
+                className="w-full overflow-hidden rounded-md hover:scale-105 transition-transform duration-300"
                 imgSrc={galleries.image}
                 imgSize="md"
               >
