@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import  { useEffect, useState } from 'react';
 
 const Success = () => {
   const [expandedIndex, setExpandedIndex] = useState(-1);
@@ -38,7 +38,7 @@ const Success = () => {
               {successStory.journey.length > 15 && (
                 <button
                   className="text-blue-500 hover:underline mt-2"
-                  onClick={() => toggleShowMore({index})}
+                  onClick={() => toggleShowMore(index)}
                 >
                   {expandedIndex === index ? 'Show Less' : 'Show More'}
                 </button>
