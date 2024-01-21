@@ -151,7 +151,7 @@ const router = createBrowserRouter([
   } 
 ]);
 ReactDOM.createRoot(document.getElementById('root')).render(
-<div className='max-w-[1870px] mx-auto '>
+<div className='max-w-[1850px] mx-auto '>
   <React.StrictMode>
       <AuthProvider>
       <QueryClientProvider client={queryClient}>

@@ -17,7 +17,7 @@ const Featured = () => {
       <div className="flex justify-center items-center mt-5">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-5 gap-10">
         {feature.map((featured) => (
-  <div key={featured.id} className="w-72 mx-auto mt-10 bg-[#fafafa] shadow-md rounded-md overflow-hidden hover:scale-105 transition-transform duration-300 ">
+  <div key={featured.id}  className="w-72 mx-auto mt-10 bg-[#fafafa] shadow-md rounded-md overflow-hidden hover:scale-105 transition-transform duration-300 ">
   <div className="flex justify-center items-center h-48 bg-gray-200">
     <img className="w-full h-full" src={featured.image} alt="" />
   </div>
