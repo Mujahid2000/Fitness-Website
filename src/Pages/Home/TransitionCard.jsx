@@ -1,7 +1,7 @@
 
     import { useEffect, useState } from 'react';
     import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
-
+    import { motion } from "framer-motion";
     const TransitionCard = () => {
     
     const [team , setTeam] = useState([]);
@@ -22,9 +22,10 @@ return (
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mt-5'>
     {
         team.map(teams => 
-            <div key={teams.id}
+            <motion.div key={teams.id}
             className={`max-w-sm mx-auto overflow-hidden  relative hover:scale-105 transition-transform duration-300`}
-            
+            data-aos="zoom-in-up"
+            whileHover={{ scale: 1.1 }}
             >
             <div className="bg-gray-200  p-4 transition duration-300 ease-in-out">
                 <div className="relative overflow-hidden">
@@ -47,7 +48,7 @@ return (
             <div className="bg-white p-4">
                 
             </div>
-            </div>    
+            </motion.div>    
         )
     }
 </div>

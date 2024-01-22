@@ -1,4 +1,5 @@
 import  { useEffect, useState } from 'react';
+import { motion } from "framer-motion";
 
 const Success = () => {
   const [expandedIndex, setExpandedIndex] = useState(-1);
@@ -22,9 +23,12 @@ const Success = () => {
       <hr />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 max-w-[1710px] mx-auto gap-4 px-5">
         {success.map((successStory, index) => (
-          <div
+          <motion.div
             key={successStory.id}
+            data-aos="zoom-in-up"
             className="w-72 mx-auto bg-[#fafafa] shadow-md rounded-md overflow-hidden hover:scale-105 transition-transform duration-300  mt-5"
+            whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
           >
             <img className="h-40 md:h-56 lg:h-56 xl:h-56 w-full object-cover rounded-t-md" src={successStory.image} alt="" />
             <div className="p-6">
@@ -44,7 +48,7 @@ const Success = () => {
                 </button>
               )}
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>

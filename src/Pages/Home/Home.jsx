@@ -12,10 +12,6 @@ import ContactUS from "./Contact";
 
 
 
-
-
-
-
 const Home = () => {
     return (
         <div>
@@ -26,10 +22,10 @@ const Home = () => {
             <Featured></Featured>
             <Success></Success>
             <Blog></Blog>
-            <Subscription></Subscription>
             <TransitionCard></TransitionCard>
             <About></About>
             <Health></Health>
+            <Subscription></Subscription>
             <ContactUS></ContactUS>
         </div>
     );

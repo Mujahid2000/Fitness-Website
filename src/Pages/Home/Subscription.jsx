@@ -41,13 +41,6 @@ const Subscription = () => {
     Subscribe Now <span className="text-5xl font-bold text-blue-500">&</span> Join with Us
   </h2>
   <div className="flex flex-col md:flex-row max-w-7xl mx-auto justify-center items-center">
-    <div className="md:w-1/2 h-full">
-      <img
-        src="https://i.ibb.co/Y3Msrpn/contact.png"
-        alt="Contact us"
-        className="w-full h-full object-cover rounded-md"
-      />
-    </div>
     <div className="w-full max-w-md p-4 bg-sky-400 px-9 py-12 md:py-24 border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
       <form onSubmit={handleSubscribe} className="max-w-md mx-auto">
         <div className="mb-4">
@@ -84,6 +77,15 @@ const Subscription = () => {
         </button>
       </form>
     </div>
+    <div className="md:w-1/2 h-full">
+      <img
+        src="https://i.ibb.co/Y3Msrpn/contact.png"
+        alt="Contact us"
+        className="w-full h-full object-cover rounded-md"
+      />
+    </div>
+
+
   </div>
 </div>
 
