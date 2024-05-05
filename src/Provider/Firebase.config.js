@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey:import.meta.env.VITE_APIKEY,
-  authDomain:import.meta.env.VITE_AUTHDOMAIN,
-  projectId:import.meta.env.VITE_PROJECTID,
-  storageBucket:import.meta.env.VITE_STORAGEBUCKET,
-  messagingSenderId:import.meta.env.VITE_MESSAGINGSENDERID,
-  appId:import.meta.env.VITE_APPID,
+  apiKey: "AIzaSyCQm1XhyAUS-9cy22LMmtMwWMH_IOkIP18",
+  authDomain: "fitness-website-e148a.firebaseapp.com",
+  projectId: "fitness-website-e148a",
+  storageBucket: "fitness-website-e148a.appspot.com",
+  messagingSenderId: "552497115464",
+  appId: "1:552497115464:web:043d3399dac78c8d8ec37d"
 };
 
 // Initialize Firebase
