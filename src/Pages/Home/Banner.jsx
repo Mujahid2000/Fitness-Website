@@ -17,7 +17,7 @@ const Banner = () => {
     
 
     return (
-        <div className={styles.sliderContainer}>
+        <div className={`styles.sliderContainer mt-16`}>
             <Slider {...settings}>
         <div className="px-5 relative">
             <img src="https://i.ibb.co/TWLqWL5/banner1.jpg" alt="" className='rounded-lg'/>

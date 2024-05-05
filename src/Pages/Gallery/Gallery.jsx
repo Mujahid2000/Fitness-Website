@@ -66,7 +66,7 @@ const Gallery = () => {
         <title>Fitness || Gallery</title>
       </Helmet>
 
-      <div className="px-5 max-w-[1800px] mx-auto">
+      <div className="px-5 max-w-[1800px] mt-16 mx-auto">
         <div className="relative h-screen mt-3 flex items-center justify-center" style={containerStyle}>
           <div className="absolute inset-0 bg-black opacity-25 rounded-xl"></div>
           <div className="relative z-10 text-white text-center">

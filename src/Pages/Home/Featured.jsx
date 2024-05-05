@@ -11,8 +11,8 @@ const Featured = () => {
   }, []);
 
   return (
-    <div className="px-5 max-w-[1870px] mx-auto">
-      <h2 className="text-2xl lg:text-5xl font-semibold uppercase mb-9 mt-6 text-center font-mono">Featured section</h2>
+    <div className="px-5  max-w-[1870px] mx-auto">
+      <h2 className="text-2xl lg:text-5xl font-semibold uppercase mb-9 lg:mt-[490px] text-center font-mono">Featured section</h2>
       <hr />
       <div className="flex justify-center items-center mt-5">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-5 gap-10">

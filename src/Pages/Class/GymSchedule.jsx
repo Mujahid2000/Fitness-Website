@@ -30,9 +30,9 @@ const GymSchedule = () => {
       </Helmet>
       <div>
         <div>
-          <h2 className="text-center text-5xl font-mono mb-4 mt-4">Class Page</h2>
+          <h2 className="text-center text-5xl font-mono mb-4 mt-20">Class Page</h2>
         </div>
-        <div>
+        <div className='mt-10'>
           <form className="relative">
             <div className="flex">
              
@@ -90,7 +90,7 @@ const GymSchedule = () => {
           </form>
         </div>
       </div>
-      <div className="overflow-x-auto bg-slate-400 p-4 mt-5">
+      <div className="overflow-x-auto bg-slate-400 p-4 mt-10">
         <table className="table-auto w-full border-collapse border border-gray-800 mt-6">
           <thead className="bg-slate-50 text-lg">
             <tr>

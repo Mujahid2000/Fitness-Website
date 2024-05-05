@@ -24,7 +24,7 @@ const Trainer = () => {
       <Helmet>
         <title>Fitness || Trainer</title>
       </Helmet>
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-5 mt-8 max-w-full justify-self-center place-items-center
+      <div className='grid grid-cols-1 mt-28 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-5  max-w-full justify-self-center place-items-center
  mx-auto'>
         {trainer.map(trainers => (
           <Card

@@ -4,7 +4,7 @@ import { MyMap } from './MyMap';
 
 const Contact = () => {
     return (
-        <div>
+        <div className='mt-16'>
             <MyMap></MyMap>
             <ContactUS></ContactUS>
         </div>

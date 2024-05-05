@@ -1,12 +1,8 @@
-
     import { useEffect, useState } from 'react';
     import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
     import { motion } from "framer-motion";
-    const TransitionCard = () => {
-    
+    const TransitionCard = () => {    
     const [team , setTeam] = useState([]);
-
-   
 
 
     useEffect(() =>{

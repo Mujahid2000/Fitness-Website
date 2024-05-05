@@ -17,6 +17,6 @@ Overview: This is a Fitness related website. Where a customer see about a compan
 4. Seamless trainer application process available for fitness professionals.
 5. User-friendly features, including class schedules for easy planning and accessibility.
 
-Live link: https://oafish-shoe.surge.sh/
+Live link: https://worried-horn.surge.sh/
 
 Fitness Center: Client Side code: https://github.com/Mujahid2000/Fitness-Website | Server Side Code: https://github.com/Mujahid2000/Fitness-Server

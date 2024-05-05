@@ -43,7 +43,7 @@ const TrainerDetails = (book) => {
 
 
   return (
-    <div className=" mx-auto mt-9">
+    <div className="mt-20 mx-5">
       <div className="justify-end flex">
         <Link to={'/trainerApply'}><Button color="purple" className="p-3 text-xl mb-5 mt-3">Become a Trainer</Button></Link>
         </div>

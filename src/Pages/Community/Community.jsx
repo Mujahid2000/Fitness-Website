@@ -36,7 +36,7 @@ const Community = () => {
       <Helmet>
         <title>Fitness Website || Community</title>
       </Helmet>
-      <div className="container mx-auto my-8">
+      <div className="container mx-auto my-8 mt-20">
         <h1 className="text-3xl font-bold mb-4">Post List</h1>
         <PostList posts={posts} reFetch={reFetch} setRefetch={setRefetch} />
       </div>

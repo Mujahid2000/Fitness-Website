@@ -18,7 +18,7 @@ const Success = () => {
   }, []);
 
   return (
-    <div className="mt-5 ">
+    <div className="mt-5 max-w-[1820px] mx-auto">
       <h2 className="text-2xl lg:text-5xl font-semibold text-center mb-5 font-mono uppercase">Our Success Story</h2>
       <hr />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 max-w-[1710px] mx-auto gap-4 px-5">

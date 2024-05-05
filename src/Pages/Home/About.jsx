@@ -3,7 +3,7 @@ import { Card } from 'flowbite-react';
 
 const About = () => {
     return (
-        <div className='   mt-5'>
+        <div className=' max-w-[1820px] mx-auto  mt-5'>
           <h2 className='text-2xl lg:text-5xl font-bold font-mono text-center'>Why Choose Us</h2>
           <div className='max-w-2xl mx-auto px-5 mt-5'>
           <p className='text-base  text-center '>when picking a gym, consider its amenities like guest access, hours location, and extra benefits to enhance your experience</p>

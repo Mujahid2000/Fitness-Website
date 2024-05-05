@@ -79,7 +79,7 @@ return (
         <Helmet>
             <title>Fitness || Apply</title>
         </Helmet>
-<div className="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 min-h-screen flex items-center justify-center">
+<div className="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 min-h-screen flex items-center justify-center mt-16">
         <div className="max-w-md mx-auto p-6 bg-[#9cf] rounded-md shadow-md mt-4 mb-4">
         <h2 className="text-3xl font-semibold text-center text-gray-800 mb-6">Application Form</h2>
         <form onSubmit={handleSubscribe} className="bg-[#9cf]">
