@@ -18,7 +18,7 @@ const NavBar = () => {
   };
 
     return (
-      <div className='fixed top-0 w-full z-50  py-2.4 '>
+      <div className='fixed top-0 w-full z-50  py-2.8 '>
       <Navbar fluid rounded className='bg-white py-2.5 shadow-md'>
         <Navbar.Brand href="/">
           <img src="https://i.ibb.co/NjvfR0R/Screenshot-2024-01-08-135124-removebg-preview.png" className="mr-3 h-8 sm:h-9" alt="Logo" />
