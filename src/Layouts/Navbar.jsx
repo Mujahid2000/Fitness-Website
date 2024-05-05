@@ -1,4 +1,4 @@
-'use client';
+
 
 import { Avatar, Dropdown, Navbar } from 'flowbite-react';
 import { useContext } from 'react';

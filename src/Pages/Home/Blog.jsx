@@ -1,4 +1,4 @@
-"use client";
+
 import { Card } from "keep-react";
 import { useEffect, useState } from "react";
 
