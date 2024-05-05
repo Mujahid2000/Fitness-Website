@@ -1,4 +1,4 @@
-"use client";
+
 import { Avatar,Card } from "keep-react";
 
 
