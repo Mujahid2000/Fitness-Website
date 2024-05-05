@@ -1,6 +1,6 @@
-import { data } from "autoprefixer";
+
 import axios from "axios";
-import {  useContext, useState } from "react";
+import {  useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
@@ -9,10 +9,9 @@ import { Helmet } from "react-helmet";
 const skillsOptions = ['Self-Development', 'Positivity', 'Extensive Knowledge of Fitness', 'Skills in Communication', 'Inspiring Others', 'Being Approachable and Friendly'];
 
 const TrainerApply = () => {
-    const [applyData, setApplyData] = useState([]);
+    
     const {user} = useContext(AuthContext);
     const navigate = useNavigate();
-
     const handleSubscribe = async (e) => {
         e.preventDefault();
         const formData = new FormData(e.target);
