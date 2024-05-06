@@ -57,7 +57,7 @@ const NavBar = () => {
                     : ""
                 }
               >
-                <button className="btn btn-info bg-white text-black hover:bg-red-600 hover:text-white px-3 py-2 rounded-lg">Login</button>
+                <button className="bg-indigo-600 px-4 py-2 rounded text-white hover:bg-indigo-500 text-sm">Login</button>
               </Link>
             </div>
           )}
