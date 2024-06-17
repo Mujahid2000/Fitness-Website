@@ -35,8 +35,8 @@ const Dashboard = () => {
       <button onClick={() => setOpen(!open)} className={` absolute cursor-pointer -right-3 rounded-full top-9 w-7 border-2 border-white bg-white ${!open && 'rotate-180'}`}><IoIosArrowBack></IoIosArrowBack></button>
                 
         <div className='flex justify-center items-center gap-2 mt-2'>
-          <img className='w-10 h-10 rounded-lg' src='https://i.ibb.co/cYYK2CY/Screenshot-2023-11-24-003245.png' alt='' />
-          <h2 className={`${open ? 'text-base text-white font-mono' : 'hidden'}`}>Fitness Website</h2>
+          <img className='w-10 h-10 rounded-lg' src='https://i.ibb.co/pPQVxSw/Screenshot-2024-06-16-214828-removebg-preview.png' alt='' />
+          <h2 className={`${open ? 'text-xl text-white font-mono' : 'hidden'}`}>Gym Center</h2>
         </div>
         <ul className='grid grid-cols-1 gap-3 p-4 text-white text-center mt-3'>
           <li>

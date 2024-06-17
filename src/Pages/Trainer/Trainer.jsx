@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 // import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
-import { FaFacebook } from 'react-icons/fa';
+import { FaFacebook, FaTwitter, FaWhatsapp } from 'react-icons/fa';
 import { RiTwitterXFill } from "react-icons/ri";
 import { BsWhatsapp } from "react-icons/bs";
 import { Button, Card } from 'keep-react';
@@ -24,48 +24,31 @@ const Trainer = () => {
       <Helmet>
         <title>Fitness || Trainer</title>
       </Helmet>
-      <div className='grid grid-cols-1 mt-28 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-5  max-w-full justify-self-center place-items-center
+      <div className='grid bg-black grid-cols-1 pt-28 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-5  max-w-full justify-self-center place-items-center
  mx-auto'>
         {trainer.map(trainers => (
-          <Card
-            key={trainers._id}
-            className="max-w-xs overflow-hidden rounded-md hover:scale-105 transition-transform duration-300 mb-4 md:mb-0 lg:mb-0"
-            imgSrc={trainers.image}
-            imgSize="md">
-            <Card.Container className="space-y-4 p-6">
-              <Card.Title className="flex items-center gap-2 text-body-5 font-medium text-metal-500 md:!text-body-4">
-               
-                <span>{trainers.name}</span>
-              </Card.Title>
-              <Card.Container className="flex items-center justify-between">
-                <Card.Title className="flex items-center gap-2 !text-body-5 font-medium text-metal-500">
-                 
-                  <span>{trainers.experience}</span>
-                </Card.Title>
-                
-              </Card.Container>
-              <Card.Container className="flex items-center justify-between">
-                <Card.Title className="flex items-center gap-2 !text-body-5 font-medium text-metal-500">
-                  
-                  <span>Available Time: Mon-Fri, 9 AM - 5 PM</span>
-                </Card.Title>
-               
-              </Card.Container>
-              <Card.Container className="my-3 flex items-center justify-between">
-                <Link to={`/trainerDetail/${trainers._id}`}>
-                <Button type="primary" size="sm">
-                  Know More
-                </Button>
-                
-                </Link>
-                <Card.Title className="text-body-3 flex gap-4 font-medium text-metal-500">
-                  <FaFacebook className="text-blue-500 hover:text-blue-700 cursor-pointer" />
-              <RiTwitterXFill className="text-blue-400 hover:text-blue-600 cursor-pointer" />
-              <BsWhatsapp className="text-green-500 flex gap-3 hover:text-green-700 cursor-pointer" />
-              </Card.Title>
-              </Card.Container>
-            </Card.Container>
-          </Card>
+          <div key={trainers._id} className="max-w-sm rounded overflow-hidden shadow-lg bg-gray-950">
+          <img className="h-64 w-80" src={trainers.image} alt="Sample" />
+          <div className="px-6 py-4">
+            <div className="font-bold text-xl mb-2 text-blue-700">{trainers.name}</div>
+            <p className="text-white text-base">Experience: {trainers.experience}</p>
+            <p className="text-white text-base">Schedule Time: 9:00 AM - 5:00 PM</p>
+          </div>
+          <div className='flex justify-between items-center'>
+          <Link to={`/trainerDetail/${trainers._id}`}>
+          <div className="px-6 py-4">
+            <button className="bg-blue-700 hover:bg-blue-500 text-white font-bold py-2 px-4 rounded">
+              Details
+            </button>
+          </div>
+          </Link>
+          <div className="px-6 flex gap-4 pt-4 pb-2">
+            <FaFacebook className='w-6 h-6 text-blue-500'/>
+            <FaTwitter className='w-6 h-6 text-blue-600'/>
+            <FaWhatsapp className='w-6 h-6 text-green-500'/>
+          </div>
+          </div>
+        </div>
         ))}
       </div>
     </div>

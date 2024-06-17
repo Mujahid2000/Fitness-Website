@@ -1,7 +1,6 @@
-
-
-import { Avatar, Dropdown, Navbar } from 'flowbite-react';
-import { useContext } from 'react';
+import { AiOutlineLogout } from 'react-icons/ai';
+import { CgProfile } from 'react-icons/cg';
+import { useContext, useState } from 'react';
 import { AuthContext } from '../Provider/AuthProvider';
 import { Link } from 'react-router-dom';
 import UseTrainer from '../Hooks/UseTrainer';
@@ -10,106 +9,221 @@ import UseAdmin from '../Hooks/UseAdmin';
 const NavBar = () => {
   const { user, logOut } = useContext(AuthContext);
   const [isTrainer] = UseTrainer();
+  const [menu, setMenu] = useState(false);
   const [isAdmin] = UseAdmin();
+  const [mobileMenu, setMobileMenu] = useState(false);
+
   const handleLogOut = () => {
     logOut()
-    .then(() => {})
-    .catch(error => console.log(error));
+      .then(() => {})
+      .catch(error => console.log(error));
   };
 
-    return (
-      <div className='fixed top-0 w-full z-50  py-2.8 '>
-      <Navbar fluid rounded className='bg-white py-2.5 shadow-md'>
-        <Navbar.Brand href="/">
-          <img src="https://i.ibb.co/NjvfR0R/Screenshot-2024-01-08-135124-removebg-preview.png" className="mr-3 h-8 sm:h-9" alt="Logo" />
-          <span className="self-center whitespace-nowrap text-xl font-semibold text-white">Fitness Center</span>
-        </Navbar.Brand>
-        <div className="flex md:order-2">
+  return (
+    <div className='fixed top-0 w-full z-50'>
+      <div className='flex items-center justify-between px-1 py-5 px-2 gap-4 bg-black shadow-md'>
+        <div className='flex gap-2 items-center'>
+          <Link to={'/'}>
+          <img src="https://i.ibb.co/pPQVxSw/Screenshot-2024-06-16-214828-removebg-preview.png" className=" h-6 sm:h-6" alt="Logo" />
+          </Link>
+          <h2 className="text-xs lg:text-lg poppins-semibold font-semibold text-white">Gym Center</h2>
+        </div>
+        <div className="flex items-center justify-center flex-row-reverse md:hidden">
+          <button onClick={() => setMobileMenu(!mobileMenu)} className="text-white focus:outline-none">
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={mobileMenu ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}></path>
+            </svg>
+          </button>
+
           {user ? (
-            <div className="flex md:order-2">
-              <Dropdown
-                arrowIcon={false}
-                inline
-                label={<Avatar alt="User settings" img={user?.photoURL}  rounded />}
-              >
-                <Dropdown.Header>
-                  <span className="block text-sm">{user?.displayName}</span>
-                  <span className="block truncate text-sm font-medium">{user.email}</span>
-                </Dropdown.Header>
-                <Dropdown.Divider />
-                {user?.email ? (
-                  <Dropdown.Item href="dashboard">DashBoard</Dropdown.Item>
-                ) : (
-                  <p>No dashboard</p>
-                )}
-                <Dropdown.Item onClick={handleLogOut}>LogOut</Dropdown.Item>
-              </Dropdown>
+            <div className="relative  mx-2 ">
+              <img
+                onClick={() => setMenu(!menu)}
+                src={user?.photoURL}
+                alt="User"
+                className="w-8 h-8 rounded-full cursor-pointer"
+              />
+              {menu && (
+                <ul className="absolute z-10 right-0 mt-4 w-48 bg-black border border-gray-200 rounded-md shadow-lg">
+                  <Link to={'/dashboard'}>
+                    <li className="flex items-center gap-2 p-2 text-white cursor-pointer">
+                      <CgProfile className="w-4 h-4" />
+                      <span>Dashboard</span>
+                    </li>
+                  </Link>
+                  <li
+                    onClick={handleLogOut}
+                    className="flex items-center gap-2 p-2   cursor-pointer"
+                  >
+                    <AiOutlineLogout className="w-4 text-white h-4" />
+                    <span className='text-white'>Sign Out</span>
+                  </li>
+                </ul>
+              )}
             </div>
           ) : (
-            <div>
-              <Link
-                to="/login"
-                className={({ isActive, isPending }) =>
-                  isPending
-                    ? "pending"
-                    : isActive
-                    ? "text-[#333333] underline font-medium text-lg"
-                    : ""
-                }
-              >
-                <button className="bg-indigo-600 px-4 py-2 rounded text-white hover:bg-indigo-500 text-sm">Login</button>
-              </Link>
-            </div>
+            <Link to={'/login'} className="mt-3 md:mt-0">
+              <button className="bg-[#097FD9] text-white font-medium py-2 px-4 rounded hover:bg-[#097fd9db]">
+                LOG IN
+              </button>
+            </Link>
           )}
-          <Navbar.Toggle />
         </div>
-              <Navbar.Collapse className="ml-auto mr-4">
-          <Link to="/" className='uppercase text-black hover:text-orange-500'>
-            Home
-          </Link>
-          <Link to="/gallery" className='uppercase text-black hover:text-orange-500'>
-            Gallery
-          </Link>
-          <Link to="/trainer" className='uppercase text-black hover:text-orange-500'>
-            Trainer
-          </Link>
-          <Link to="/class" className='uppercase text-black hover:text-orange-500'>
-            Classes
-          </Link>
-          <Link to="/community" className='uppercase text-black hover:text-orange-500'>
-            Community
-          </Link>
-          <Link to="/contact" className='uppercase text-black hover:text-orange-500'>
-            Contact Us
-          </Link>
-          {
+        <div className={`flex-col md:flex md:flex-row md:items-center hidden`}>
+          <ul className='flex text-sm  poppins-semibold lg:text-base flex-col md:flex-row gap-3 '>
+            <li>
+              <Link to="/" className='uppercase text-white hover:text-sky-500'>
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link to="/gallery" className='uppercase text-white hover:text-sky-500'>
+                Gallery
+              </Link>
+            </li>
+            <li>
+              <Link to="/trainer" className='uppercase text-white hover:text-sky-500'>
+                Trainer
+              </Link>
+            </li>
+            <li>
+              <Link to="/class" className='uppercase text-white hover:text-sky-500'>
+                Classes
+              </Link>
+            </li>
+            <li>
+              <Link to="/community" className='uppercase text-white hover:text-sky-500'>
+                Community
+              </Link>
+            </li>
+            <li>
+              <Link to="/contact" className='uppercase text-white hover:text-sky-500'>
+                Contact
+              </Link>
+            </li>
+            {
             user && isAdmin && !isTrainer &&
-            <Link to="/dashboard" className='uppercase text-black hover:text-orange-500'>
+            <Link to="/dashboard" className='uppercase text-white hover:text-sky-500'>
               DashBoard
             </Link>
           }
           {
             user && isTrainer && !isAdmin &&
-            <Link to="/dashboard" className='uppercase text-black hover:text-orange-500'>
+            <Link to="/dashboard" className='uppercase text-white hover:text-sky-500'>
               DashBoard
             </Link>
           }
           {
             user && isAdmin && isTrainer &&
-            <Link to="/dashboard" className='uppercase text-black hover:text-orange-500'>
+            <Link to="/dashboard" className='uppercase text-white hover:text-sky-500'>
               DashBoard
             </Link>
           }
           {
             user && !isAdmin && !isTrainer &&
-            <Link to="/dashboard" className='uppercase text-black hover:text-orange-500'>
+            <Link to="/dashboard" className='uppercase text-white hover:text-sky-500'>
               DashBoard
             </Link>
           }
-        </Navbar.Collapse>
-    </Navbar>
+          </ul>
+          {user ? (
+            <div className="relative mt-3 md:mt-0 ml-4 ">
+              <img
+                onClick={() => setMenu(!menu)}
+                src={user?.photoURL}
+                alt="User"
+                className="w-8 h-8 rounded-full cursor-pointer"
+              />
+              {menu && (
+                <ul className="absolute z-10 right-0 mt-4 w-40 bg-black border border-gray-200 rounded-md shadow-lg">
+                  <Link to={'/dashboard'}>
+                    <li className="flex items-center gap-2 p-2 text-white cursor-pointer">
+                      <CgProfile className="w-4 h-4" />
+                      <span className='text-white'>Dashboard</span>
+                    </li>
+                  </Link>
+                  <li
+                    onClick={handleLogOut}
+                    className="flex items-center gap-2 p-2 bg-black cursor-pointer"
+                  >
+                    <AiOutlineLogout className="w-4 text-white h-4" />
+                    <span className='text-white'>Sign Out</span>
+                  </li>
+                </ul>
+              )}
+            </div>
+          ) : (
+            <Link to={'/login'} className="mt-3 mx-2 md:mt-0">
+              <button className="bg-[#097FD9] text-white font-medium py-2 px-4 text-sm rounded hover:bg-[#097fd9db]">
+                LOG IN
+              </button>
+            </Link>
+          )}
         </div>
-    );
+      </div>
+
+      {/* mobile side */}
+      <div className={`md:hidden ${mobileMenu ? 'block' : 'hidden'} px-5 py-4 bg-black`}>
+        <ul className='flex flex-col poppins-semibold gap-4 text-sm'>
+          <li>
+            <Link to="/" className='uppercase text-white hover:text-sky-500'>
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link to="/gallery" className='uppercase text-white hover:text-sky-500'>
+              Gallery
+            </Link>
+          </li>
+          <li>
+            <Link to="/trainer" className='uppercase text-white hover:text-sky-500'>
+              Trainer
+            </Link>
+          </li>
+          <li>
+            <Link to="/class" className='uppercase text-white hover:text-sky-500'>
+              Classes
+            </Link>
+          </li>
+          <li>
+            <Link to="/community" className='uppercase text-white hover:text-sky-500'>
+              Community
+            </Link>
+          </li>
+          <li>
+            <Link to="/contact" className='uppercase text-white hover:text-sky-500'>
+              Contact
+            </Link>
+          </li>
+          {
+            user && isAdmin && !isTrainer &&
+            <Link to="/dashboard" className='uppercase text-white hover:text-sky-500'>
+              DashBoard
+            </Link>
+          }
+          {
+            user && isTrainer && !isAdmin &&
+            <Link to="/dashboard" className='uppercase text-white hover:text-sky-500'>
+              DashBoard
+            </Link>
+          }
+          {
+            user && isAdmin && isTrainer &&
+            <Link to="/dashboard" className='uppercase text-white hover:text-sky-500'>
+              DashBoard
+            </Link>
+          }
+          {
+            user && !isAdmin && !isTrainer &&
+            <Link to="/dashboard" className='uppercase text-white hover:text-sky-500'>
+              DashBoard
+            </Link>
+          }
+        </ul>
+        
+      </div>
+    </div>
+  );
 };
 
 export default NavBar;

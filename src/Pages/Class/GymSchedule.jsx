@@ -28,11 +28,11 @@ const GymSchedule = () => {
       <Helmet>
         <title>Fitness || Class</title>
       </Helmet>
-      <div>
+      <div className='bg-black px-4'>
         <div>
-          <h2 className="text-center text-5xl font-mono mb-4 mt-20">Class Page</h2>
+          <h2 className="text-center poppins-semibold text-white text-5xl font-bold  mb-4 pt-20">Class Page</h2>
         </div>
-        <div className='mt-10'>
+        <div className='pt-10'>
           <form className="relative">
             <div className="flex">
              
@@ -56,7 +56,7 @@ const GymSchedule = () => {
               </button>
               <div
                 id="dropdown"
-                className={`absolute top-full left-0 z-10 ${isDropdownOpen ? 'block' : 'hidden'} bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700`}>
+                className={`absolute top-full left-0 z-10 ${isDropdownOpen ? 'block' : 'hidden'} bg-black divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700`}>
                   
                   <button
                     type="button"
@@ -70,11 +70,11 @@ const GymSchedule = () => {
                 
                 {
                   data.map(item => 
-                    <ul key={item._id} className="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdown-button">
+                    <ul key={item._id} className="py-2 text-sm text-white dark:text-gray-200" aria-labelledby="dropdown-button">
                     <li>
                       <button
                         type="button"
-                        className={`inline-flex w-full px-4 py-2 ${selectedCategory === item.time ? 'bg-gray-200 dark:bg-gray-600 dark:text-white' : 'hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white'
+                        className={`inline-flex w-full px-4 py-2 ${selectedCategory === item.time ? 'bg-black dark:bg-black dark:text-white' : 'hover:bg-gray-100 dark:hover:bg-gray-600 text-white'
                         }`}
                         onClick={() => selectCategory(`${item.time}`)}
                       >
@@ -90,9 +90,9 @@ const GymSchedule = () => {
           </form>
         </div>
       </div>
-      <div className="overflow-x-auto bg-slate-400 p-4 mt-10">
+      <div className="overflow-x-auto bg-gray-950 px-4 p-10">
         <table className="table-auto w-full border-collapse border border-gray-800 mt-6">
-          <thead className="bg-slate-50 text-lg">
+          <thead className=" text-white text-lg">
             <tr>
               <th className="p-2 border">Time</th>
               <th className="p-2 border">Saturday</th>
@@ -107,7 +107,7 @@ const GymSchedule = () => {
   {data
     .filter(item => !selectedCategory || item.time === selectedCategory) // Filter data based on the selected day
     .map((item) => (
-      <tr key={item._id}>
+      <tr key={item._id} className='text-white'>
         <td className="p-2 border">{item.time}</td>
         <td className="p-2 border">
           <h1 className="font-bold text-center">{item.exercise}</h1>

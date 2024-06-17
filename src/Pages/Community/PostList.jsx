@@ -46,14 +46,14 @@ const PostList = ({ posts, reFetch, setRefetch }) => {
     const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
     return (
-      <div>
+      <div className="">
         <div>
         {currentPosts.map((post) => (
         <div
             key={post.title}
-            className="post my-8 p-4 bg-white shadow-md rounded-md">
-            <h2 className="text-xl font-bold mb-2">{post.title}</h2>
-            <p className="text-gray-700">{post.content}</p>
+            className="post my-8 p-4 bg-gray-800 shadow-md rounded-md">
+            <h2 className="text-xl text-white font-bold mb-2">{post.title}</h2>
+            <p className="text-white">{post.content}</p>
             <div className="flex items-center mt-4">
             <button
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-2"
@@ -62,7 +62,7 @@ const PostList = ({ posts, reFetch, setRefetch }) => {
             Upvote
             </button>
 
-            <span className="text-xl font-bold">{post.vote}</span>
+            <span className="text-xl text-white font-bold">{post.vote}</span>
             <button
             className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded ml-2"
             onClick={() => handleVote(post._id, "down")}>
@@ -79,9 +79,9 @@ const PostList = ({ posts, reFetch, setRefetch }) => {
             <button
               key={index + 1}
               onClick={() => paginate(index + 1)}
-              className={`px-4 py-2 mx-1 bg-gray-300 rounded ${
+              className={`px-4 py-2 mx-1 bg-white rounded ${
                 currentPage === index + 1
-                  ? "bg-gray-500 text-white"
+                  ? "bg-gray-500 text-black"
                   : "hover:bg-gray-400"
               }`}
             >

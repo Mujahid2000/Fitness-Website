@@ -10,24 +10,33 @@ import TransitionCard from "./TransitionCard";
 import Health from "./Health";
 import ContactUS from "./Contact";
 import Featured from "./Featured";
+import Program from "./Program";
+import FitnessPlan from "./FitnessPlan";
+import Pricing from "./Pricing";
+import Review from "./Review";
 
 
 
 const Home = () => {
     return (
-        <div>
+        <div >
             <Helmet>
                 <title>Home</title>
             </Helmet>
             <HomeBanner></HomeBanner>
-            <Featured/>
-            <Success></Success>
+            <Program/>
+            <FitnessPlan/>
+            <Pricing/>
+            <Review/>
+            {/* <Featured/> */}
+            {/* <Success></Success>
             <Blog></Blog>
             <TransitionCard></TransitionCard>
             <About></About>
             <Health></Health>
-            <Subscription></Subscription>
-            <ContactUS></ContactUS>
+             */}
+             <Subscription></Subscription>
+            {/* <ContactUS></ContactUS> */}
         </div>
     );
 };

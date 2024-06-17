@@ -2,97 +2,87 @@ import axios from "axios";
 import { useState } from "react";
 import Swal from "sweetalert2";
 
-
 const Subscription = () => {
-  const [subscribe, setSubscribe] = useState([]);
 
 
   const handleSubscribe = async (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
+
+    const name = 'Mujahidul Islam';
+    const email = formData.get("email");
+
+    // Validate if name and email are present
+    if (!name || !email) {
+      Swal.fire({
+        position: "top-end",
+        icon: "error",
+        title: "Please enter your name and email",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+      return;
+    }
+
     console.log({
-      name: formData.get('name'),
-      email: formData.get('email')
+      name: name,
+      email: email,
     });
-    
-    axios.post('https://fitness-server-iota.vercel.app/subscribe', {
-      name: formData.get('name'),
-      email: formData.get('email')
-    })
-    .then(res => {
-      console.log(res.data);
+
+    try {
+      const response = await axios.post("https://fitness-server-iota.vercel.app/subscribe", {
+        name: name,
+        email: email,
+      });
+
+      console.log(response.data);
       Swal.fire({
         position: "top-end",
         icon: "success",
         title: "Your Subscription done",
         showConfirmButton: false,
-        timer: 1500
+        timer: 1500,
       });
-    })
-    .catch(error => {
-      console.error('Error:', error);
-    });
-  }
+    } catch (error) {
+      console.error("Error:", error);
+      Swal.fire({
+        position: "top-end",
+        icon: "error",
+        title: "Subscription failed",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+    }
+  };
 
+  return (
+    <div className="bg-[#000] px-5 pb-20">
+      <div className="mx-auto  max-w-7xl px-6 lg:px-8">
+    <div
+        className="relative isolate overflow-hidden bg-[#097FD9] px-6 py-20 shadow-2xl rounded-2xl sm:rounded-3xl sm:px-24 xl:py-20">
+       
+        <h2 className="mx-auto max-w-2xl text-center text-3xl font-bold tracking-tight text-white sm:text-4xl">Subscribe our fitness tips
+        </h2>
 
-    return (
-      <div className="mt-10 px-5">
-  <h2 className="text-2xl lg:text-5xl uppercase font-mono font-semibold text-center mb-8">
-    Subscribe Now <span className="text-5xl font-bold text-blue-500">&</span> Join with Us
-  </h2>
-  <div className="flex flex-col md:flex-row max-w-7xl mx-auto justify-center items-center">
-    <div className="w-full max-w-md p-4 bg-sky-400 px-9 py-12 md:py-24 border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
-      <form onSubmit={handleSubscribe} className="max-w-md mx-auto">
-        <div className="mb-4">
-          <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-white">
-            Your Name
-          </label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            className="mt-1 p-3 block w-full border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500 dark:border-gray-600 dark:text-white dark:focus:border-blue-500 dark:focus:ring-blue-500"
-            placeholder="John Doe"
-            required
-          />
-        </div>
-        <div className="mb-4">
-          <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-white">
-            Your Email
-          </label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            className="mt-1 p-3 block w-full border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500 dark:border-gray-600 dark:text-white dark:focus:border-blue-500 dark:focus:ring-blue-500"
-            placeholder="name@gmail.com"
-            required
-          />
-        </div>
-        <button
-          type="submit"
-          className="bg-blue-600 hover:bg-blue-800 text-white font-medium rounded-md py-3 w-full transition duration-300"
-        >
-          Subscribe Now
-        </button>
-      </form>
+        <p className="mx-auto  max-w-xl text-center text-lg leading-8 text-white">
+        Clearly communicate the benefits of subscribing, such as exclusive content and breaking news.
+        </p>
+
+        <form onSubmit={handleSubscribe} className="mx-auto mt-10 flex max-w-md gap-x-4">
+
+            <label htmlFor="email-address" className="sr-only">Email address</label>
+            <input id="email-address" name="email" type="email" autoComplete="email" required="" className="min-w-0 flex-auto rounded-md border-0 bg-white 5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-white sm:text-sm sm:leading-6" placeholder="Enter your email"/>
+
+            <button type="submit" className="flex-none rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Subscribe</button>
+        </form>
+
+        
+
     </div>
-    <div className="md:w-1/2 h-full">
-      <img
-        src="https://i.ibb.co/Y3Msrpn/contact.png"
-        alt="Contact us"
-        className="w-full h-full object-cover rounded-md"
-      />
-    </div>
-
-
-  </div>
 </div>
-
-
-
-      
-    );
+      </div>
+  
+  );
 };
 
 export default Subscription;
