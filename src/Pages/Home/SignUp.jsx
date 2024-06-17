@@ -88,14 +88,14 @@ const SignUp = () => {
 
     return (
         <div>
-        <div className="min-h-screen flex items-center justify-center">
-            <div className="bg-gray-100 p-8 rounded-lg shadow-lg w-full max-w-md">
-            <h2 className="text-3xl uppercase text-center font-bold text-indigo-600 mb-4">Sign Up</h2>
+        <div className="min-h-screen bg-black flex items-center justify-center">
+            <div className="bg-gray-950 p-8 rounded-lg shadow-lg w-full max-w-md">
+            <h2 className="text-3xl uppercase text-center font-bold text-blue-600 mb-4">Sign Up</h2>
             <form onSubmit={handleRegister}>
                 <div className="mb-4">
                 <label
                     htmlFor="name"
-                    className="block text-gray-700 text-sm font-medium mb-2"
+                    className="block text-white text-sm font-medium mb-2"
                 >
                     Name
                 </label>
@@ -103,14 +103,14 @@ const SignUp = () => {
                     type="text"
                     id="name"
                     name="name"
-                    className="w-full py-2 px-3 border bg-gray-100 rounded-md focus:outline-none focus:border-indigo-600"
+                    className="w-full py-2 px-3 border bg-black text-white rounded-md focus:outline-none focus:border-blue-600"
                     placeholder="Enter your name"
                 />
                 </div>
                 <div className="mb-4">
                 <label
                     htmlFor="email"
-                    className="block text-gray-700 text-sm font-medium mb-2"
+                    className="block text-white text-sm font-medium mb-2"
                 >
                     Email
                 </label>
@@ -118,14 +118,14 @@ const SignUp = () => {
                     type="email"
                     id="email"
                     name="email"
-                    className="w-full py-2 px-3 border rounded-md bg-gray-100 focus:outline-none focus:border-indigo-600"
+                    className="w-full py-2 px-3 border rounded-md bg-black text-white focus:outline-none focus:border-blue-600"
                     placeholder="Enter your email"
                 />
                 </div>
                 <div className="mb-6">
                 <label
                     htmlFor="password"
-                    className="block text-gray-700 text-sm font-medium mb-2"
+                    className="block text-white text-sm font-medium mb-2"
                 >
                     Password
                 </label>
@@ -133,14 +133,14 @@ const SignUp = () => {
                     type="password"
                     id="password"
                     name="password"
-                    className="w-full py-2 px-3 border rounded-md bg-gray-100 focus:outline-none focus:border-indigo-600"
+                    className="w-full py-2 px-3 border rounded-md bg-black text-white focus:outline-none focus:border-blue-600"
                     placeholder="Enter your password"
                 />
                 </div>
                 <div className="mb-6">
                 <label
                     htmlFor="photoURL"
-                    className="block text-gray-700 text-sm font-medium mb-2"
+                    className="block text-white text-sm font-medium mb-2"
                 >
                     Photo URL
                 </label>
@@ -149,17 +149,17 @@ const SignUp = () => {
                     type="text"
                     id="photoURL"
                     name="photoURL"
-                    className="w-full py-2 px-3 border rounded-md bg-gray-100 focus:outline-none focus:border-indigo-600"
+                    className="w-full py-2 px-3 border rounded-md bg-black text-white focus:outline-none focus:border-blue-600"
                     placeholder="Enter your photo URL"
                     />
-                    <div className="absolute top-2 right-2 text-indigo-600">
+                    <div className="absolute top-2 right-2 text-blue-600">
                     <FaCamera />
                     </div>
                 </div>
                 </div>
                 <button
                 type="submit"
-                className="w-full bg-indigo-600 text-white py-2 rounded-md hover:bg-indigo-200 focus:outline-none "
+                className="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 focus:outline-none "
                 >
                 Sign Up
                 </button>
@@ -167,9 +167,9 @@ const SignUp = () => {
                 <div className="flex gap-4 justify-center mt-4">
             <SocialLogin></SocialLogin>
             </div>
-            <p className="mt-4 text-sm text-gray-600 text-center">
+            <p className="mt-4 text-base text-gray-600 text-center">
                 Already have an account?{" "}
-                <a href="/login" className="text-indigo-600 underline">
+                <a href="/login" className="text-blue-600 underline">
                 Log in
                 </a>
             </p>

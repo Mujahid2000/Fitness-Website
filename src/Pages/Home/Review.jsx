@@ -38,7 +38,7 @@ const Review = () => {
 
         <div className="">
         <div className=" p-3 relative">
-         <div className="w-[24rem] mx-auto" >
+         <div className="w-[18rem] md:w-[22rem] mx-auto" >
          <div className="">
       <div id="keen-slider" className="keen-slider">
         <div className="keen-slider__slide">
@@ -83,7 +83,7 @@ const Review = () => {
                <input className="sr-only peer" type="radio" name="carousel" id="carousel-1" checked />
               
                <div
-                  className="w-[24rem] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  rounded-lg shadow-lg transition-all duration-300 opacity-0 peer-checked:opacity-100 peer-checked:z-10 z-0">
+                  className="w-[18rem] md:w-[22rem] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  rounded-lg shadow-lg transition-all duration-300 opacity-0 peer-checked:opacity-100 peer-checked:z-10 z-0">
                  <div className="">
       <div id="keen-slider" className="keen-slider">
         <div className="keen-slider__slide">
@@ -143,7 +143,7 @@ const Review = () => {
             <div className="">
                <input className="sr-only peer" type="radio" name="carousel" id="carousel-2" />
                         <div
-                  className="w-[24rem] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  rounded-lg shadow-lg transition-all duration-300 opacity-0 peer-checked:opacity-100 peer-checked:z-10 z-0">
+                  className="w-[18rem] md:w-[22rem] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  rounded-lg shadow-lg transition-all duration-300 opacity-0 peer-checked:opacity-100 peer-checked:z-10 z-0">
                   <div className="">
       <div id="keen-slider" className="keen-slider">
         <div className="keen-slider__slide">
@@ -192,7 +192,7 @@ const Review = () => {
                <input className="sr-only peer" type="radio" name="carousel" id="carousel-3" checked />
              
                <div
-                  className="w-[24rem] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  rounded-lg shadow-lg transition-all duration-300 opacity-0 peer-checked:opacity-100 peer-checked:z-10 z-0">
+                  className="w-[18rem] md:w-[22rem] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  rounded-lg shadow-lg transition-all duration-300 opacity-0 peer-checked:opacity-100 peer-checked:z-10 z-0">
                 
                 <div className="">
       <div id="keen-slider" className="keen-slider">

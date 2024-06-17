@@ -5,6 +5,8 @@ import { AuthContext } from '../Provider/AuthProvider';
 import { Link } from 'react-router-dom';
 import UseTrainer from '../Hooks/UseTrainer';
 import UseAdmin from '../Hooks/UseAdmin';
+import { IoMdMenu } from "react-icons/io";
+
 
 const NavBar = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -21,7 +23,7 @@ const NavBar = () => {
 
   return (
     <div className='fixed top-0 w-full z-50'>
-      <div className='flex items-center justify-between px-1 py-5 px-2 gap-4 bg-black shadow-md'>
+      <div className='flex items-center justify-between  py-5 px-2 gap-4 bg-black shadow-md'>
         <div className='flex gap-2 items-center'>
           <Link to={'/'}>
           <img src="https://i.ibb.co/pPQVxSw/Screenshot-2024-06-16-214828-removebg-preview.png" className=" h-6 sm:h-6" alt="Logo" />
@@ -30,9 +32,8 @@ const NavBar = () => {
         </div>
         <div className="flex items-center justify-center flex-row-reverse md:hidden">
           <button onClick={() => setMobileMenu(!mobileMenu)} className="text-white focus:outline-none">
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={mobileMenu ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}></path>
-            </svg>
+          <IoMdMenu className='w-6 h-6' />
+
           </button>
 
           {user ? (
@@ -63,7 +64,7 @@ const NavBar = () => {
             </div>
           ) : (
             <Link to={'/login'} className="mt-3 md:mt-0">
-              <button className="bg-[#097FD9] text-white font-medium py-2 px-4 rounded hover:bg-[#097fd9db]">
+              <button className="bg-blue-500 text-white font-medium py-2 px-4 rounded hover:bg-blue-600">
                 LOG IN
               </button>
             </Link>
@@ -154,7 +155,7 @@ const NavBar = () => {
             </div>
           ) : (
             <Link to={'/login'} className="mt-3 mx-2 md:mt-0">
-              <button className="bg-[#097FD9] text-white font-medium py-2 px-4 text-sm rounded hover:bg-[#097fd9db]">
+              <button className="bg-blue-500 text-white font-medium py-2 px-4 text-sm rounded hover:bg-blue-600">
                 LOG IN
               </button>
             </Link>
