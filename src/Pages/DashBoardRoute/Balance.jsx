@@ -7,6 +7,7 @@ import { FaMoneyCheckAlt } from "react-icons/fa";
 
 const Balance = () => {
     const [balance , setBalance] = useState([]);
+    
     const [payment, setPayment] = useState([])
     
 
@@ -29,7 +30,8 @@ const Balance = () => {
     },[])
 
     const calculateTotal = () => {
-        const total = balance.reduce((acc, item) => acc + item.price, 0);
+        const total = balance.reduce((acc, item) => acc + item?.price, 0);
+       
         return total;
     };
 
@@ -45,7 +47,7 @@ const Balance = () => {
         const totalMoney = totalBalance - totalPayment;
         return totalMoney;
     };
-    
+    // console.log(calculateTotal);
 
 
     return (
@@ -54,7 +56,7 @@ const Balance = () => {
                 <title>Dashboard || Balance</title>
             </Helmet>
 
-            <div className="bg-[#555555] p-6 h-screen">
+            <div className=" p-6 h-full md:h-[89.5vh]">
                 <h2 className="text-center text-5xl font-medium mt-2">Balance Dashboard</h2>
             <div className="grid lg:mt-24 grid-cols-1 lg:grid-cols-3 gap-6 items-center justify-center mx-auto max-w-7xl">
             <div className="flex justify-center items-center hover:scale-105 transition-transform duration-300 gap-4 border-purple-600r bg-sky-500 text-white font-semibold rounded-xl py-28">

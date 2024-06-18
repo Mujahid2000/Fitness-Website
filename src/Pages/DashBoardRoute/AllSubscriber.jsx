@@ -15,9 +15,9 @@ const AllSubscriber = () => {
     return (
         <div>
             <Helmet>
-                <title>Dashboard || ALL Subscriber</title>
+                <title>ALL Subscriber</title>
             </Helmet>
-<div className='bg-purple-700 h-screen p-6'>
+        <div className={`${subscribers.length < 1 ? 'h-[89.5vh] bg-black max-w-7xl mx-auto p-6' : 'h-full  max-w-7xl mx-auto p-6'}`}>
             <h2 className='text-5xl text-center mb-6 mt-6 text-white font-serif font-semibold'>All Subscribers</h2>
             <div className="overflow-x-auto">
                 <table className="min-w-full bg-white border border-gray-300">
@@ -30,8 +30,8 @@ const AllSubscriber = () => {
                     <tbody>
                         {subscribers.map((subscriber, index) => (
                             <tr key={index} className={`${index % 2 === 0 ? 'bg-gray-100' : 'bg-white'} hover:bg-gray-200 transition-all`}>
-                                <td className="py-3 px-4 border-b text-center">{subscriber.name}</td>
-                                <td className="py-3 px-4 border-b text-center">{subscriber.email}</td>
+                                <td className="py-3 px-4 border-b text-center">{subscriber?.name}</td>
+                                <td className="py-3 px-4 border-b text-center">{subscriber?.email}</td>
                             </tr>
                         ))}
                     </tbody>

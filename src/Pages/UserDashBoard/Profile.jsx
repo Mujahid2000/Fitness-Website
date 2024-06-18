@@ -50,8 +50,9 @@ const Profile = () => {
   };
 
   return (
-    <div className="bg-white p-6 rounded-md shadow-md">
-      <form onSubmit={handleSubmit}>
+   <div className='h-[89.5vh]'>
+     <div className="max-w-7xl  mx-auto bg-white p-6 rounded-md shadow-md">
+      <form onSubmit={handleSubmit} className=''>
         <div>
           <h3 className="text-lg font-semibold mb-2">Account Details</h3>
           <div className="mb-4">
@@ -93,6 +94,7 @@ const Profile = () => {
         </button>
       </form>
     </div>
+   </div>
   );
 };
 

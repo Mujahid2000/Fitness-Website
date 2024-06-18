@@ -29,16 +29,16 @@ const AllTrainers = () => {
   return (
       <div>
         <Helmet>
-          <title>Dashboard || All Trainers</title>
+          <title>All Trainers</title>
         </Helmet>
-<div className="bg-[#9b59b6] h-screen p-6">
+<div className=" h-full p-6 max-w-7xl mx-auto">
       <h2 className="text-5xl text-center mb-6 mt-6 text-white font-serif font-semibold">
         All Trainers
       </h2>
       <div className="overflow-x-auto">
         <table className="min-w-full bg-white border border-gray-300">
           <thead>
-            <tr className="bg-[#9b59b6] text-white">
+            <tr className="bg-[#878484] text-white">
               <th className="py-2 px-4 border-b">Name</th>
               <th className="py-2 px-4 border-b">Title</th>
               <th className="py-2 px-4 border-b">Salary</th>

@@ -1,44 +1,58 @@
 import { NavLink, Outlet } from 'react-router-dom';
 import {
   FaHome,
-  FaUsers,
-  FaUserTie,
-  FaUserCheck,
-  FaBalanceScale,
-  FaHeart,
-  FaRegCalendarAlt,
   FaRegUser,
-  FaPlusSquare,
-  FaListAlt,
   FaCog,
+  FaListAlt,
+  FaHeart,
+  FaPlusSquare,
+  FaRegCalendarAlt,
+  FaBalanceScale,
+  FaUserCheck,
+  FaUserTie,
+  FaUsers,
 } from 'react-icons/fa';
-import { IoIosArrowBack } from "react-icons/io";
+import { Helmet } from 'react-helmet';
+import { useState, useRef, useEffect } from 'react';
 import UseAdmin from '../../Hooks/UseAdmin';
 import UseTrainer from '../../Hooks/UseTrainer';
-import { Helmet } from 'react-helmet';
-import { useState } from 'react';
+
 
 const Dashboard = () => {
-  // todo: get isAdmin and isTrainer values from the database (replace true with your logic)
-  const [open , setOpen] = useState(true);
+  const [open, setOpen] = useState(true);
+  const sidebarRef = useRef(null);
   const [isAdmin] = UseAdmin();
   const [isTrainer] = UseTrainer();
-  
+
+
+  const handleClickOutside = (event) => {
+    if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
+      setOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
 
   return (
     <div>
       <Helmet>
         <title>Dashboard</title>
       </Helmet>
-      <div className='flex'>
-      <div className={`${open ? 'w-72' : 'w-20'} duration-300 h-screen bg-blue-950 relative`}>
-      <button onClick={() => setOpen(!open)} className={` absolute cursor-pointer -right-3 rounded-full top-9 w-7 border-2 border-white bg-white ${!open && 'rotate-180'}`}><IoIosArrowBack></IoIosArrowBack></button>
-                
-        <div className='flex justify-center items-center gap-2 mt-2'>
-          <img className='w-10 h-10 rounded-lg' src='https://i.ibb.co/pPQVxSw/Screenshot-2024-06-16-214828-removebg-preview.png' alt='' />
-          <h2 className={`${open ? 'text-xl text-white font-mono' : 'hidden'}`}>Gym Center</h2>
-        </div>
-        <ul className='grid grid-cols-1 gap-3 p-4 text-white text-center mt-3'>
+      
+      <div className="flex h-screen bg-gray-100">
+        <div ref={sidebarRef} className={`${open ? 'duration-300 absolute z-50 h-screen flex flex-col w-64 bg-gray-800 ' : 'hidden'}`}>
+          <div className="flex gap-3 items-center justify-center h-16 bg-gray-900">
+            <img src="https://i.ibb.co/pPQVxSw/Screenshot-2024-06-16-214828-removebg-preview.png" alt="" className='w-6 h-6' />
+            <span className="text-white font-bold uppercase">Gym Center</span>
+          </div>
+          <div className="flex flex-col flex-1 overflow-y-auto">
+            <div className="flex-1 px-2 py-4 bg-gray-800">
+            <ul className='grid grid-cols-1 gap-3 p-4 text-white text-center mt-3'>
           <li>
             <NavLink to='/' className='flex text-white leading-normal shadow-md transition duration-150 ease-in-out hover:bg-neutral-300 hover:shadow-lg focus:bg-neutral-300 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-neutral-400 active:shadow-lg rounded-lg p-3 bg-[#008080] items-center gap-5'>
               <FaHome /> <h3 className={`${open ? 'text-base text-white font-mono' : 'hidden'}`}>Home</h3>
@@ -128,11 +142,29 @@ const Dashboard = () => {
             </>
           )}
         </ul>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex flex-col flex-1 overflow-y-auto">
+          <div className="flex items-center py-5 justify-between h-16 bg-white border-b border-gray-200">
+            <div className="flex items-center px-4">
+              <button onClick={() => setOpen(!open)} className="text-gray-500 focus:outline-none focus:text-gray-700">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              </button>
+            </div>
+            <h2 className='text-xl text-center poppins-semibold font-bold'>Dashboard</h2>
+              <input className="mx-4 max-w-[10rem] border rounded-md px-4 py-2" type="text" placeholder="Search"/>
+          </div>
+          <div className="p-4 bg-black">
+            <Outlet/>
+
+           <h2 className='text-white h-[89.5vh] text-center text-2xl md:text-2xl lg:text-5xl poppins-semibold justify-center items-center flex'>Welcome to Your Dashboard</h2>
+          </div>
+        </div>
       </div>
-      <div className='flex-1'>
-        <Outlet />
-      </div>
-    </div>
     </div>
   );
 };
