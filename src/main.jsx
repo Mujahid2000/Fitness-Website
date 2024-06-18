@@ -39,6 +39,7 @@ import ActivityLog from './Pages/UserDashBoard/ActivityLog';
 import Recomended from './Pages/UserDashBoard/Recomended';
 import AllUsers from './Pages/DashBoardRoute/AllUsers';
 import SimpleMap from './Pages/Contact/Contact';
+import DashBoardScreen from './Pages/DashBoard/DashBoardScreen';
 const queryClient = new QueryClient()
 const router = createBrowserRouter([
   {
@@ -143,6 +144,10 @@ const router = createBrowserRouter([
       {
         path: 'profile',
         element: <PrivateRoute><Profile></Profile> </PrivateRoute>
+      },
+      {
+        path: 'dashboard',
+        element: <PrivateRoute><DashBoardScreen></DashBoardScreen> </PrivateRoute>
       }
     ]
   } 

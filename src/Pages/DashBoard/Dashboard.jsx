@@ -130,8 +130,8 @@ const Dashboard = () => {
                 </NavLink>
               </li>
               <li>
-                <NavLink to='/dashboard/recommendedClass' className='flex text-white leading-normal shadow-md transition duration-150 ease-in-out hover:bg-[#e74c3c] hover:shadow-lg focus:bg-[#e74c3c] focus:shadow-lg focus:outline-none focus:ring-0 active:bg-[#c0392b] active:shadow-lg rounded-lg p-3 bg-[#d35400] items-center gap-5'>
-                  <FaHeart /> <h3 className={`${open ? 'text-base text-white font-mono' : 'hidden'}`}>Recommended Classes</h3>
+                <NavLink to='/dashboard/recommendedClass' className='flex text-white leading-normal shadow-md transition duration-150 ease-in-out hover:bg-[#e74c3c] hover:shadow-lg focus:bg-[#e74c3c] focus:shadow-lg focus:outline-none focus:ring-0 active:bg-[#c0392b] active:shadow-lg rounded-lg p-3 bg-[#d35400] items-center gap-3 text-base'>
+                  <FaHeart /> <h3 className={`${open ? 'text-base text-white font-mono' : 'hidden'}`}>Recommend Class</h3>
                 </NavLink>
               </li>
               <li>
@@ -161,7 +161,6 @@ const Dashboard = () => {
           <div className="p-4 bg-black">
             <Outlet/>
 
-           <h2 className='text-white h-[89.5vh] text-center text-2xl md:text-2xl lg:text-5xl poppins-semibold justify-center items-center flex'>Welcome to Your Dashboard</h2>
           </div>
         </div>
       </div>

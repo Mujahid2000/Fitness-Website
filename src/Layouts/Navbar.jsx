@@ -104,25 +104,25 @@ const NavBar = () => {
             </li>
             {
             user && isAdmin && !isTrainer &&
-            <Link to="/dashboard" className='uppercase text-white hover:text-sky-500'>
+            <Link to="/dashboard/dashboard" className='uppercase text-white hover:text-sky-500'>
               DashBoard
             </Link>
           }
           {
             user && isTrainer && !isAdmin &&
-            <Link to="/dashboard" className='uppercase text-white hover:text-sky-500'>
+            <Link to="/dashboard/dashboard" className='uppercase text-white hover:text-sky-500'>
               DashBoard
             </Link>
           }
           {
             user && isAdmin && isTrainer &&
-            <Link to="/dashboard" className='uppercase text-white hover:text-sky-500'>
+            <Link to="/dashboard/dashboard" className='uppercase text-white hover:text-sky-500'>
               DashBoard
             </Link>
           }
           {
             user && !isAdmin && !isTrainer &&
-            <Link to="/dashboard" className='uppercase text-white hover:text-sky-500'>
+            <Link to="/dashboard/dashboard" className='uppercase text-white hover:text-sky-500'>
               DashBoard
             </Link>
           }
@@ -198,25 +198,25 @@ const NavBar = () => {
           </li>
           {
             user && isAdmin && !isTrainer &&
-            <Link to="/dashboard" className='uppercase text-white hover:text-sky-500'>
+            <Link to="/dashboard/dashboard" className='uppercase text-white hover:text-sky-500'>
               DashBoard
             </Link>
           }
           {
             user && isTrainer && !isAdmin &&
-            <Link to="/dashboard" className='uppercase text-white hover:text-sky-500'>
+            <Link to="/dashboard/dashboard" className='uppercase text-white hover:text-sky-500'>
               DashBoard
             </Link>
           }
           {
             user && isAdmin && isTrainer &&
-            <Link to="/dashboard" className='uppercase text-white hover:text-sky-500'>
+            <Link to="/dashboard/dashboard" className='uppercase text-white hover:text-sky-500'>
               DashBoard
             </Link>
           }
           {
             user && !isAdmin && !isTrainer &&
-            <Link to="/dashboard" className='uppercase text-white hover:text-sky-500'>
+            <Link to="/dashboard/dashboard" className='uppercase text-white hover:text-sky-500'>
               DashBoard
             </Link>
           }
