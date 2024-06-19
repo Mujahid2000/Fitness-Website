@@ -80,12 +80,12 @@ const Login = () => {
                         />
                     </div>
                     <div className="flex justify-around gap-5">
-                        <button type="submit" className="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-blue-300 font-medium rounded-lg text-sm px-2 py-3 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Login</button>
-                        <button type="button" onClick={() => { setTrainer(!trainer); setAdmin(false); }} className="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Login as Trainer</button>
-                        <button type="button" onClick={() => { setAdmin(!admin); setTrainer(false); }} className="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Login as Admin</button>
+                        <button type="submit" className=" text-white bg-blue-700 hover:bg-blue-800 focus:ring-blue-300 font-medium rounded-lg text-sm px-2 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Login Account</button>
+                        <button type="button" onClick={() => { setTrainer(!trainer); setAdmin(false); }} className=" text-white bg-blue-700 hover:bg-blue-800 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Login as Trainer</button>
+                        <button type="button" onClick={() => { setAdmin(!admin); setTrainer(false); }} className=" text-white bg-blue-700 hover:bg-blue-800 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Login as Admin</button>
                     </div>
-                    <div className="text-sm text-center font-medium text-white dark:text-gray-300">
-                        Not registered? <a href="/signUp" className="text-blue-700 hover:underline dark:text-blue-500">Create account</a>
+                    <div className="text-sm text-center justify-between flex font-medium text-white dark:text-white">
+                        Not registered? <a href="/signUp" className="text-white underline dark:text-blue-500">Create account</a>
                     </div>
                 </form>
                 <div className="flex gap-4 justify-center mt-4">
