@@ -263,7 +263,7 @@ const Dashboard = () => {
                     <li>
                       <NavLink
                         to="/dashboard/activityLog"
-                        className="flex text-white leading-normal shadow-md transition duration-150 ease-in-out hover:bg-[#8e44ad] hover:shadow-lg focus:bg-[#8e44ad] focus:shadow-lg focus:outline-none focus:ring-0 active:bg-[#9b59b6] active:shadow-lg rounded-lg p-3 bg-[#2980b9] items-center gap-5"
+                        className="flex text-white leading-normal shadow-md transition duration-150  ease-in-out hover:bg-[#8e44ad] hover:shadow-lg focus:bg-[#8e44ad] focus:shadow-lg focus:outline-none focus:ring-0 active:bg-[#9b59b6] active:shadow-lg rounded-lg p-3 bg-[#2980b9] items-center gap-5"
                       >
                         <FaListAlt />{" "}
                         <h3

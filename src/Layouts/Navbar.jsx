@@ -46,7 +46,7 @@ const NavBar = () => {
               />
               {menu && (
                 <ul className="absolute z-10 right-0 mt-4 w-48 bg-black border border-gray-200 rounded-md shadow-lg">
-                  <Link to={'/dashboard'}>
+                  <Link to={'/dashboard/dashboard'}>
                     <li className="flex items-center gap-2 p-2 text-white cursor-pointer">
                       <CgProfile className="w-4 h-4" />
                       <span>Dashboard</span>
@@ -137,7 +137,7 @@ const NavBar = () => {
               />
               {menu && (
                 <ul className="absolute z-10 right-0 mt-4 w-40 bg-black border border-gray-200 rounded-md shadow-lg">
-                  <Link to={'/dashboard'}>
+                  <Link to={'/dashboard/dashboard'}>
                     <li className="flex items-center gap-2 p-2 text-white cursor-pointer">
                       <CgProfile className="w-4 h-4" />
                       <span className='text-white'>Dashboard</span>

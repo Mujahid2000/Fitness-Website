@@ -4,13 +4,19 @@ import { Helmet } from "react-helmet";
 
 const AllSubscriber = () => {
     const [subscribers, setSubscribers] = useState([]);
+    const [isLoading, setIsLoading] = useState(false);
+
+
 
     useEffect(() => {
+        setIsLoading(true);
         axios.get('https://fitness-server-iota.vercel.app/subscribe')
-            .then(res => res.data)
-            .then(data => setSubscribers(data))
-            .catch(error => console.error('Error fetching data:', error));
-    }, []);
+        .then(res => res.data)
+          .then(data => {
+            setSubscribers(data);
+            setIsLoading(false);
+          });
+      }, []);
 
     return (
         <div>
@@ -28,6 +34,8 @@ const AllSubscriber = () => {
                         </tr>
                     </thead>
                     <tbody>
+
+                        
                         {subscribers.map((subscriber, index) => (
                             <tr key={index} className={`${index % 2 === 0 ? 'bg-gray-100' : 'bg-white'} hover:bg-gray-200 transition-all`}>
                                 <td className="py-3 px-4 border-b text-center">{subscriber?.name}</td>

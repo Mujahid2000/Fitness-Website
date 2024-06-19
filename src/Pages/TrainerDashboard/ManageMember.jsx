@@ -25,7 +25,7 @@ const ManageMember = () => {
   }, [user])
 
   return (
-    <div className="container mx-auto my-8">
+    <div className="container h-[89.5vh] mx-auto ">
       <h1 className="text-3xl font-bold mb-6 text-blue-700">Manage Members</h1>
 
       <div className="overflow-x-auto">

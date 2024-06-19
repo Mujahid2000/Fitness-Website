@@ -40,6 +40,8 @@ import Recomended from './Pages/UserDashBoard/Recomended';
 import AllUsers from './Pages/DashBoardRoute/AllUsers';
 import SimpleMap from './Pages/Contact/Contact';
 import DashBoardScreen from './Pages/DashBoard/DashBoardScreen';
+import AddForum from './Pages/TrainerDashboard/AddForum';
+import AddClass from './Pages/TrainerDashboard/AddClass';
 const queryClient = new QueryClient()
 const router = createBrowserRouter([
   {
@@ -131,6 +133,18 @@ const router = createBrowserRouter([
       {
         path: 'manageMember',
         element: <PrivateRoute> <ManageMember></ManageMember> </PrivateRoute>
+      },
+      {
+        path: 'addForum',
+        element: <PrivateRoute> <AddForum></AddForum> </PrivateRoute>
+      },
+      {
+        path: 'addNewForum',
+        element: <PrivateRoute> <AddForum></AddForum> </PrivateRoute>
+      },
+      {
+        path: 'addClass',
+        element: <PrivateRoute> <AddClass></AddClass> </PrivateRoute>
       },
       // user path
       {
