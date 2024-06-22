@@ -9,11 +9,11 @@ const Banner = () => {
           Motivate users with benefits and positive reinforcement, and offer
           modifications and progress tracking.
         </p>
-        <div className="flex gap-2 py-6">
-          <button className="text-base md:text-base lg:text-xl px-5 py-3 bg-[#097FD9] hover:bg-[#1b95fff7] text-white rounded-lg">
+        <div className="flex gap-6 py-6">
+          <button className="text-base md:text-base px-3 py-1 lg:text-xl md:px-5 md:py-3 bg-[#097FD9] hover:bg-[#1b95fff7] text-white rounded-lg">
             Start Training
           </button>
-          <button className="text-base md:text-base lg:text-lg px-5 py-3 bg-[#097FD9] hover:bg-[#1b95fff7] text-white rounded-lg flex  justify-center items-center">
+          <button className="text-base md:text-base px-3 py-1 lg:text-lg md:px-5 md:py-3 bg-[#097FD9] hover:bg-[#1b95fff7] text-white rounded-lg flex  justify-center items-center">
             <IoPlayCircleOutline className="h-9 w-9" />
             Watch Demo
           </button>
