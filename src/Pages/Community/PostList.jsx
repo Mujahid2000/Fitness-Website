@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useContext, useEffect, useState } from "react";
+import  { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 
 const PostList = ({ posts, reFetch, setRefetch }) => {
@@ -30,7 +30,7 @@ const PostList = ({ posts, reFetch, setRefetch }) => {
           status: action === "up" ? "upVote" : "downVote"
         };
         axios
-          .post("https://fitness-server-iota.vercel.app/updateVotes", data)
+          .post("https://fitness-server-flax.vercel.app/updateVotes", data)
           .then((response) => {
             setRefetch(!reFetch)
             console.log("Votes updated successfully:", response.data);
@@ -56,7 +56,7 @@ const PostList = ({ posts, reFetch, setRefetch }) => {
             <p className="text-white">{post.content}</p>
             <div className="flex items-center mt-4">
             <button
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-2"
+            className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-2"
             onClick={() => handleVote(post._id, "up")}
             >
             Upvote
@@ -64,7 +64,7 @@ const PostList = ({ posts, reFetch, setRefetch }) => {
 
             <span className="text-xl text-white font-bold">{post.vote}</span>
             <button
-            className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded ml-2"
+            className="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded ml-2"
             onClick={() => handleVote(post._id, "down")}>
               Downvote
             </button>
@@ -79,7 +79,7 @@ const PostList = ({ posts, reFetch, setRefetch }) => {
             <button
               key={index + 1}
               onClick={() => paginate(index + 1)}
-              className={`px-4 py-2 mx-1 bg-white rounded ${
+              className={`px-4 py-2 mx-1 bg-white rounded hover:bg-slate-300 hover:text-white ${
                 currentPage === index + 1
                   ? "bg-gray-500 text-black"
                   : "hover:bg-gray-400"

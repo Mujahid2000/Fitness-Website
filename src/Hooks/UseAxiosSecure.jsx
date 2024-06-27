@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 
 const axiosSecure = axios.create({
-    baseURL: 'https://fitness-server-iota.vercel.app'
+    baseURL: 'https://fitness-server-flax.vercel.app'
 })
 
 const UseAxiosSecure = () => {
@@ -14,7 +14,7 @@ const UseAxiosSecure = () => {
 
     axiosSecure.interceptors.request.use(function(config){
         const token = localStorage.getItem('access-token')
-        //  console.log('request stopped by interceptors before adding token', token);
+//    console.log('request stopped by interceptors before adding token', token);
         config.headers.authorization = `Bearer ${token}`;
         return config;
     }, function (error) {

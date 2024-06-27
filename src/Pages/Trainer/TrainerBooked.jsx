@@ -12,7 +12,8 @@ const TrainerBooked = () => {
   const { user } = useContext(AuthContext);
   const [billingCycle, setBillingCycle] = useState('monthly');
   const userEmail = (user.email)
-  
+  const userName = user.displayName;
+  const photo= user.photoURL
   const navigate = useNavigate();
   const [selectedSlot, setSelectedSlot] = useState(null);
   const { slot, name } = useParams();
@@ -26,8 +27,10 @@ const TrainerBooked = () => {
       return;
     }
 
-    axios.post("https://fitness-server-iota.vercel.app/trainerBooked", {
-      user,
+    axios.post("https://fitness-server-flax.vercel.app/trainerBooked", {
+      userEmail,
+      photo,
+      userName,
       packageName: packageName,
       selectedSlot: finalSelectedSlot,
       trainerName: finalTrainerName,

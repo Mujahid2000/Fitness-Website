@@ -1,70 +1,60 @@
 // AddClass.js
 
-import React, { useState } from 'react';
+import axios from 'axios';
+import  { useState } from 'react';
 
 const AddClass = () => {
-    // State variables to hold form data
-    const [time, setTime] = useState('');
-    const [trainerName, setTrainerName] = useState('');
-    const [className, setClassName] = useState('');
+   
 
     // Function to handle form submission
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Here you can handle form submission logic (e.g., sending data to backend)
-        console.log('Submitted:', { time, trainerName, className });
-        // You can clear the form inputs after submission if needed
-        setTime('');
-        setTrainerName('');
-        setClassName('');
+        const formData = new FormData(e.target);
+        const time = formData.get('time')
+        const days = formData.get('days')
+        const className = formData.get('className')
+        const trainerName = formData.get('trainerName');
+
+        const data = {time, days, className, trainerName};
+        axios.post()
+       
     };
 
     return (
-        <div className="container h-[89.5vh] justify-center items-center mx-auto mt-8">
-            <h2 className="text-2xl font-bold mb-4">Add Class</h2>
-            <form onSubmit={handleSubmit} className="max-w-md mx-auto bg-gray-900 p-6 rounded-md shadow-md">
-                <div className="mb-4">
-                    <label htmlFor="time" className="block text-white font-semibold mb-2">Time</label>
-                    <input 
-                        type="datetime-local" 
-                        id="time" 
-                        value={time} 
-                        onChange={(e) => setTime(e.target.value)} 
-                        className="w-full bg-slate-500 text-white px-3 py-2 border  rounded-md focus:outline-none focus:ring focus:ring-blue-500"
-                        required 
-                    />
-                </div>
-                <div className="mb-4">
-                    <label htmlFor="trainerName" className="block text-white font-semibold mb-2">Trainer Name</label>
-                    <input 
-                        type="text" 
-                        id="trainerName" 
-                        value={trainerName} 
-                        onChange={(e) => setTrainerName(e.target.value)} 
-                        className="w-full bg-slate-500 px-3 py-2 border  rounded-md focus:outline-none focus:ring focus:ring-blue-500"
-                        required 
-                    />
-                </div>
-                <div className="mb-6">
-                    <label htmlFor="className" className="block text-white font-semibold mb-2">Class Name</label>
-                    <input 
-                        type="text" 
-                        id="className" 
-                        value={className} 
-                        onChange={(e) => setClassName(e.target.value)} 
-                        className="w-full bg-slate-500 px-3 py-2 border  rounded-md focus:outline-none focus:ring focus:ring-blue-500"
-                        required 
-                    />
-                </div>
-                <div className="flex justify-end">
-                    <button 
-                        type="submit" 
-                        className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 focus:outline-none focus:ring focus:ring-blue-500"
-                    >
-                        Add Class
-                    </button>
-                </div>
-            </form>
+        <div className=" h-[86.1vh] justify-center items-center mx-auto mt-8">
+            <h2 className="text-2xl text-white text-center font-bold mb-4">Add Class</h2>
+            <div className="">
+  <form onSubmit={handleSubmit} className="px-8 py-10   border-2 border-blue-400 rounded-lg">
+    <div className="flex flex-col md:flex-row gap-4 items-center">
+    <select required name="time" id="select" className="block w-full rounded-md border border-slate-300 bg-white px-3 py-4 font-semibold  shadow-sm focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500 sm:text-sm">
+        <option  className="font-semibold text-black">Select Time</option>
+        <option  className="font-semibold text-black">08:00 AM</option>
+        <option  className="font-semibold text-black">11:00 AM</option>
+        <option  className="font-semibold text-black">12:00 PM</option>
+        <option  className="font-semibold text-black">09:00 AM</option>
+        <option  className="font-semibold text-black">10:00 AM</option>
+        <option  className="font-semibold text-black">01:00 PM</option>
+      </select>
+      <select required name="days" id="select" className="block w-full rounded-md border border-slate-300 bg-white px-3 py-4 font-semibold  shadow-sm focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500 sm:text-sm">
+        <option  className="font-semibold text-black">Select Days</option>
+        <option  className="font-semibold text-black">Saturday</option>
+        <option  className="font-semibold text-black">Sunday</option>
+        <option  className="font-semibold text-black">Monday</option>
+        <option  className="font-semibold text-black">Tuesday</option>
+        <option  className="font-semibold text-black">Wednesday</option>
+        <option  className="font-semibold text-black">Thursday</option>
+      </select>
+    </div>
+    <div className="my-6 flex flex-col md:flex-row gap-4 items-center">
+    <input required type="Name" name="className" className="mt-1 block w-full rounded-md border border-slate-300 bg-white px-3 py-4 placeholder-slate-400 shadow-sm placeholder:font-semibold placeholder:text-black focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500 sm:text-sm" placeholder="Class Name *" />
+    <input required type="Name" name="trainerName" className="mt-1 block w-full rounded-md border border-slate-300 bg-white px-3 py-4 placeholder-slate-400 shadow-sm placeholder:font-semibold placeholder:text-black focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500 sm:text-sm" placeholder="Trainer Name *" />
+    </div>
+    
+    <div className=" pt-10 text-center md:text-right">
+      <button className="cursor-pointer rounded-lg bg-blue-700 px-6 py-3 hover:bg-blue-500 text-sm font-semibold text-white">Add Class</button>
+    </div>
+  </form>
+</div>
         </div>
     );
 };

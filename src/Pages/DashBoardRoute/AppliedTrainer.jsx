@@ -11,6 +11,7 @@ import { Helmet } from 'react-helmet';
 const AppliedTrainer = () => {
     const [openModal, setOpenModal] = useState(false);
     const [apply, setApply] = useState([]);
+   
     const axiosSecure = UseAxiosSecure();
    
     const {refetch, data: applyData =[] } = useQuery({
@@ -20,9 +21,8 @@ const AppliedTrainer = () => {
             return res.data
         }
     })
-  
     
-      axios.get("https://fitness-server-iota.vercel.app/trainerApply")
+      axios.get("https://fitness-server-flax.vercel.app/trainerApply")
         .then((res) => res.data)
         .then((data) => {
             setApply(data)
@@ -30,8 +30,11 @@ const AppliedTrainer = () => {
         })
         .catch((error) => console.error("Error fetching data:", error));
 
+
+
+
     const handleAccept = async (_id) => {
-      const res = await axios.patch(`https://fitness-server-iota.vercel.app/trainerApply/${_id}`);
+      const res = await axios.patch(`https://fitness-server-flax.vercel.app/trainerApply/${_id}`);
       console.log(res.data);
       Swal.fire({
         title: 'Success!',

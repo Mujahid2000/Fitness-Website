@@ -22,7 +22,7 @@ const CheckOutForm = ({ salary, trainerId, name }) => {
                     return;
                 }
 
-                const response = await axios.post('https://fitness-server-iota.vercel.app/create-payment-intent', {
+                const response = await axios.post('https://fitness-server-flax.vercel.app/create-payment-intent', {
                     price: parsedSalary,
                     trainerId
                 });
@@ -97,7 +97,7 @@ const CheckOutForm = ({ salary, trainerId, name }) => {
                 name: name,
                 status: "success"
             }
-            const res = await axios.post('https://fitness-server-iota.vercel.app/payments', payment);
+            const res = await axios.post('https://fitness-server-flax.vercel.app/payments', payment);
             console.log('payment done',res);
         }
     };

@@ -12,7 +12,7 @@ const Balance = () => {
     
 
     useEffect(() =>{
-        axios.get('https://fitness-server-iota.vercel.app/trainerBooked')
+        axios.get('https://fitness-server-flax.vercel.app/trainerBooked')
         .then(res => res.data)
         .then(data =>{
             setBalance(data)
@@ -21,7 +21,7 @@ const Balance = () => {
     },[])
 
     useEffect(() =>{
-        axios.get('https://fitness-server-iota.vercel.app/payments')
+        axios.get('https://fitness-server-flax.vercel.app/payments')
         .then(res => res.data)
         .then(data =>{
             setPayment(data)

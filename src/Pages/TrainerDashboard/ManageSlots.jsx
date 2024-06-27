@@ -13,11 +13,12 @@ const ManageSlot = () => {
   const [rejectionSubmitted, setRejectionSubmitted] = useState(false);
   const axiosSecure = UseAxiosSecure();
   const { user } = useContext(AuthContext);
-
+const photo = (user?.displayName);
+console.log(trainers);
   const { refetch, data = [] } = useQuery({
     queryKey: ["users"],
     queryFn: async () => {
-      const res = await axiosSecure.get(`/trainerBooked/${user.displayName}`);
+      const res = await axiosSecure.get(`/trainerBooked/${user?.displayName}`);
       return res.data;
     },
   });
@@ -35,14 +36,14 @@ const ManageSlot = () => {
 
   useEffect(() => {
     axios
-      .get(`https://fitness-server-iota.vercel.app/trainerBooked/${user.displayName}`)
+      .get(`https://fitness-server-flax.vercel.app/trainerBooked/${user?.displayName}`)
       .then((res) => res.data)
       .then((data) => {
         setTrainers(data);
         refetch();
       })
       .catch((error) => console.error("Error fetching data:", error));
-  }, [user.displayName, refetch]);
+  }, [user?.displayName, refetch]);
 
   return (
     <div>
@@ -62,15 +63,15 @@ const ManageSlot = () => {
             </tr>
           </thead>
           <tbody>
-            {data.map((item) => (
-              <tr key={item._id} className="hover:bg-gray-100">
-                <td className="py-2 px-4 text-center">{item.user.displayName}</td>
-                <td className="py-2 px-4 text-center">{item.user.email}</td>
-                <td className="py-2 px-4 text-center">{item.packageName}</td>
-                <td className="py-2 px-4 text-center">{item.selectedSlot}</td>
-                <td className="py-2 px-4 text-center">${item.price}</td>
-                <td className="py-2 px-4 text-center justify-center">
-                  <Button onClick={handleRejectClick}>Reject</Button>
+            {data && data.map((item) => (
+              <tr key={item._id} className="">
+                <td className="py-2 px-4 text-center text-white">{item?.userName}</td>
+                <td className="py-2 px-4 text-center text-white">{item?.userEmail}</td>
+                <td className="py-2 px-4 text-center text-white">{item?.packageName}</td>
+                <td className="py-2 px-4 text-center text-white">{item.selectedSlot}</td>
+                <td className="py-2 px-4 text-center text-white">${item.price}</td>
+                <td className="py-2 px-4 text-center text-white justify-center">
+                  <Button onClick={handleRejectClick} text-white>Reject</Button>
                   {showEmail && !rejectionSubmitted && (
                     <div>
                       <Email />

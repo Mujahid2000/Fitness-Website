@@ -1,20 +1,17 @@
 import axios from "axios";
-import { Spinner } from "keep-react";
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
-import InfiniteScroll from "react-infinite-scroll-component";
-import { IoSearch } from "react-icons/io5";
 
-const LIMIT = 5;
+import { IoSearch } from "react-icons/io5";
+import LazyLoad from "react-lazy-load";
+
+
 
 const Gallery = () => {
   const [gallery, setGallery] = useState([]);
-  const [activePage, setActivePage] = useState(1);
-  const [totalData, setTotalData] = useState(0);
-  const [loading, setLoading] = useState(false);
   const [value, setValue] = useState("");
-  const [filteredUsers, setFilteredUsers] = useState([]);
-
+  const [filteredGallery, setFilteredGallery] = useState([]);
+console.log(filteredGallery);
   const containerStyle = {
     backgroundImage: 'url("https://images4.alphacoders.com/692/692043.jpg")',
     backgroundRepeat: "no-repeat",
@@ -23,57 +20,27 @@ const Gallery = () => {
     height: "600px",
   };
 
-  const fetchData = () => {
-    if (loading) return;
-
-    setLoading(true);
-
+   useEffect(() =>{
     axios
-      .get("https://fitness-server-iota.vercel.app/gallery", {
-        params: {
-          page: activePage,
-          size: LIMIT,
-        },
-      })
-      .then(({ data }) => {
-        setActivePage(activePage + 1);
-        setGallery((prevGallery) => {
-          const newData = data.filter(
-            (item) =>
-              !prevGallery.some((existingItem) => existingItem._id === item._id)
-          );
-          const updatedGallery = [...prevGallery, ...newData];
-          setFilteredUsers(updatedGallery); // Initialize filteredUsers with all data
-          return updatedGallery;
-        });
-        setTotalData(data.totalCount); // Assuming the total count is returned in data.totalCount
-      })
-      .catch((error) => {
-        console.error("Error:", error.response);
-      })
-      .finally(() => {
-        setLoading(false);
-      });
-  };
+    .get("https://fitness-server-flax.vercel.app/gallery")
+   .then((res) => {setGallery(res.data) ; setFilteredGallery(res.data)})
+    .catch((error) => {
+      console.error("Error:", error.response);
+    })
+   },[])
+    
+  
+useEffect(()=>{
+setFilteredGallery(gallery.filter((item) =>(
+  item.title.toLowerCase().includes(value.toLowerCase())
+)))
+},[value, gallery])
+ 
 
-  useEffect(() => {
-    fetchData();
-  }, []);
 
-  useEffect(() => {
-    if (value === "") {
-      setFilteredUsers(gallery);
-    } else {
-      const filteredItems = gallery.filter((item) =>
-        item.title.toLowerCase().includes(value.toLowerCase())
-      );
-      setFilteredUsers(filteredItems);
-    }
-  }, [value, gallery]);
-
-  const handleSearch = (e) => {
-    setValue(e.target.value);
-  };
+ const handleSearch = (e) => {
+ setValue(e.target.value.toLowerCase());
+};
 
   return (
     <div>
@@ -81,7 +48,7 @@ const Gallery = () => {
         <title>Fitness || Gallery</title>
       </Helmet>
 
-      <div className="px-5 max-w-full bg-black mt-16 mx-auto">
+      <div className="px-9 max-w-full bg-black mt-16 mx-auto">
         <div
           className="relative h-screen mt-3 flex items-center justify-center"
           style={containerStyle}
@@ -106,35 +73,21 @@ const Gallery = () => {
             </div>
           </div>
         </div>
-        <InfiniteScroll
-          dataLength={filteredUsers.length}
-          next={fetchData}
-          hasMore={gallery.length < totalData}
-          loader={
-            <Spinner
-              className="justify-center items-center"
-              color="info"
-              aria-label="Info spinner example"
-            />
-          }
-          endMessage={
-            <p className="text-center text-2xl text-white font-bold mt-5">
-              <b>You have loaded all data</b>
-            </p>
-          }
-        >
-          <div className="columns-1 md:columns-2 xl:columns-3 gap-75 mt-8 max-w-full mx-auto justify-self-center place-items-center">
-            {filteredUsers.map((galleries) => (
-              <div key={galleries._id} className=" break-inside-avoid mb-8">
+        <div className="columns-1 md:columns-2 xl:columns-3 gap-75 mt-8 max-w-full mx-auto justify-self-center place-items-center">
+        {filteredGallery.map((galleries) => (
+            <div key={galleries._id} className="break-inside-avoid mb-8">
+              <LazyLoad offset={100} placeholder={<div style={{height: '200px', backgroundColor: '#ccc'}} />}>
                 <img
-                  className="h-auto hover:scale-110 hover:transition-all hover:duration-500	cursor-pointer max-w-full rounded-lg"
+                  className="h-auto hover:scale-110 hover:duration-500 cursor-pointer max-w-full rounded-lg"
                   src={galleries.image}
-                  alt="Gallery image"
+                  srcSet={`${galleries.image}?w=200 200w, ${galleries.image}?w=400 400w, ${galleries.image}?w=800 800w`}
+                  sizes="(max-width: 600px) 480px, 800px"
+                  alt={galleries.title}
                 />
-              </div>
-            ))}
+              </LazyLoad>
+            </div>
+          ))}
           </div>
-        </InfiniteScroll>
       </div>
     </div>
   );

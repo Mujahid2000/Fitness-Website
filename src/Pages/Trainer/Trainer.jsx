@@ -13,7 +13,7 @@ const Trainer = () => {
   const [trainer, setTrainer] = useState([]);
 
   useEffect(() => {
-    axios.get('https://fitness-server-iota.vercel.app/trainer')
+    axios.get('https://fitness-server-flax.vercel.app/trainer')
       .then(res => res.data)
       .then(data => setTrainer(data))
       .catch(error => console.error('Error fetching data:', error));

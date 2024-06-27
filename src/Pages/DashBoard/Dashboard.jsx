@@ -21,9 +21,9 @@ const Dashboard = () => {
   const [open, setOpen] = useState(true);
   const sidebarRef = useRef(null);
   const [isAdmin] = UseAdmin();
+
   const [isTrainer] = UseTrainer();
   const location = useLocation();
-
   const handleClickOutside = (event) => {
     if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
       setOpen(false);
