@@ -2,7 +2,7 @@ import axios from "axios";
 
 
 const axiosPublic = axios.create({
-    baseURL: 'https://fitness-server-flax.vercel.app'
+    baseURL: 'https://fitness-server-seven.vercel.app'
 })
 const UseAxiosPublic = () => {
     return  axiosPublic;

@@ -27,7 +27,7 @@ const TrainerBooked = () => {
       return;
     }
 
-    axios.post("https://fitness-server-flax.vercel.app/trainerBooked", {
+    axios.post("https://fitness-server-seven.vercel.app/trainerBooked", {
       userEmail,
       photo,
       userName,

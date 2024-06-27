@@ -18,7 +18,7 @@ const AllTrainers = () => {
     })
   
     axios
-      .get("https://fitness-server-flax.vercel.app/trainer")
+      .get("https://fitness-server-seven.vercel.app/trainer")
       .then((res) => res.data)
       .then((data) => {
         setTrainers(data)

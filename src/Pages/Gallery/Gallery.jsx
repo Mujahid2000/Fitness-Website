@@ -22,7 +22,7 @@ console.log(filteredGallery);
 
    useEffect(() =>{
     axios
-    .get("https://fitness-server-flax.vercel.app/gallery")
+    .get("https://fitness-server-seven.vercel.app/gallery")
    .then((res) => {setGallery(res.data) ; setFilteredGallery(res.data)})
     .catch((error) => {
       console.error("Error:", error.response);

@@ -22,7 +22,7 @@ const AppliedTrainer = () => {
         }
     })
     
-      axios.get("https://fitness-server-flax.vercel.app/trainerApply")
+      axios.get("https://fitness-server-seven.vercel.app/trainerApply")
         .then((res) => res.data)
         .then((data) => {
             setApply(data)
@@ -34,7 +34,7 @@ const AppliedTrainer = () => {
 
 
     const handleAccept = async (_id) => {
-      const res = await axios.patch(`https://fitness-server-flax.vercel.app/trainerApply/${_id}`);
+      const res = await axios.patch(`https://fitness-server-seven.vercel.app/trainerApply/${_id}`);
       console.log(res.data);
       Swal.fire({
         title: 'Success!',

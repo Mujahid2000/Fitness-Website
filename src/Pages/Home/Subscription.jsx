@@ -30,7 +30,7 @@ const Subscription = () => {
     });
 
     try {
-      const response = await axios.post("https://fitness-server-flax.vercel.app/subscribe", {
+      const response = await axios.post("https://fitness-server-seven.vercel.app/subscribe", {
         name: name,
         email: email,
       });

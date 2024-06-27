@@ -10,7 +10,7 @@ const AllSubscriber = () => {
 
     useEffect(() => {
         setIsLoading(true);
-        axios.get('https://fitness-server-flax.vercel.app/subscribe')
+        axios.get('https://fitness-server-seven.vercel.app/subscribe')
         .then(res => res.data)
           .then(data => {
             setSubscribers(data);

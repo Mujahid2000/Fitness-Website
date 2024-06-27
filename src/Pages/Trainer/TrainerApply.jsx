@@ -41,7 +41,7 @@ const TrainerApply = () => {
         role : 'member'
     });
 
-    axios.post('https://fitness-server-flax.vercel.app/trainerApply', {
+    axios.post('https://fitness-server-seven.vercel.app/trainerApply', {
         name: formData.get('name'),
         age: formData.get('age'),
         image: formData.get('image'),

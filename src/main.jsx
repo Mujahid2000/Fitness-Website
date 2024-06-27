@@ -68,7 +68,7 @@ const router = createBrowserRouter([
       {
         path: '/trainerDetail/:id',
         element: <PrivateRoute><TrainerDetails></TrainerDetails> </PrivateRoute> ,
-        loader: ({ params }) => fetch(`https://fitness-server-flax.vercel.app/trainer/${params.id}`),
+        loader: ({ params }) => fetch(`https://fitness-server-seven.vercel.app/trainer/${params.id}`),
       },
       {
         path: '/trainerApply',
