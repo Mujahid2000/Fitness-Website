@@ -36,7 +36,7 @@ console.log(trainers);
 
   useEffect(() => {
     axios
-      .get(`https://fitness-server-seven.vercel.app/trainerBooked/${user?.displayName}`)
+      .get(`https://gym-server-orpin.vercel.app/trainerBooked/${user?.displayName}`)
       .then((res) => res.data)
       .then((data) => {
         setTrainers(data);

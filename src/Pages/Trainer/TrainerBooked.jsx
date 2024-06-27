@@ -27,7 +27,7 @@ const TrainerBooked = () => {
       return;
     }
 
-    axios.post("https://fitness-server-seven.vercel.app/trainerBooked", {
+    axios.post("https://gym-server-orpin.vercel.app/trainerBooked", {
       userEmail,
       photo,
       userName,

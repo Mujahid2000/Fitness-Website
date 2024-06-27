@@ -30,7 +30,7 @@ const PostList = ({ posts, reFetch, setRefetch }) => {
           status: action === "up" ? "upVote" : "downVote"
         };
         axios
-          .post("https://fitness-server-seven.vercel.app/updateVotes", data)
+          .post("https://gym-server-orpin.vercel.app/updateVotes", data)
           .then((response) => {
             setRefetch(!reFetch)
             console.log("Votes updated successfully:", response.data);

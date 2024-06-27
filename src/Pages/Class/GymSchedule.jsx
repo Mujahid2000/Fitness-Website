@@ -9,7 +9,7 @@ const GymSchedule = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   useEffect(() => {
-    Axios.get('https://fitness-server-seven.vercel.app/weeklySchedule')
+    Axios.get('https://gym-server-orpin.vercel.app/weeklySchedule')
       .then((res) => setData(res.data))
       .catch((error) => console.error('Error fetching weekly schedule', error));
   }, []);
