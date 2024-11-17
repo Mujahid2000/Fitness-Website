@@ -80,9 +80,9 @@ const Login = () => {
                         />
                     </div>
                     <div className="flex justify-around gap-5">
-                        <button type="submit" className=" text-white bg-blue-700 hover:bg-blue-800 focus:ring-blue-300 font-medium rounded-lg text-sm px-2 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Login Account</button>
-                        <button type="button" onClick={() => { setTrainer(!trainer); setAdmin(false); }} className=" text-white bg-blue-700 hover:bg-blue-800 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Login as Trainer</button>
-                        <button type="button" onClick={() => { setAdmin(!admin); setTrainer(false); }} className=" text-white bg-blue-700 hover:bg-blue-800 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Login as Admin</button>
+                        <button type="submit" className=" text-white duration-300 bg-blue-600 hover:bg-blue-700 focus:ring-blue-300 font-medium rounded-lg text-sm px-2 py-2 text-center   ">Login Account</button>
+                        <button type="button" onClick={() => { setTrainer(!trainer); setAdmin(false); }} className=" text-white bg-blue-600 hover:bg-blue-700 duration-300 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center   ">Login as Trainer</button>
+                        <button type="button" onClick={() => { setAdmin(!admin); setTrainer(false); }} className=" text-white bg-blue-600 hover:bg-blue-700 duration-300 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center   ">Login as Admin</button>
                     </div>
                     <div className="text-sm text-center justify-between flex font-medium text-white dark:text-white">
                         Not registered? <a href="/signUp" className="text-white underline dark:text-blue-500">Create account</a>
