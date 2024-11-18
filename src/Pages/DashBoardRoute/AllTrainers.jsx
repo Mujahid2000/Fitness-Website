@@ -13,7 +13,7 @@ const AllTrainers = () => {
   const { data: trainers = [], isLoading, isError } = useQuery({
     queryKey: ["trainers"],
     queryFn: async () => {
-      const res = await axiosSecure.get("https://gym-server-orpin.vercel.app/trainer");
+      const res = await axios.get("https://gym-server-orpin.vercel.app/trainer");
       return res.data;
     },
     staleTime: 120000, // Cache data for 2 minutes to reduce unnecessary refetching
@@ -23,7 +23,7 @@ const AllTrainers = () => {
   const proceedData = async (trainer) => {
     try {
       // Send the payment data to the server to get the checkout URL
-      const res = await axiosSecure.post("http://localhost:5000/payment", { trainerData: trainer });
+      const res = await axios.post("https://gym-server-orpin.vercel.app/payment", { trainerData: trainer });
 
       if (res.data.url) {
         localStorage.setItem("deleteCartAfterCheckout", "true");
@@ -51,7 +51,7 @@ const AllTrainers = () => {
 //       if (token && trainerData) { // Make sure token and trainerData are available
 //         try {
 //           // Send trainer data to another endpoint (paymentData)
-//           const res = await axios.post("http://localhost:5000/paymentData", trainerData);
+//           const res = await axios.post("https://gym-server-orpin.vercel.app/paymentData", trainerData);
 //           console.log("Payment data sent successfully:", res.data);
 //           if(res.data.success){
 //             localStorage.removeItem('deleteCartAfterCheckout'); 
