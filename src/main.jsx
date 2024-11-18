@@ -42,6 +42,10 @@ import SimpleMap from './Pages/Contact/Contact';
 import DashBoardScreen from './Pages/DashBoard/DashBoardScreen';
 import AddForum from './Pages/TrainerDashboard/AddForum';
 import AddClass from './Pages/TrainerDashboard/AddClass';
+import SuccessURL from './Pages/DashBoardRoute/SuccesUrl';
+import Cancel from './Pages/DashBoardRoute/Cancel';
+import Failed from './Pages/DashBoardRoute/Failed';
+
 const queryClient = new QueryClient()
 const router = createBrowserRouter([
   {
@@ -124,6 +128,18 @@ const router = createBrowserRouter([
       {
         path: 'balance',
         element: <AdminRoute><Balance></Balance> </AdminRoute>
+      },
+      {
+        path: '/dashboard/success',
+        element: <AdminRoute><SuccessURL></SuccessURL></AdminRoute>
+      },
+      {
+        path: '/dashboard/cancel',
+        element: <AdminRoute><Cancel></Cancel></AdminRoute>
+      },
+      {
+        path: '/dashboard/failed',
+        element: <AdminRoute><Failed></Failed></AdminRoute>
       },
       // Trainer path
       {
