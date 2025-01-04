@@ -2,7 +2,7 @@
 
 import axios from 'axios';
 import { Button, Modal } from 'flowbite-react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Swal from 'sweetalert2';
 import UseAxiosSecure from '../../Hooks/UseAxiosSecure';
 import { useQuery } from '@tanstack/react-query';
@@ -11,7 +11,7 @@ import { Helmet } from 'react-helmet';
 const AppliedTrainer = () => {
     const [openModal, setOpenModal] = useState(false);
     const [apply, setApply] = useState([]);
-   
+    const [error, setError] = useState('');
     const axiosSecure = UseAxiosSecure();
    
     const {refetch, data: applyData =[] } = useQuery({
@@ -21,20 +21,28 @@ const AppliedTrainer = () => {
             return res.data
         }
     })
-    
-      axios.get("https://gym-server-orpin.vercel.app/trainerApply")
-        .then((res) => res.data)
-        .then((data) => {
-            setApply(data)
-            refetch()
-        })
-        .catch((error) => console.error("Error fetching data:", error));
+
+
+    useEffect(() => {
+        const fetchTrainerData = async () => {
+            try {
+                const response = await axiosSecure.get('/trainerapply');
+                setApply(response.data);
+            } catch (err) {
+                console.error('Error fetching trainer data:', err);
+                setError('Failed to fetch trainer data. Please try again.');
+            }
+        };
+
+        fetchTrainerData();
+    }, [axiosSecure]);
+     
 
 
 
 
     const handleAccept = async (_id) => {
-      const res = await axios.patch(`https://gym-server-orpin.vercel.app/trainerApply/${_id}`);
+      const res = await axios.patch(`https://gym-server-orpin.vercel.apptrainerApply/${_id}`);
       console.log(res.data);
       Swal.fire({
         title: 'Success!',

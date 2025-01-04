@@ -97,7 +97,7 @@ const Trainer = () => {
 
       </div>
     <img className="h-3/4 w-full clip-custom" src={trainers.image} alt="Sample" />
-    <div className="px-8 rounded-b-xl absolute py-5 -mt-[135px] bg-gray-950 clip-custom1">
+    <div className="px-auto w-60 rounded-b-xl absolute py-5 -mt-[135px] bg-gray-950 clip-custom1">
      <Link to={`/trainerDetail/${trainers._id}`}>
      <p className="font-bold text-2xl hover:text-blue-700 text-white text-center pt-16  ">{trainers.name}</p>
      </Link>
