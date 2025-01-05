@@ -39,7 +39,7 @@ const AllUsers = () => {
             <Helmet>
                 <title>ALL Users</title>
             </Helmet>
-            <div className='h-full max-w-7xl mx-auto p-6'>
+            <div className='min-h-screen max-w-7xl mx-auto p-6'>
         <div className="flex bg-black justify-evenly my-4 ">
         <h2 className="text-xl md:text-2xl lg:text-3xl text-white">All Users</h2>
         <h2 className="text-xl md:text-2xl lg:text-3xl text-white">Total Users: {users.length}</h2>
@@ -64,7 +64,7 @@ const AllUsers = () => {
               </svg>
             </th>
            
-            <th className="p-4 text-left text-sm font-semibold text-white">
+            <th className="p-4 text-center text-sm font-semibold text-white">
               Action
             </th>
           </tr>
@@ -94,8 +94,8 @@ const AllUsers = () => {
             }
             </td>
             
-            <td className="p-4">
-              <button className="mr-4" title="Edit">
+            <td className="p-4 text-center">
+              <button className="mr-4 text-center" title="Edit">
                 <svg xmlns="http://www.w3.org/2000/svg" className="w-5 fill-blue-500 hover:fill-blue-700"
                   viewBox="0 0 348.882 348.882">
                   <path

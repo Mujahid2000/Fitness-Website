@@ -70,7 +70,7 @@ const AllTrainers = () => {
       <Helmet>
         <title>All Trainers</title>
       </Helmet>
-      <div className="h-full p-6 max-w-7xl mx-auto">
+      <div className="min-h-screen p-6 max-w-7xl mx-auto">
         <h2 className="text-5xl text-center mb-6 mt-6 text-white font-serif font-semibold">
           All Trainers
         </h2>

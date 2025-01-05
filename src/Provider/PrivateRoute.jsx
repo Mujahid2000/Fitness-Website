@@ -10,9 +10,7 @@ const PrivateRoute = ({ children }) => {
 
     const { user, loading } = useContext(AuthContext);
     const location = useLocation();
-    console.log(user, loading);
-    console.log(user)
-
+   
     if (loading)
         return<Spinner color="purple" aria-label="Purple spinner example" />
 
