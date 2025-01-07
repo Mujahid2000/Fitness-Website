@@ -19,7 +19,7 @@ const Banner = () => {
           </button>
         </div>
       </div>
-      <div className="flex hidden lg:block  items-start bg-no-repeat  h-[650px] w-[560px] bg-[url('https://i.ibb.co/CVtFrqc/pngwing-5.png')]">
+      <div className="flex hidden lg:block  items-start bg-no-repeat  h-[650px] w-[560px] bg-[url('https://res.cloudinary.com/dhfqokxun/image/upload/v1736270958/pngwing-5_wwkdf1.png')]">
         
       </div>
     </div>
