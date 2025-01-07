@@ -7,7 +7,7 @@ const Gallery = () => {
   const [gallery, setGallery] = useState([]);
   const [value, setValue] = useState("");
   const [filteredGallery, setFilteredGallery] = useState([]);
-  const [loading, setLoding] = useState(false)
+  const [loading, setLoading] = useState(true);
 
   const containerStyle = {
     backgroundImage: 'url("https://images4.alphacoders.com/692/692043.jpg")',
@@ -17,9 +17,8 @@ const Gallery = () => {
     height: "600px",
   };
 
-
-  
   useEffect(() => {
+    setLoading(true); // লোডিং শুরু
     axios
       .get("https://gym-server-orpin.vercel.app/gallery")
       .then((res) => {
@@ -28,7 +27,8 @@ const Gallery = () => {
       })
       .catch((error) => {
         console.error("Error:", error.response);
-      });
+      })
+      .finally(() => setLoading(false)); // লোডিং শেষ
   }, []);
 
   useEffect(() => {
@@ -41,6 +41,21 @@ const Gallery = () => {
 
   const handleSearch = (e) => {
     setValue(e.target.value);
+  };
+
+  const renderSkeletons = () => {
+    return Array.from({ length: 8 }).map((_, index) => (
+      <div
+        key={index}
+        className="relative overflow-hidden rounded-lg shadow-lg bg-gray-800 animate-pulse"
+      >
+        <div className="h-40 bg-gray-500"></div>
+        <div className="p-4">
+          <div className="h-4 bg-gray-400 rounded w-3/4 mb-2"></div>
+          <div className="h-4 bg-gray-600 rounded w-1/2"></div>
+        </div>
+      </div>
+    ));
   };
 
   return (
@@ -75,12 +90,17 @@ const Gallery = () => {
             </div>
           </div>
         </div>
-        </div>
+      </div>
 
       {/* Gallery Section */}
       <div className="py-5 bg-black">
         <div className="max-w-7xl mx-auto">
-          {filteredGallery.length > 0 ? (
+          {loading ? (
+            // Loading Skeletons
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+              {renderSkeletons()}
+            </div>
+          ) : filteredGallery.length > 0 ? (
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
               {filteredGallery.map((item) => (
                 <div
