@@ -2,12 +2,7 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 // import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
-import { FaFacebook, FaTwitter, FaWhatsapp } from 'react-icons/fa';
-import { RiTwitterXFill } from "react-icons/ri";
-import { BsWhatsapp } from "react-icons/bs";
-import { Button, Card } from 'keep-react';
 import { Link } from 'react-router-dom';
-import { IoSearch } from 'react-icons/io5';
 import './trainer.css'
 import HoverPlusButton from './SocialIcons';
 
@@ -16,7 +11,7 @@ const Trainer = () => {
   const [loading, setLoading] = useState(true);
 
   const containerStyle = {
-    backgroundImage: 'url("https://i.ibb.co.com/DbHf0mN/breadcumb-bg.png")',
+    backgroundImage: 'url("https://res.cloudinary.com/diez3alve/image/upload/v1736517815/breadcumb-bg_lxcfig.webp")',
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
     backgroundPosition: "center",
@@ -57,7 +52,7 @@ const Trainer = () => {
                     <h2 className='text-2xl md:text-3xl lg:text-5xl xl:text-6xl font-semibold'>Trainers</h2>
                   </div>
                     <div className='hidden lg:block'>
-                      <img className='h-[300px] w-[800px]' src="https://i.ibb.co.com/kxYB2CT/download.png" alt="" />
+                      <img className='h-[300px] w-[800px]' src="https://res.cloudinary.com/diez3alve/image/upload/v1736517638/download_d3mgdd.webp" alt="" />
                     </div>
                   </div>
                 </div>
