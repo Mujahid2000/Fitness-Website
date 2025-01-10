@@ -10,7 +10,7 @@ const Gallery = () => {
   const [loading, setLoading] = useState(true);
 
   const containerStyle = {
-    backgroundImage: 'url("https://images4.alphacoders.com/692/692043.jpg")',
+    backgroundImage: 'url("https://res.cloudinary.com/diez3alve/image/upload/v1736518067/692043_fkrldr.webp")',
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
     backgroundPosition: "center",
@@ -28,7 +28,7 @@ const Gallery = () => {
       .catch((error) => {
         console.error("Error:", error.response);
       })
-      .finally(() => setLoading(false)); // লোডিং শেষ
+      .finally(() => setLoading(false)); // loading complete
   }, []);
 
   useEffect(() => {
