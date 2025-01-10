@@ -6,9 +6,10 @@ import { Helmet } from "react-helmet";
 const Community = () => {
   const [posts, setPosts] = useState([]);
   const [reFetch, setRefetch] = useState(false);
-  console.log(posts);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    setIsLoading(true);
     axios
       .get("https://gym-server-orpin.vercel.app/forum")
       .then((res) => {
@@ -28,7 +29,8 @@ const Community = () => {
         });
         setPosts(newData);
       })
-      .catch((error) => console.error("Error fetching data:", error));
+      .catch((error) => console.error("Error fetching data:", error))
+      .finally(() => setIsLoading(false));
   }, [reFetch]);
 
   return (
@@ -36,9 +38,26 @@ const Community = () => {
       <Helmet>
         <title>Fitness Website || Community</title>
       </Helmet>
-      <div className=" bg-black mx-auto px-5 py-10 pt-20">
+      <div className="bg-black mx-auto px-5 py-10 pt-20">
         <h1 className="text-3xl text-white poppins-semibold font-bold mb-4">Post List</h1>
-        <PostList posts={posts} reFetch={reFetch} setRefetch={setRefetch} />
+        {isLoading ? (
+          <div className="skeleton">
+            {Array.from({ length: 3 }).map((_, index) => (
+              <div
+                key={index}
+                className="skeleton-post my-8 p-4 bg-gray-300 shadow-md rounded-md animate-pulse">
+                <div className="h-6 bg-gray-400 rounded mb-2"></div>
+                <div className="h-4 bg-gray-400 rounded mb-2"></div>
+                <div className="flex space-x-2">
+                  <div className="h-8 w-16 bg-gray-400 rounded"></div>
+                  <div className="h-8 w-16 bg-gray-400 rounded"></div>
+                </div>
+              </div>
+            ))}
+          </div>
+        ) : (
+          <PostList posts={posts} reFetch={reFetch} setRefetch={setRefetch} />
+        )}
       </div>
     </div>
   );
