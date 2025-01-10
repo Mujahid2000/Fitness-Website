@@ -8,7 +8,7 @@ import { Pagination } from 'swiper/modules';
 const Program = () => {
   return (
     <div className="program-container ">
-      <h1 className='text-black text-5xl font-bold text-left'>Explore Our Program</h1>
+      <h1 className='text-white text-lg lg:text-5xl font-bold text-center py-0 lg:py-3 lg:text-center'>Explore Our Program</h1>
       <Swiper
         slidesPerView={1} // Default for mobile devices
         spaceBetween={30}
@@ -31,37 +31,37 @@ const Program = () => {
       >
         <SwiperSlide>
           <div className="slide-content">
-            <img src="https://i.ibb.co/Nr8p38W/Group-4.png" alt="" className="icon"/>
-            <h2 className='text-xl text-white'>Cardio Strength</h2>
-            <p className='text-white'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut venenatis, nunc a pretium viverra.</p>
+            <img src="https://res.cloudinary.com/diez3alve/image/upload/v1736519167/Group-4_copy_tllbwn.webp" alt="" className="icon "/>
+            <h2 className='text-lg lg:text-xl text-white'>Cardio Strength</h2>
+            <p className='text-sm lg:text-base text-white'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut venenatis, nunc a pretium viverra.</p>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="slide-content">
             <img src="https://i.ibb.co/DL0nGjT/Group-5.png" alt="" className="icon"/>
-            <h2 className='text-xl text-white'>Fat Lose</h2>
-            <p className='text-white'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut venenatis, nunc a pretium viverra.</p>
+            <h2 className='text-lg lg:text-xl text-white'>Fat Lose</h2>
+            <p className='text-sm lg:text-base text-white'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut venenatis, nunc a pretium viverra.</p>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="slide-content">
             <img src="https://i.ibb.co/nr79DvS/Vector.png" alt="" className="icon"/>
-            <h2 className='text-xl text-white'>Muscle Gain</h2>
-            <p className='text-white'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut venenatis, nunc a pretium viverra.</p>
+            <h2 className='text-lg lg:text-xl text-white'>Muscle Gain</h2>
+            <p className='text-sm lg:text-base text-white'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut venenatis, nunc a pretium viverra.</p>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="slide-content">
             <img src="https://i.ibb.co/jrD1ZT8/Group-3.png" alt="" className="icon"/>
-            <h2 className='text-xl text-white'>Nutrition</h2>
-            <p className='text-white'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut venenatis, nunc a pretium viverra.</p>
+            <h2 className='text-lg lg:text-xl text-white'>Nutrition</h2>
+            <p className=' text-sm lg:text-base text-white'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut venenatis, nunc a pretium viverra.</p>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="slide-content">
-            <img src="https://i.ibb.co/Nr8p38W/Group-4.png" alt="" className="icon"/>
-            <h2 className='text-xl text-white'>Cardio Strength</h2>
-            <p className='text-white'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut venenatis, nunc a pretium viverra.</p>
+            <img src="https://res.cloudinary.com/diez3alve/image/upload/v1736519167/Group-4_copy_tllbwn.webp" alt="" className="icon"/>
+            <h2 className='text-lg lg:text-xl text-white'>Cardio Strength</h2>
+            <p className=' text-sm lg:text-base text-white'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut venenatis, nunc a pretium viverra.</p>
           </div>
         </SwiperSlide>
        
