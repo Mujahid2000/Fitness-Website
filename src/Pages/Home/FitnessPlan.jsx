@@ -6,9 +6,9 @@ const FitnessPlan = () => {
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col lg:flex-row items-center lg:space-x-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8 lg:mb-0">
-            <img src="https://i.ibb.co/kX7g3h3/Rectangle-1.png" alt="Fitness 1" className="rounded-lg h-full w-full" />
-            <img src="https://i.ibb.co/P5z3mrh/Rectangle-2.png" alt="Fitness 2" className="rounded-lg w-full" />
-            <img src="https://i.ibb.co/ZY8mchQ/Rectangle-4.png" alt="Fitness 3" className="rounded-lg w-full lg:col-span-2 md:col-span-1" />
+            <img src="https://res.cloudinary.com/diez3alve/image/upload/v1736516758/hb2sdnlabehrhwhqwkfm.webp" alt="Fitness 1" className="rounded-lg h-full w-full" />
+            <img src="https://res.cloudinary.com/diez3alve/image/upload/v1736516826/Rectangle-2_eby3xb.webp" alt="Fitness 2" className="rounded-lg w-full" />
+            <img src="https://res.cloudinary.com/diez3alve/image/upload/v1736516860/Rectangle-4_sm6jnd.webp" alt="Fitness 3" className="rounded-lg w-full lg:col-span-2 md:col-span-1" />
           </div>
           <div className="lg:w-1/2">
             <h1 className="text-4xl lg:text-5xl font-bold mb-4">Transform your physique with our fitness plan.</h1>
